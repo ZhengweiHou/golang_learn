@@ -13,7 +13,7 @@ func main() {
 
 	startT := time.Now()
 
-	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50000;UID=db2inst1;PWD=db2inst1"
+	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50000;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=DBSYNCTEST"
 	// type Db *sql.DB
 	var db *sql.DB
 	var stmt *sql.Stmt
@@ -27,7 +27,7 @@ func main() {
 	// tx.Rollback()       // 回滚事务
 
 	//
-	stmt, _ = db.Prepare("select * from DBSYNCTEST.student")
+	stmt, _ = db.Prepare("select * from student")
 
 	// 执行查询 TODO 此处是否已将所有数据查询出来
 	rows, _ = stmt.Query()

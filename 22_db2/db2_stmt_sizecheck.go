@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	con := "HOSTNAME=localhost;DATABASE=testdb;PORT=50000;UID=db2inst1;PWD=db2inst1"
+	con := "HOSTNAME=localhost;DATABASE=testdb;PORT=50000;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;SCHEMA=DBSYNCTEST"
 	db, _ := sql.Open("go_ibm_db", con)
 
 	args := []interface{}{1}
