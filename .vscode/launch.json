@@ -11,9 +11,9 @@
         "mode": "debug",
         "program": "${file}",
         "env": {
-            "CGO_CFLAGS": "-I/home/houzw/document/golang_project/pkg/mod/github.com/ibmdb/clidriver/include",
-            "CGO_LDFLAGS": "-L/home/houzw/document/golang_project/pkg/mod/github.com/ibmdb/clidriver/lib",
-            "LD_LIBRARY_PATH": "/home/houzw/document/golang_project/pkg/mod/github.com/ibmdb/clidriver/lib"
+            "CGO_CFLAGS": "-I/home/houzw/document/golang_project/clidriver/include",
+            "CGO_LDFLAGS": "-L/home/houzw/document/golang_project/clidriver/lib",
+            "LD_LIBRARY_PATH": "/home/houzw/document/golang_project/clidriver/lib"
         }
     },
         {

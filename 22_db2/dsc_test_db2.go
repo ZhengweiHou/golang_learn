@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	// _ "github.com/go-sql-driver/mysql"
 	_ "github.com/ibmdb/go_ibm_db"
@@ -65,17 +66,52 @@ func main() {
 	}
 	fmt.Println(ddl)
 
-	// manager.ReadAllWithHandler("select * from student", nil, func(scanner dsc.Scanner) (toContinue bool, err error) {
-	// 	var record = make(map[string]interface{})
+	/*===dmlProvider test ===*/
 
-	// 	err = scanner.Scan(&record) //从数据库读取一条数据
+	var table *dsc.TableDescriptor
+	table = manager.TableDescriptorRegistry().Get("STUDENT3")
+	dmlProvider := dsc.NewMapDmlProvider(table)
+	fmt.Println(dmlProvider)
+	// dmlProvider.Get(dsc.SQLTypeInsert, instance interface{})
 
-	// 	log.Println("===", record)
-	// 	toContinue = true
-	// 	return
-	// })
+	manager.ReadAllWithHandler("select * from student", nil, func(scanner dsc.Scanner) (toContinue bool, err error) {
+		var record = make(map[string]interface{})
+
+		err = scanner.Scan(&record) //从数据库读取一条数据
+
+		log.Println("=1=", record)
+		toContinue = true
+		return
+	})
+
+	manager.ReadAllWithHandler("select * from student", nil, func(scanner dsc.Scanner) (toContinue bool, err error) {
+
+		var rowValues = make([]interface{}, 6)
+		var valuePointers = make([]interface{}, 6)
+		for i := range rowValues {
+			valuePointers[i] = &rowValues[i] // 将原切片中元素的指针取出
+		}
+
+		err = scanner.Scan(valuePointers...) //从数据库读取一条数据
+
+		for i := range rowValues {
+			var value interface{}
+			rawValue := rowValues[i]
+			b, ok := rawValue.([]byte) //byte，占用1个节字，就 8 个比特位（2^8 = 256，因此 byte 的表示范围 0->255），所以它和 uint8 类型本质上没有区别，它表示的是 ACSII 表中的一个字符
+			if ok {
+				value = string(b) //string 的本质，其实是一个 byte数组
+			} else {
+				value = rawValue
+			}
+			rowValues[i] = value
+		}
+
+		log.Println("=2=", rowValues)
+		toContinue = true
+		return
+	})
 
 	// var record = make(map[string]interface{})
-	// manager.ReadAll(record, "select * from student", nil,)
+	// manager.ReadAll(record, "select * from student", nil, nil)
 
 }
