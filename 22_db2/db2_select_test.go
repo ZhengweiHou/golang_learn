@@ -4,12 +4,13 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"testing"
 	"time"
 
 	_ "github.com/ibmdb/go_ibm_db"
 )
 
-func main() {
+func TestSelect1(t *testing.T) {
 
 	startT := time.Now()
 

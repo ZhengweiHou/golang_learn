@@ -3,9 +3,10 @@ package main
 import (
 	"fmt"
 	"strings"
+	"testing"
 )
 
-func main() {
+func Test_string1(t *testing.T) {
 	var str1 string
 	str1 = "123123123"
 

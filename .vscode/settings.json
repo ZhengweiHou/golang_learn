@@ -37,5 +37,10 @@
     "go.coverShowCounts": true,
     "go.testOnSave": false,
     "go.testFlags": [],
-    "go.lintTool": "golint"
+    "go.lintTool": "golint",
+    "go.testEnvVars": { // 测试案例的环境变量设置
+        "CGO_CFLAGS": "-I/home/houzw/document/golang_project/clidriver/include",
+        "CGO_LDFLAGS": "-L/home/houzw/document/golang_project/clidriver/lib",
+        "LD_LIBRARY_PATH": "/home/houzw/document/golang_project/clidriver/lib"
+    }
 }

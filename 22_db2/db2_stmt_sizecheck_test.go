@@ -4,11 +4,13 @@ import (
 	"database/sql"
 	"log"
 	"strings"
+	"testing"
 
 	_ "github.com/ibmdb/go_ibm_db"
 )
 
-func main() {
+func TestStmtSizeTest1(t *testing.T) {
+
 	con := "HOSTNAME=localhost;DATABASE=testdb;PORT=50000;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;SCHEMA=DBSYNCTEST"
 	db, _ := sql.Open("go_ibm_db", con)
 
@@ -21,7 +23,7 @@ func main() {
 	}
 	sqlBuilder.WriteString("?)")
 	sqlstr := sqlBuilder.String()
-	log.Println("argslen:%d sqlstr count'?':%d", len(args), strings.Count(sqlstr, "?"))
+	log.Printf("argslen:%d sqlstr count'?':%d", len(args), strings.Count(sqlstr, "?"))
 	rs, err := db.Exec(sqlstr, args...)
 	if err != nil {
 		log.Panic(rs, err)

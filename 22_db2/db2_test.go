@@ -16,7 +16,6 @@ import (
 // export CGO_LDFLAGS=-L$DB2HOME/lib
 // export LD_LIBRARY_PATH=$DB2HOME/lib
 
-
 func Test1(m *testing.T) {
 	con := "HOSTNAME=host;DATABASE=name;PORT=number;UID=username;PWD=password"
 	db, err := sql.Open("go_ibm_db", con)
@@ -28,5 +27,4 @@ func Test1(m *testing.T) {
 }
 
 func TestDb1(t *testing.T) {
-
 }

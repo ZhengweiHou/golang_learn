@@ -5,6 +5,7 @@ go 1.18
 require (
 	github.com/go-sql-driver/mysql v1.7.0
 	github.com/ibmdb/go_ibm_db v0.4.2
+	github.com/shopspring/decimal v1.3.1
 	github.com/sirupsen/logrus v1.9.0
 	github.com/viant/dsc v0.0.0-00010101000000-000000000000
 )

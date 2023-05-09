@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
+	"testing"
+	"time"
 
 	// _ "github.com/go-sql-driver/mysql"
 	_ "github.com/ibmdb/go_ibm_db"
@@ -19,11 +21,34 @@ import (
 // 	}
 // }
 
-func main() {
+func TestDb2Dsc1(t *testing.T) {
 	factory := dsc.NewManagerFactory()
 	config := dsc.NewConfig("go_ibm_db",
 		"HOSTNAME=[host];DATABASE=[database];PORT=[port];UID=[user];PWD=[pwd];AUTHENTICATION=SERVER;CurrentSchema=[schema]",
-		"user:db2inst1,pwd:db2inst1,host:localhost,database:testdb,port:50000,schema:DBSYNCTEST")
+		"user:db2inst1,pwd:db2inst1,host:localhost,database:testdb,port:50001,schema:DBSYNCTEST")
+	manager, err := factory.Create(config)
+	if err != nil {
+		panic(err.Error())
+	}
+	fmt.Println(manager.Config().DriverName)
+
+	// insert 包含 decimal 类型字段
+	destCon, err := manager.ConnectionProvider().Get()
+	var record = make([]interface{}, 0)
+	record = append(record, "刘德华222", 1, 1, "11.11", time.Now()) // FEE 是DECIMAL 类型，传参使用string方式则会丢失精度
+	record = append(record, "刘德华111", 1, 1, 11.11, time.Now())   // 使用float传参就不会有问题
+	result, err := manager.ExecuteOnConnection(destCon, "INSERT INTO STUDENT2(NAME,AGE,GRADES,FEE,MODIFIED) VALUES(?,?,?,?,?),(?,?,?,?,?)", record)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Printf("insert result:%v\n", result)
+}
+
+func TestDb2Dsc2(t *testing.T) {
+	factory := dsc.NewManagerFactory()
+	config := dsc.NewConfig("go_ibm_db",
+		"HOSTNAME=[host];DATABASE=[database];PORT=[port];UID=[user];PWD=[pwd];AUTHENTICATION=SERVER;CurrentSchema=[schema]",
+		"user:db2inst1,pwd:db2inst1,host:localhost,database:testdb,port:50001,schema:DBSYNCTEST")
 	manager, err := factory.Create(config)
 	if err != nil {
 		panic(err.Error())
@@ -44,7 +69,7 @@ func main() {
 	fmt.Println(dbs)
 
 	// var columns []dsc.Column
-	columns, err := dialect.GetColumns(manager, datastore, "STUDENT3")
+	columns, err := dialect.GetColumns(manager, datastore, "STUDENT")
 	if err != nil {
 		panic(err.Error())
 	}
