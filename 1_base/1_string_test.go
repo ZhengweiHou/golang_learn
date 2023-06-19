@@ -8,6 +8,9 @@ import (
 
 func Test_string1(t *testing.T) {
 	var str1 string
+
+	fmt.Printf("len:%v\n", len(str1))
+
 	str1 = "123123123"
 
 	fmt.Println(strings.LastIndex(str1, "2"))
@@ -23,3 +26,5 @@ func Test_string1(t *testing.T) {
 	fmt.Println(str2)
 
 }
+
+// create table 

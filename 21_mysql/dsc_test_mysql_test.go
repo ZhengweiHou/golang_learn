@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"testing"
 
 	_ "github.com/go-sql-driver/mysql"
 
@@ -18,7 +19,9 @@ import (
 // 	}
 // }
 
-func main() {
+// func main() {
+
+func TestXxx(t *testing.T) {
 	factory := dsc.NewManagerFactory()
 	config := dsc.NewConfig("mysql", "[user]:[pwd]@[url]", "user:root,pwd:root,url:tcp(localhost:3306)/dbsynctest?parseTime=true")
 	manager, err := factory.Create(config)

@@ -39,8 +39,10 @@
     "go.testFlags": [],
     "go.lintTool": "golint",
     "go.testEnvVars": { // 测试案例的环境变量设置
-        "CGO_CFLAGS": "-I/home/houzw/document/golang_project/clidriver/include",
-        "CGO_LDFLAGS": "-L/home/houzw/document/golang_project/clidriver/lib",
-        "LD_LIBRARY_PATH": "/home/houzw/document/golang_project/clidriver/lib"
+        // "DB2CODEPAGE": "1386",
+        "DB2CODEPAGE": "1208",
+        "CGO_CFLAGS": "-I/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/include",
+        "CGO_LDFLAGS": "-L/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib",
+        "LD_LIBRARY_PATH": "/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib",
     }
 }

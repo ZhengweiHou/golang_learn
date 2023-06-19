@@ -7,6 +7,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/axgle/mahonia"
 	_ "github.com/ibmdb/go_ibm_db"
 )
 
@@ -14,7 +15,7 @@ func TestSelect1(t *testing.T) {
 
 	startT := time.Now()
 
-	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50000;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=DBSYNCTEST"
+	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50001;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=DBSYNCTEST"
 	// type Db *sql.DB
 	var db *sql.DB
 	var stmt *sql.Stmt
@@ -58,14 +59,15 @@ func TestSelect1(t *testing.T) {
 		if err != nil {
 			log.Panic(err)
 		}
-
+		enc := mahonia.NewDecoder("gbk")
 		// 格式化数据
 		for i := range rowValues {
 			var value interface{}
 			rawValue := rowValues[i]
 			b, ok := rawValue.([]byte) //byte，占用1个节字，就 8 个比特位（2^8 = 256，因此 byte 的表示范围 0->255），所以它和 uint8 类型本质上没有区别，它表示的是 ACSII 表中的一个字符
 			if ok {
-				value = string(b) //string 的本质，其实是一个 byte数组
+				// value = string(b) //string 的本质，其实是一个 byte数组
+				value = enc.ConvertString(string(b))
 			} else {
 				value = rawValue
 			}
@@ -82,4 +84,19 @@ func TestSelect1(t *testing.T) {
 		fmt.Printf("time cost = %v\n", tc)
 	}
 
+}
+
+// test db2 select
+
+func TestSelect2(t *testing.T) {
+	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST"
+	db, _ := sql.Open("go_ibm_db", dataSourceName)
+	rows, _ := db.Query("select * from TT")
+
+	for rows.Next() {
+		var id int
+		var name string
+		rows.Scan(&id, &name)
+		fmt.Printf("id:%v, name:%v\n", id, name)
+	}
 }

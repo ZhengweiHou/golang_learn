@@ -34,3 +34,22 @@ func Test2(t *testing.T) {
 	fmt.Printf("%T  %v\n", arr2, arr2)
 
 }
+
+func TestSliceMapRange(t *testing.T) {
+	slice := []int{1, 2, 3, 4, 5}
+	m := map[string]int{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
+
+	// 迭代切片
+	for i, v := range slice {
+		fmt.Printf("slice[%d] = %d\n", i, v)
+	}
+
+	/*
+		map 内部的实现是使用哈希表，哈希表的特性是无序的。所以，在使用 range 迭代一个 map 时，迭代顺序是不确定的
+	*/
+	// 迭代 map
+	for k, v := range m {
+		fmt.Printf("m[%s] = %d\n", k, v)
+	}
+
+}

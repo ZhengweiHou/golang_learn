@@ -1,4 +1,4 @@
-package main
+package int
 
 import (
 	"fmt"
@@ -38,8 +38,9 @@ func UInteger() {
 	fmt.Printf("num的类型:%T ,num的大小:%d ,num是:%d\n", num, unsafe.Sizeof(num), num)
 
 }
-func main() {
-	Integer()
-    fmt.Println("=======")
-	UInteger()
-}
+
+// func main() {
+// 	Integer()
+// 	fmt.Println("=======")
+// 	UInteger()
+// }

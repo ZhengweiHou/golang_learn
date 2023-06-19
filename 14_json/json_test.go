@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"testing"
 )
 
 // type User1 struct {
@@ -12,7 +13,8 @@ import (
 // 	sex      string
 // }
 
-func main() {
+func Test1(t *testing.T) {
+
 	// == T1 ==
 	type User1 struct {
 		UserId   string
