@@ -7,8 +7,7 @@ import (
 	_ "net/http/pprof"
 	"sync"
 	"time"
-
-	_ "github.com/uber/go-torch"
+	// _ "github.com/uber/go-torch"
 )
 
 func Counter(wg *sync.WaitGroup) {
@@ -27,7 +26,7 @@ func main() {
 
 	//远程获取pprof数据
 	go func() {
-		log.Println(http.ListenAndServe("localhost:8080", nil))
+		log.Println(http.ListenAndServe("localhost:8588", nil))
 	}()
 
 	var wg sync.WaitGroup

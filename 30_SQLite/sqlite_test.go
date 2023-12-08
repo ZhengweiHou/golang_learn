@@ -12,7 +12,7 @@ func Test1(t *testing.T) {
 	db, err := sql.Open("sqlite3", "sqlitedb.db")
 	if err != nil {
 		// 处理连接错误
-	}     
+	}
 	defer db.Close()
 
 	// 建表
@@ -28,7 +28,7 @@ func Test1(t *testing.T) {
 	}
 
 	// 插入
-	_, err = db.Exec("INSERT INTO users (name, age) VALUES (?, ?)", "Alice", 25)
+	_, err = db.Exec("INSERT INTO users (name, age) VALUES (?, ?)", "hzw", 25)
 	if err != nil {
 		// 处理插入数据错误
 	}

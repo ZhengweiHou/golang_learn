@@ -11,9 +11,13 @@
         "mode": "debug",
         "program": "${file}",
         "env": {
-            "CGO_CFLAGS": "-I/home/houzw/document/golang_project/clidriver/include",
-            "CGO_LDFLAGS": "-L/home/houzw/document/golang_project/clidriver/lib",
-            "LD_LIBRARY_PATH": "/home/houzw/document/golang_project/clidriver/lib"
+            // "CGO_CFLAGS": "-I/home/houzw/document/golang_project/clidriver/include",
+            // "CGO_LDFLAGS": "-L/home/houzw/document/golang_project/clidriver/lib",
+            // "LD_LIBRARY_PATH": "/home/houzw/document/golang_project/clidriver/lib"
+
+            "CGO_CFLAGS": "-I/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/include",
+            "CGO_LDFLAGS": "-L/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib",
+            "LD_LIBRARY_PATH": "/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib"
         }
     },
         {

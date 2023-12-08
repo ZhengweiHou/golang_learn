@@ -31,18 +31,18 @@
         "serve",
         "--debug=localhost:6060", // to investigate memory usage, see profiles
     ],
-    "go.coverOnSave": true,
-    "go.coverOnSingleTest": true,
-    "go.coverOnSingleTestFile": true,
+    // "go.coverOnSave": true,
+    // "go.coverOnSingleTest": true,
+    // "go.coverOnSingleTestFile": true,
     "go.coverShowCounts": true,
-    "go.testOnSave": false,
-    "go.testFlags": [],
+    // "go.testOnSave": false,
+    // "go.testFlags": [],
     "go.lintTool": "golint",
-    "go.testEnvVars": { // 测试案例的环境变量设置
-        // "DB2CODEPAGE": "1386",
-        "DB2CODEPAGE": "1208",
-        "CGO_CFLAGS": "-I/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/include",
-        "CGO_LDFLAGS": "-L/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib",
-        "LD_LIBRARY_PATH": "/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib",
-    }
+    // "go.testEnvVars": { // 测试案例的环境变量设置
+    //     // "DB2CODEPAGE": "1386",
+    //     "DB2CODEPAGE": "1208",
+    //     "CGO_CFLAGS": "-I/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/include",
+    //     "CGO_LDFLAGS": "-L/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib",
+    //     "LD_LIBRARY_PATH": "/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib",
+    // }
 }

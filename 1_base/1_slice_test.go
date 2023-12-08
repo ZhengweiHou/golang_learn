@@ -26,13 +26,14 @@ func Test2(t *testing.T) {
 
 	myarr := []int{1}
 	myarr = append(myarr, 2)
-
 	arr2 := myarr
 	arr2 = append(arr2, 3) // 不会修改原切片内容
 	arr2[0] = 9            // 不会修改原切片内容
 	fmt.Printf("%T  %v\n", myarr, myarr)
 	fmt.Printf("%T  %v\n", arr2, arr2)
-
+	arr3 := &myarr
+	(*arr3)[0] = 10 // 会修改原切片的数据
+	fmt.Printf("%T  %v\n", myarr, myarr)
 }
 
 func TestSliceMapRange(t *testing.T) {

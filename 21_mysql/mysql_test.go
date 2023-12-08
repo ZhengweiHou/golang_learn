@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	dburl = "root:root@tcp(127.0.0.1:3316)/dbsynctest?parseTime=true"
+	dburl = "root:root@tcp(127.0.0.1:3306)/dbsynctest?parseTime=true"
 )
 
 var Db *sql.DB
@@ -21,6 +21,35 @@ func TestDb(t *testing.T) {
 	Db = NewDB() // 此时不会创建链接
 	Db.Ping()    // 链接测试
 	defer CloseDB()
+}
+
+func TestAffect(t *testing.T) {
+	db, _ := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/test?parseTime=true")
+
+	// insert one
+	result, err := db.Exec("INSERT INTO test.test (id, name, age) values (99, '99', 99)", make([]any, 0)...)
+	if err != nil {
+		t.Fatal(err)
+	}
+	aft1, err := result.RowsAffected()
+	fmt.Println(aft1)
+
+	// insert multiple
+	r2, err := db.Exec("INSERT INTO test.test (id, name, age) values (0, '0', 0),(1, '1', 1),(2, '2', 2),(3, '3', 3),(4, '4', 4)", make([]any, 0)...)
+	if err != nil {
+		t.Fatal(err)
+	}
+	aft2, err := r2.RowsAffected()
+	fmt.Println(aft2)
+
+	// delete
+	r3, err := db.Exec("DELETE FROM test.test WHERE id<?", 100)
+	if err != nil {
+		t.Fatal(err)
+	}
+	aft3, err := r3.RowsAffected()
+	fmt.Println(aft3)
+
 }
 
 func NewDB() *sql.DB {

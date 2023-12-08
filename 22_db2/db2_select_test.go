@@ -89,9 +89,9 @@ func TestSelect1(t *testing.T) {
 // test db2 select
 
 func TestSelect2(t *testing.T) {
-	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST"
+	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST;DB2CODEPAGE=1208"
 	db, _ := sql.Open("go_ibm_db", dataSourceName)
-	rows, _ := db.Query("select * from TT")
+	rows, _ := db.Query("select * from TT2")
 
 	for rows.Next() {
 		var id int

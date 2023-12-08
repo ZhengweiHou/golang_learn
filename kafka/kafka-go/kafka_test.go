@@ -7,17 +7,19 @@ import (
 	"testing"
 	"time"
 
-	"github.com/segmentio/kafka-go"
+	kafka "github.com/segmentio/kafka-go"
 )
 
 func Test_kafka(t *testing.T) {
 	topic := "hzwkfk"
 	brokers := make([]string, 0)
 	brokers = append(brokers, "localhost:9092")
+	// brokers = append(brokers, "192.168.105.15:9092")
 	go func() {
-		tick := time.NewTicker(time.Second * 5)
+		tick := time.NewTicker(time.Second * 2)
 		for {
 			<-tick.C
+			fmt.Println(fmt.Sprintf("time:%v,msg:%v", time.Now(), "hello"))
 			produceMessage(topic, brokers, fmt.Sprintf("time:%v,msg:%v", time.Now(), "hello"))
 		}
 	}()
@@ -25,7 +27,16 @@ func Test_kafka(t *testing.T) {
 	consumeMessages(topic, brokers, "")
 }
 
+func Test_consumeMessages(t *testing.T) {
+	topic := "hzwkfk"
+	brokers := make([]string, 0)
+	brokers = append(brokers, "192.168.105.15:9092")
+
+	consumeMessages(topic, brokers, "")
+}
+
 func produceMessage(topic string, brokers []string, message string) {
+
 	// 创建一个生产者
 	writer := kafka.NewWriter(kafka.WriterConfig{
 		Brokers: brokers,

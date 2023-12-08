@@ -27,4 +27,20 @@ func Test_string1(t *testing.T) {
 
 }
 
-// create table 
+func Test_string2(t *testing.T) {
+	input := "hello:123"
+	parts := strings.Split(input, ":")
+	fmt.Println(len(parts))
+
+	input = "hello"
+	parts = strings.Split(input, ":")
+	fmt.Println(len(parts))
+
+	input = ""
+	parts = strings.Split(input, ":")
+	fmt.Println(len(parts))
+
+}
+
+// create table
+

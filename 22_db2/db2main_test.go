@@ -20,8 +20,8 @@ import (
 
 func TestMain1(t *testing.T) {
 
-	// con := "HOSTNAME=localhost;DATABASE=testdb;PORT=50000;UID=db2inst1;PWD=db2inst1"
-	con := "HOSTNAME=192.168.104.223;DATABASE=testdb;PORT=50000;UID=db2inst1;PWD=db2inst1"
+	con := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1"
+	// con := "HOSTNAME=192.168.104.223;DATABASE=testdb;PORT=50000;UID=db2inst1;PWD=db2inst1"
 	fmt.Println(con)
 	db, err := sql.Open("go_ibm_db", con)
 	// db, err := sql.Open("db2-cli", con)

@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"fmt"
+
 	_ "github.com/ibmdb/go_ibm_db"
 )
 
@@ -80,7 +81,7 @@ func execquery(st *sql.Stmt) error {
 }
 
 func main() {
-	con := "HOSTNAME=localhost;DATABASE=testdb;PORT=50000;UID=db2inst1;PWD=db2inst1"
+	con := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1"
 	type Db *sql.DB
 	var re Db
 	re = Create_Con(con)
