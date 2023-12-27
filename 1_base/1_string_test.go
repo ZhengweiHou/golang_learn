@@ -42,5 +42,8 @@ func Test_string2(t *testing.T) {
 
 }
 
-// create table
-
+func Test_string3(t *testing.T) {
+	str1 := "hello"
+	str2 := "Hello"
+	fmt.Println(strings.Compare(str1, str2))
+}

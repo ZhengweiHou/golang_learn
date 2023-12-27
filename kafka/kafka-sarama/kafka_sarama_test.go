@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"math/rand"
 	"os"
 	"os/signal"
 	"strings"
@@ -34,9 +35,12 @@ func Test_produce(t *testing.T) {
 		{Key: []byte("time"), Value: []byte(time.Now().Format("2006-01-02 15:04:05"))},
 	}
 
+	rd := rand.New(rand.NewSource(time.Now().UnixNano()))
+	i := rd.Intn(10)
+	// randomNumber := rand.Intn(10)
 	// 要序列化的 map
 	data := map[string]interface{}{
-		"id":   "10",
+		"id":   i,
 		"name": "hzw10",
 		// "vlist": []string{"item1", "item2", "item3"},
 	}
@@ -45,7 +49,8 @@ func Test_produce(t *testing.T) {
 
 	// 生产者发送消息
 	message := &sarama.ProducerMessage{
-		Key:     sarama.StringEncoder(fmt.Sprintf("%v", data["id"])), // 使用id作为消息的key
+		Key: sarama.StringEncoder(fmt.Sprintf("%v", data["id"])), // 使用id作为消息的key
+		// Partition: 0,                                                   // 指定消息分区
 		Topic:   topic,
 		Value:   sarama.StringEncoder(jsonData),
 		Headers: headers,
@@ -175,4 +180,24 @@ func Test_topicPartitionInfo1(t *testing.T) {
 		fmt.Printf("Partition: %d, Leader: %d, Replicas: %v, ISR: %v, offset:%d\n", partition, leader.ID(), replicas, isr, offset)
 	}
 
+}
+
+func Test_sar_consume2(t *testing.T) {
+	topic := "notexisttopic"
+	cs, err := sarama.NewConsumer([]string{"localhost:9092"}, nil)
+	ps, err := cs.Partitions(topic)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	fmt.Printf("%v", ps)
+
+	pc, err := cs.ConsumePartition(topic, 1, sarama.OffsetNewest)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	select {
+	case <-time.After(time.Second):
+	case msg := <-pc.Messages():
+		fmt.Println(msg.Value)
+	}
 }

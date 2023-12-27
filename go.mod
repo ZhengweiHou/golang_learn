@@ -25,6 +25,8 @@ require (
 	github.com/IBM/sarama v1.42.1
 	github.com/gin-gonic/gin v1.9.1
 	github.com/linkedin/goavro v2.1.0+incompatible
+	github.com/looplab/fsm v1.0.1
+	github.com/robfig/cron/v3 v3.0.1
 	github.com/thmeitz/ksqldb-go v0.1.0
 	github.com/viant/dsc v0.16.3
 )

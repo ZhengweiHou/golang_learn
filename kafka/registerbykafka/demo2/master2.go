@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"hzw/golang_learn/hzwutils/ip"
 	"io"
 	"log"
 	"net/http"
@@ -19,12 +20,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-const (
-	kafkaBrokers    = "localhost:9092"
-	kafkaTopic      = "worker_registration"
-	heartbeatTopic  = "heartbeat"
-	heartbeatPeriod = 5 * time.Second
-)
+const ()
 
 type WorkerInfo struct {
 	IP               string        `json:"ip"`
@@ -38,16 +34,22 @@ var (
 	// workerKeys      []string
 	workerIndex     int64 = 0
 	workerListMutex sync.Mutex
+	masterPort      int
 )
 
 // 主程序入口
 func main() {
+	kafkaBrokers := "localhost:9092"
+	kafkaTopic := "worker_registration"
+	heartbeatTopic := "heartbeat"
+	heartbeatPeriod := 5 * time.Second
 
 	logrus.SetReportCaller(true)
 	logrus.SetFormatter(&logrus.TextFormatter{
 		ForceColors: true,
 	})
 	logrus.Infoln("master start")
+	masterPort, _ = ip.GetAvailablePort("127.0.0.1", 9901)
 
 	// Initialize Kafka consumer
 	kafkaConsumer := initializeKafkaConsumer()
@@ -192,7 +194,8 @@ func startMasterServer() {
 	})
 
 	// Start the server
-	if err := router.Run(":9001"); err != nil {
+	// if err := router.Run(":9001"); err != nil {
+	if err := router.Run(fmt.Sprintf(":%d", masterPort)); err != nil {
 		log.Fatalln("Failed to start REST API server:", err)
 	}
 }
