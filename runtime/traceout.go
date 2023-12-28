@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"runtime"
-	"runtime/debug"
 	"runtime/trace"
 	"sync"
 )
@@ -14,8 +13,9 @@ func main() {
 	// go tool trace trace.out 启动trace分析
 
 	// runtime.GOMAXPROCS(runtime.NumCPU()) // 设置P队列的最大数量 (理解GMP模型)
-	runtime.GOMAXPROCS(4)
-	debug.SetMaxThreads(5)
+	// runtime.GOMAXPROCS(4)
+	// debug.SetMaxThreads(5)
+	fmt.Println("real GOMAXPROCS:", runtime.GOMAXPROCS(-1))
 
 	//创建trace文件
 	f, err := os.Create("/tmp/trace.out")
@@ -37,7 +37,7 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	numTasks := 120 // 启动n个 goroutine
+	numTasks := 100 // 启动n个 goroutine
 
 	for i := 0; i < numTasks; i++ {
 		wg.Add(1)
@@ -45,13 +45,14 @@ func main() {
 	}
 
 	wg.Wait()
+	fmt.Println("real GOMAXPROCS:", runtime.GOMAXPROCS(-1))
 
 }
 
 func performComputation(wg *sync.WaitGroup) {
 	defer wg.Done()
 
-	const iterations = 10000
+	const iterations = 10000000
 	var result float64
 
 	for i := 0; i < iterations; i++ {

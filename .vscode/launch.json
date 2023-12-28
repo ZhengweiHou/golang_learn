@@ -17,7 +17,8 @@
 
             "CGO_CFLAGS": "-I/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/include",
             "CGO_LDFLAGS": "-L/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib",
-            "LD_LIBRARY_PATH": "/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib"
+            "LD_LIBRARY_PATH": "/home/houzw/rundata/db2driver/clidriver_v11.5.8.0/lib",
+            // "GOMAXPROCS": "10"
         }
     },
         {
