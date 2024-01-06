@@ -59,7 +59,7 @@ func Test1(t *testing.T) {
 		age:    12,
 	}
 	data3, _ := json.Marshal(u3)
-	fmt.Printf("忽略小写，omitempty标记时，忽略空值字段\n%s\n", string(data3))
+	fmt.Printf("T3 忽略小写，omitempty标记时，忽略空值字段\n%s\n", string(data3))
 
 	// == T4 ==
 	type User4 struct {

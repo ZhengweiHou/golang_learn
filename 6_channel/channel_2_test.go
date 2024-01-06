@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// 通过chan实现限流
 func Test1(t *testing.T) {
 
 	var throttleChannel chan bool

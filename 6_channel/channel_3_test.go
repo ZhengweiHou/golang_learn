@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+// 
 func TestChannel3(t *testing.T) {
 	c1 := make(chan []interface{}, 1)
 
