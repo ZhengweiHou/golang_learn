@@ -1,8 +1,9 @@
-package main
+package base
 
 import (
 	"fmt"
 	"log"
+	"testing"
 )
 
 /*
@@ -16,7 +17,8 @@ var gc = 100
 
 //gd := 100 // :=不能用来定义全局变量
 
-func main() {
+func TestVar1(t *testing.T) {
+
 	fmt.Println("hello")
 
 	// 第一种方式

@@ -14,11 +14,13 @@ func main() {
 
 func SayHello(writer http.ResponseWriter, request *http.Request) {
 	fmt.Println(&request)
+	time.Sleep(time.Second * 3)
 
 	go func() {
 		for range time.Tick(time.Second) {
 			select {
 			case <-request.Context().Done():
+
 				fmt.Println("request is outgoing")
 				return
 			default:

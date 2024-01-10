@@ -1,4 +1,4 @@
-package main
+package base
 
 import (
 	"fmt"
@@ -22,4 +22,19 @@ func Test_time1(t *testing.T) {
 	if time.Now().Sub(time1) > time.Second {
 		fmt.Println("2222")
 	}
+}
+
+func Test_time2(t *testing.T) {
+	td := time.Duration(1)
+
+	var i interface{}
+	i = "hello"
+
+	if c, ok := i.(int); ok {
+		td = time.Duration(c)
+	}
+
+	fmt.Println(time.Now())
+	time.Sleep(td * time.Second)
+	fmt.Println(time.Now())
 }

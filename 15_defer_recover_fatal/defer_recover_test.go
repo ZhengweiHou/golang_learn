@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"testing"
 )
 
@@ -45,4 +46,8 @@ func funB() { //外围函数
 	}
 	//当外围函数的代码中发生了运行恐慌，只有其中所有的已经defer的函数全部都执行完毕后，该运行恐慌才会真正被扩展至调用处。
 	defer fmt.Println("defer funB 2") // 此处被panic中断，不会执行
+}
+
+func funC() {
+	log.Fatal("funC fatal") // fatal会直接结束程序，不会被recover捕获
 }
