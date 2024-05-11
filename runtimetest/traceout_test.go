@@ -1,4 +1,4 @@
-package main
+package runtimetest
 
 import (
 	"fmt"
@@ -6,12 +6,13 @@ import (
 	"runtime"
 	"runtime/trace"
 	"sync"
+	"testing"
 )
 
-func main() {
+func TestTrace(t *testing.T) {
 
 	// go tool trace trace.out 启动trace分析
-
+	// go tool trace /tmp/trace.out
 	// runtime.GOMAXPROCS(runtime.NumCPU()) // 设置P队列的最大数量 (理解GMP模型)
 	// runtime.GOMAXPROCS(4)
 	// debug.SetMaxThreads(5)
@@ -54,10 +55,14 @@ func performComputation(wg *sync.WaitGroup) {
 
 	const iterations = 10000000
 	var result float64
+	var result2 int
 
 	for i := 0; i < iterations; i++ {
+		byte1 := make([]byte, 10)
 		result += float64(i)
+		result2 = len(byte1)
 	}
 
 	fmt.Println(result)
+	fmt.Println(result2)
 }

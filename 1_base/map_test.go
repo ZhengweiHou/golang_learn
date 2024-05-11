@@ -60,3 +60,11 @@ func TestMap3(t *testing.T) {
 	}(rmap)
 
 }
+
+func TestMap4(t *testing.T) {
+	var map1 map[int32]*string
+
+	if map1 == nil {
+		fmt.Println("map1 is nil")
+	}
+}

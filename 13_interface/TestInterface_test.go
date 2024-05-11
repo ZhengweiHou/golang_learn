@@ -1,8 +1,11 @@
-package main
+package hzwinterface
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func main() {
+func TestInt3df(t *testing.T) {
 	// 接口测试
 	var empty any // any 实际上就是 空接口 interface{}
 	empty = Person{age: 20, name: "empty"}
@@ -18,8 +21,6 @@ func main() {
 	stu.age = 30
 	fmt.Print(stu.name)
 	stu.SayHello()
-
-	
 
 }
 

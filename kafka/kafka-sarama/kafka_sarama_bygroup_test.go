@@ -7,27 +7,43 @@ import (
 	"testing"
 
 	"github.com/IBM/sarama"
+	"github.com/sirupsen/logrus"
 	log "github.com/sirupsen/logrus"
 )
 
 func Test_consumeByGroup(t *testing.T) {
 	brokerList := "localhost:9092" // Kafka broker 地址
 	topic := "hzwkfk_topic"        // Kafka 主题名称
-	groupID := "hzwkfk-group2"
+	groupID := "hzwkfk-group1"
 
 	config := sarama.NewConfig()
 	config.Consumer.Group.Rebalance.Strategy = sarama.NewBalanceStrategyRoundRobin()
 	config.Consumer.Offsets.Initial = sarama.OffsetNewest
 
+	// sarama client
+	client, err := sarama.NewClient(strings.Split(brokerList, ","), config)
+
 	// 创建 Kafka 消费者组
-	consumerGroup, err := sarama.NewConsumerGroup(strings.Split(brokerList, ","), groupID, config)
+	consumerGroup, err := sarama.NewConsumerGroupFromClient(groupID, client) // 通过client创建消费者组
+	// consumerGroup, err := sarama.NewConsumerGroup(strings.Split(brokerList, ","), groupID, config)
 	if err != nil {
 		log.Fatalf("Error creating consumer group: %v", err)
 	}
 	defer consumerGroup.Close()
 
+	// 获取当前topic所有分区的offset
+	parts, _ := client.Partitions(topic)
+	topicoffsets := make(map[int32]int64)
+	for _, parti := range parts {
+		begainoffset, _ := client.GetOffset(topic, parti, sarama.OffsetNewest)
+		topicoffsets[parti] = begainoffset
+	}
+
 	// 消费者处理函数
-	handler := &messageHandler{}
+	handler := &messageHandler{
+		partBegainOffsets: make(map[string]map[int32]int64),
+	}
+	handler.partBegainOffsets[topic] = topicoffsets
 
 	// 消费者消费消息
 	for {
@@ -39,9 +55,19 @@ func Test_consumeByGroup(t *testing.T) {
 }
 
 // messageHandler 实现了 sarama.ConsumerGroupHandler 接口
-type messageHandler struct{}
+type messageHandler struct {
+	partBegainOffsets map[string]map[int32]int64
+	// []int32
+}
 
-func (m *messageHandler) Setup(sarama.ConsumerGroupSession) error {
+func (m *messageHandler) Setup(session sarama.ConsumerGroupSession) error {
+	for topic, offsets := range m.partBegainOffsets {
+		for part, offset := range offsets {
+			session.GenerationID()
+			logrus.Infof("%s[%d]:%d\n", topic, part, offset-1)
+			session.ResetOffset(topic, part, offset-1, "")
+		}
+	}
 	fmt.Println("Setup")
 	return nil
 }

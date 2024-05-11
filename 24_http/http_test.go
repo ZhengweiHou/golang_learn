@@ -1,13 +1,14 @@
-package main
+package http
 
 import (
 	"fmt"
 	"log"
 	"net/http"
+	"testing"
 	"time"
 )
 
-func main() {
+func TestServer1(t *testing.T) {
 	http.HandleFunc("/", SayHello) // 设置访问的路由
 	log.Fatalln(http.ListenAndServe(":8080", nil))
 }

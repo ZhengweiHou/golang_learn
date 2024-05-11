@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"sync"
 	"testing"
@@ -30,3 +31,19 @@ func TestChannel5(t *testing.T) {
 	wg.Wait()
 }
 
+func TestChannelCloseMul(t *testing.T) {
+	chan1 := make(chan bool, 0)
+	close(chan1)
+
+	select {
+	case _, ok := <-chan1:
+		fmt.Println("2")
+		if ok {
+			close(chan1)
+			fmt.Println("check and close chan1")
+		}
+	default:
+		// Channel already closed or not initialized
+	}
+
+}

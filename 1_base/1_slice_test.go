@@ -1,6 +1,7 @@
 package base
 
 import (
+	"bytes"
 	"fmt"
 	"testing"
 )
@@ -53,4 +54,60 @@ func TestSliceMapRange(t *testing.T) {
 		fmt.Printf("m[%s] = %d\n", k, v)
 	}
 
+}
+
+func TestSliceRange2(t *testing.T) {
+
+	type _tmp struct {
+		i int
+	}
+
+	slice := []int{1, 2, 3, 4, 5}
+	slice2 := []*_tmp{}
+	// 迭代切片
+	for _, v := range slice {
+		slice2 = append(slice2, &_tmp{i: v})
+	}
+	for _, v2 := range slice2 {
+		fmt.Printf("%v\n", v2)
+	}
+
+}
+func TestSlice3(t *testing.T) {
+
+	slice := []int{1, 2, 3, 4, 5}
+
+	s1 := slice[2:]
+	s2 := slice[:0]
+
+	fmt.Printf("%v\n", s1)
+	fmt.Printf("%v\n", s2)
+
+	bt := []byte{1, 2, 3, 4, 5, 6}
+	fmt.Printf("%v\n", bt)
+
+	buff := &bytes.Buffer{}
+	buff.Write(bt)
+	fmt.Printf("%v\n", buff.Bytes())
+
+	buff.Reset()
+	fmt.Printf("%v\n", buff.Bytes())
+
+}
+
+func TestSli4(t *testing.T) {
+	bt := []byte{1, 2, 3, 4, 5, 6}
+
+	buff := &bytes.Buffer{}
+
+	buff.Write(bt)
+	sli1 := buff.Bytes()
+	fmt.Printf("%v\n", sli1)
+
+	buff.Reset()
+	bt2 := []byte{9, 8, 7, 6}
+	buff.Write(bt2) // 会覆盖上方的sli1
+	sli2 := buff.Bytes()
+	fmt.Printf("%v\n", sli2)
+	fmt.Printf("%v\n", sli1)
 }

@@ -47,3 +47,8 @@ func Test_string3(t *testing.T) {
 	str2 := "Hello"
 	fmt.Println(strings.Compare(str1, str2))
 }
+
+func Test_string4(t *testing.T) {
+	str := "a,b,c,d"
+	fmt.Println(strings.CutSuffix(str, ","))
+}

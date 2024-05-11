@@ -10,6 +10,7 @@
         "request": "launch",
         "mode": "debug",
         "program": "${file}",
+        "args": ["-a1","a1a1","a=AAA","b=BBB"],
         "env": {
             // "CGO_CFLAGS": "-I/home/houzw/document/golang_project/clidriver/include",
             // "CGO_LDFLAGS": "-L/home/houzw/document/golang_project/clidriver/lib",
@@ -30,7 +31,9 @@
             "env": {
                 "CGO_CFLAGS": "-I/home/houzw/document/golang_project/pkg/mod/github.com/ibmdb/clidriver/include",
                 "CGO_LDFLAGS": "-L/home/houzw/document/golang_project/pkg/mod/github.com/ibmdb/clidriver/lib",
-                "LD_LIBRARY_PATH": "/home/houzw/document/golang_project/pkg/mod/github.com/ibmdb/clidriver/lib"
+                "LD_LIBRARY_PATH": "/home/houzw/document/golang_project/pkg/mod/github.com/ibmdb/clidriver/lib",
+                "DB2CODEPAGE": "1386",
+                "LANG": "zh_CN.gbk"
             }
         },
         {

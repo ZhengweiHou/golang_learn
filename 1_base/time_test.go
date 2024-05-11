@@ -16,3 +16,10 @@ func TestTime1(t *testing.T) {
 	time.Sleep(du)
 	fmt.Println(time.Now())
 }
+func TestTime2(t *testing.T) {
+
+	for i := 1; i < 3; i++ {
+		fmt.Printf("%T,%d\n", i, i)
+		time.Sleep(time.Duration(i) * time.Second)
+	}
+}

@@ -1,4 +1,4 @@
-package main
+package http
 
 import (
 	"fmt"
@@ -10,7 +10,6 @@ import (
 )
 
 func TestHttpClient1(t *testing.T) {
-
 	client := &http.Client{}
 	client.Timeout = time.Second * 2
 

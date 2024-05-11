@@ -1,9 +1,11 @@
-package main
+package db2
 
 import (
 	"database/sql"
+	"encoding/hex"
 	"fmt"
 	"log"
+	"os"
 	"testing"
 	"time"
 
@@ -93,10 +95,41 @@ func TestSelect2(t *testing.T) {
 	db, _ := sql.Open("go_ibm_db", dataSourceName)
 	rows, _ := db.Query("select * from TT2")
 
+	var id int
+	var name string
 	for rows.Next() {
-		var id int
-		var name string
 		rows.Scan(&id, &name)
 		fmt.Printf("id:%v, name:%v\n", id, name)
+	}
+}
+
+func TestSelect3(t *testing.T) {
+	// DB2CODEPAGE=1208  utf8
+	os.Setenv("DB2CODEPAGE", "1386")
+	// dataSourceName := "HOSTNAME=db2host.cn;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST"
+	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST"
+	db, _ := sql.Open("go_ibm_db", dataSourceName)
+	rows, _ := db.Query("select name from student3 where id=725")
+	// var id int
+	var name string
+	for rows.Next() {
+		// rows.Scan(&id, &name)
+		rows.Scan(&name)
+		hexnameStr := hex.EncodeToString([]byte(name))
+		fmt.Printf("name:%s\nhex:%s\n", name, hexnameStr)
+	}
+
+	// DB2CODEPAGE=1386  gbk
+	// os.Setenv("DB2CODEPAGE", "1386")
+	dataSourceName2 := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST;DB2CODEPAGE=1386"
+	db2, _ := sql.Open("go_ibm_db", dataSourceName2)
+	rows2, _ := db2.Query("select name from student3 where id=725")
+	// var id int
+	var name2 string
+	for rows2.Next() {
+		// rows.Scan(&id, &name)
+		rows2.Scan(&name2)
+		hexnameStr2 := hex.EncodeToString([]byte(name2))
+		fmt.Printf("name:%s\nhex:%s\n", name2, hexnameStr2)
 	}
 }

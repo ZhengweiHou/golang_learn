@@ -1,16 +1,15 @@
-package main
+package avro
 
 import (
 	"fmt"
-	"io/ioutil"
 	"testing"
 
 	"github.com/linkedin/goavro"
 	log "github.com/sirupsen/logrus"
 )
 
-func Test_avro(t *testing.T) {
-	data, err := ioutil.ReadFile("/home/houzw/temp/output.dat")
+func Test_avro1(t *testing.T) {
+	data, err := io.ReadFile("/home/houzw/temp/output.dat")
 	if err != nil {
 		fmt.Println("Error reading file:", err)
 		return

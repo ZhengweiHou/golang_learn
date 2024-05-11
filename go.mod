@@ -2,12 +2,14 @@ module hzw/golang_learn
 
 go 1.18
 
+replace github.com/ibmdb/go_ibm_db => ../go_ibm_db
+
 require (
 	github.com/axgle/mahonia v0.0.0-20180208002826-3358181d7394
 	github.com/bigwhite/gocmpp v0.0.0-20211222141015-e6111341341a
 	github.com/go-sql-driver/mysql v1.7.0
 	// github.com/ibmdb/go_ibm_db v0.4.2
-	github.com/ibmdb/go_ibm_db v0.4.4
+	// github.com/ibmdb/go_ibm_db v0.4.5
 	github.com/mattn/go-sqlite3 v1.14.16
 	github.com/prometheus/client_golang v1.15.1
 	github.com/saintfish/chardet v0.0.0-20230101081208-5e3ef4b5456d
@@ -23,12 +25,15 @@ require (
 
 require (
 	github.com/IBM/sarama v1.42.1
+	github.com/bytedance/sonic v1.9.1
 	github.com/gin-gonic/gin v1.9.1
+	github.com/ibmdb/go_ibm_db v0.0.0-00010101000000-000000000000
 	github.com/linkedin/goavro v2.1.0+incompatible
 	github.com/looplab/fsm v1.0.1
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/thmeitz/ksqldb-go v0.1.0
 	github.com/viant/dsc v0.16.3
+	golang.org/x/time v0.0.0-20191024005414-555d28b269f0
 )
 
 require (
@@ -38,7 +43,6 @@ require (
 	github.com/antlr/antlr4/runtime/Go/antlr/v4 v4.0.0-20230321174746-8dcc6526cfb1 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/blend/go-sdk v1.20220411.3 // indirect
-	github.com/bytedance/sonic v1.9.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
@@ -90,7 +94,7 @@ require (
 	golang.org/x/arch v0.3.0 // indirect
 	golang.org/x/crypto v0.14.0 // indirect
 	golang.org/x/exp v0.0.0-20220722155223-a9213eeb770e // indirect
-	golang.org/x/image v0.9.0 // indirect
+	golang.org/x/image v0.11.0 // indirect
 	golang.org/x/net v0.17.0 // indirect
 	golang.org/x/oauth2 v0.6.0 // indirect
 	golang.org/x/sys v0.13.0 // indirect

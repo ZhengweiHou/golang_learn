@@ -1,8 +1,11 @@
-package main
+package hzwinterface
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func main() {
+func TestIntRef1(t *testing.T) {
 	// 接口测试
 	var pI MyInterface1
 	pI = &Person1{age: 20, name: "李四"}
