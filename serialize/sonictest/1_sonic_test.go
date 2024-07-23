@@ -42,13 +42,13 @@ func Test2(t *testing.T) {
 	buff := &bytes.Buffer{}
 
 	buff.Write(bt)
-	sil1 := buff.Bytes()
-	fmt.Printf("%v\n", sil1)
+	sil1 := buff.Bytes()     // sil1 的指针和 buff.buf 一致
+	fmt.Printf("%v\n", sil1) // 此时 sil1 的内容确实为1，2，3，4，5，6
 
 	buff.Reset()
 	bt2 := []byte{9, 8, 7, 6}
-	buff.Write(bt2)
-	sil2 := buff.Bytes()
+	buff.Write(bt2)      // 此时buff.buf的前四位被替换成了 9，8，7，6
+	sil2 := buff.Bytes() // sil2 值为 9，8，7，6  此处的sil2 和上面 sil1 的第一个元素的地址是相同的
 	fmt.Printf("%v\n", sil2)
 	fmt.Printf("%v\n", sil1)
 }

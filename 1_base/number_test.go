@@ -73,3 +73,11 @@ func strToFloatTest(str string) {
 	fmt.Printf("isEqual:%t\n\n", a.Equal(b))
 
 }
+
+func TestIntxx(t *testing.T) {
+	i := 0
+	i += 1
+	fmt.Printf("%d\n", i)
+	i++
+	fmt.Printf("%d\n", i)
+}

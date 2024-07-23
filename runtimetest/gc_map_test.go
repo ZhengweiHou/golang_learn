@@ -13,9 +13,8 @@ func TestGcMap1(t *testing.T) {
 
 	rslice := mapPush(rmap)
 
-	rb, _ := json.Marshal(rslice)
-
 	rmap["k1"] = "v2"
+	rb, _ := json.Marshal(rslice)
 
 	fmt.Printf("%s\n", rb)
 }

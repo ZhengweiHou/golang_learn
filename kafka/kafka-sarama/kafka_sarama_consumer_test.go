@@ -1,10 +1,7 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"os"
-	"os/signal"
 	"strings"
 	"testing"
 	"time"
@@ -14,7 +11,7 @@ import (
 	"github.com/IBM/sarama"
 )
 
-func Test_sar_consume2(t *testing.T) {
+func Test_sar_consume3(t *testing.T) {
 	topic := "notexisttopic"
 	cs, err := sarama.NewConsumer([]string{"localhost:9092"}, nil)
 	ps, err := cs.Partitions(topic)
@@ -34,7 +31,7 @@ func Test_sar_consume2(t *testing.T) {
 	}
 }
 
-func Test_produce_batch1(t *testing.T) {
+func Test_produce_batch3(t *testing.T) {
 	config := sarama.NewConfig()
 	config.Producer.Partitioner = sarama.NewHashPartitioner
 	config.Producer.Return.Successes = true
