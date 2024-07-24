@@ -11,6 +11,7 @@ import (
 
 	"github.com/axgle/mahonia"
 	_ "github.com/ibmdb/go_ibm_db"
+	"golang.org/x/text/encoding/simplifiedchinese"
 )
 
 func TestSelect1(t *testing.T) {
@@ -120,12 +121,18 @@ func TestSelect4(t *testing.T) {
 	fmt.Printf("DB2CODEPAGE:%s\n", os.Getenv("DB2CODEPAGE"))
 	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;CurrentSchema=TEST;"
 	db, _ := sql.Open("go_ibm_db", dataSourceName)
-	rows, _ := db.Query("select id,name from student3 where id=4")
+	rows, _ := db.Query("select id,name from student3 where id in (1,2,3)")
 	var id int
 	var name string
 	for rows.Next() {
 		rows.Scan(&id, &name)
 		hexnameStr := hex.EncodeToString([]byte(name))
-		fmt.Printf("hexname:%s\nid:%d\nname:%s\n", hexnameStr, id, name)
+		fmt.Printf("hexname:%s,id:%d,name:%s\n", hexnameStr, id, name)
+
+		// tname, _ := io.ReadAll(transform.NewReader(bytes.NewBuffer([]byte(name)), unicode.UTF8.NewEncoder()))
+		// tname, _ := io.ReadAll(transform.NewReader(bytes.NewBuffer([]byte(name)), simplifiedchinese.GBK.NewDecoder()))
+		tname, _ := simplifiedchinese.GBK.NewDecoder().Bytes([]byte(name))
+		thexnameStr := hex.EncodeToString([]byte(tname))
+		fmt.Printf("hexname:%s,id:%d,name:%s\n", thexnameStr, id, tname)
 	}
 }

@@ -4,10 +4,13 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"io"
 	"sync"
 	"testing"
 
 	"github.com/bytedance/sonic"
+	"golang.org/x/text/encoding/simplifiedchinese"
+	"golang.org/x/text/transform"
 )
 
 var dTKSBufferPool = sync.Pool{
@@ -70,5 +73,19 @@ func Test3(t *testing.T) {
 	fmt.Printf("%s\n", strJSON)
 	strJSON, _ = json.Marshal(map1)
 	fmt.Printf("%s\n", strJSON)
+
+}
+
+func Test4(t *testing.T) {
+	map1 := make(map[string]interface{}, 0)
+	map1["k1"] = "hello"
+	map1["k2"] = "孙悟空"
+
+	strSonic, _ := sonic.Marshal(map1)
+	fmt.Printf("%s\n", strSonic)
+
+	reader := transform.NewReader(bytes.NewBuffer(strSonic), simplifiedchinese.GBK.NewEncoder())
+	newstr, _ := io.ReadAll(reader)
+	fmt.Printf("%s\n", newstr)
 
 }
