@@ -104,38 +104,28 @@ func TestSelect2(t *testing.T) {
 }
 
 func TestSelect3(t *testing.T) {
-	// DB2CODEPAGE=1208  utf8
-	os.Setenv("DB2CODEPAGE", "1386")
-	// dataSourceName := "HOSTNAME=db2host.cn;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST"
-	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST"
+	fmt.Printf("DB2CODEPAGE:%s\n", os.Getenv("DB2CODEPAGE"))
+	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;CurrentSchema=TEST;"
 	db, _ := sql.Open("go_ibm_db", dataSourceName)
-	rows, _ := db.Query("select name from student3 where id=724")
-	// var id int
+	rows, _ := db.Query("select id,name from student3 where id in (1,2,3)")
+	var id int
 	var name string
 	for rows.Next() {
-		// rows.Scan(&id, &name)
-		rows.Scan(&name)
+		rows.Scan(&id, &name)
 		hexnameStr := hex.EncodeToString([]byte(name))
-		fmt.Printf("name:%s\nhex:%s\n", name, hexnameStr)
+		fmt.Printf("hexname:%s,id:%d,name:%s\n", hexnameStr, id, name)
 	}
-
-	// DB2CODEPAGE=1386  gbk
-	// os.Setenv("DB2CODEPAGE", "1386")
-	// dataSourceName2 := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST;DB2CODEPAGE=1386"
-	dataSourceName2 := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST;DisableUnicode=1;ReadOnlyConnection=1"
-	db2, _ := sql.Open("go_ibm_db", dataSourceName2)
-	rows2, _ := db2.Query("select name from student3 where id=724")
-	// var id int
-	var name2 string
-	for rows2.Next() {
-		// rows.Scan(&id, &name)
-		rows2.Scan(&name2)
-		hexnameStr2 := hex.EncodeToString([]byte(name2))
-		fmt.Printf("name:%s\nhex:%s\n", name2, hexnameStr2)
-	}
-
-	_, err := db2.Exec("update student3 set name='zzzz1' where id=723")
-	if err != nil {
-		t.Fatal(err)
+}
+func TestSelect4(t *testing.T) {
+	fmt.Printf("DB2CODEPAGE:%s\n", os.Getenv("DB2CODEPAGE"))
+	dataSourceName := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1;CurrentSchema=TEST;"
+	db, _ := sql.Open("go_ibm_db", dataSourceName)
+	rows, _ := db.Query("select id,name from student3 where id=4")
+	var id int
+	var name string
+	for rows.Next() {
+		rows.Scan(&id, &name)
+		hexnameStr := hex.EncodeToString([]byte(name))
+		fmt.Printf("hexname:%s\nid:%d\nname:%s\n", hexnameStr, id, name)
 	}
 }
