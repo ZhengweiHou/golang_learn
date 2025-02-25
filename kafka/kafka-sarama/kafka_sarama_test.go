@@ -16,6 +16,7 @@ import (
 )
 
 const (
+	// brokerList = "localhost:9092" // Kafka broker 地址
 	brokerList = "localhost:9092" // Kafka broker 地址
 	topic      = "hzwkfk_topic"   // Kafka 主题名称
 	// groupID    = "hzwkfk-group"   // 消费者组 ID
@@ -206,6 +207,7 @@ func Test_produce_batch1(t *testing.T) {
 	config := sarama.NewConfig()
 	config.Producer.Partitioner = sarama.NewHashPartitioner
 	config.Producer.Return.Successes = true
+	config.Producer.RequiredAcks = 0
 	// sarama.NewClient(addrs []string, conf *sarama.Config)
 
 	// 创建 Kafka 生产者
@@ -226,7 +228,7 @@ func Test_produce_batch1(t *testing.T) {
 	// rd := rand.New(rand.NewSource(time.Now().UnixNano()))
 	msgs := make([]*sarama.ProducerMessage, 0)
 
-	for n := 0; n < 20; n++ {
+	for n := 0; n < 10; n++ {
 		// i := rd.Intn(10)
 		i := n
 
