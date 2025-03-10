@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../golang/atlas"
+		},
+		{
+			"path": "../../../../../golang/ent"
+		}
+	],
+    "settings": {
+        "go.useLanguageServer": true,
+        "go.languageServerFlags": [
+            "-rpc.trace",
+            "serve",
+            "--debug=localhost:6060"
+        ]
+    }
+}
