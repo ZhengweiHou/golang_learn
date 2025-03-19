@@ -213,13 +213,4 @@ func TestQuery(t *testing.T) {
 	}
 	log.Printf("2: student query field selection: %v", v)
 
-	// 使用map接收
-	var m []map[string]interface{}
-	err = client.Student.Query().
-		Select(student.FieldName, student.FieldAge).Scan(ctx, &m)
-	if err != nil {
-		log.Fatalf("failed querying users: %v", err)
-	}
-	log.Printf("3: student query field selection: %v", m)
-
 }
