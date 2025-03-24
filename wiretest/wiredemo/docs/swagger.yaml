@@ -1,0 +1,171 @@
+definitions:
+  model.Hzw:
+    properties:
+      age:
+        type: integer
+      createdAt:
+        description: CreatedAt is a field that contains create time
+        type: string
+      decimal1:
+        type: number
+      id:
+        description: gorm.Model      // this is a struct that contains ID, CreatedAt,
+          UpdatedAt, DeletedAt
+        type: integer
+      name:
+        type: string
+      time1:
+        description: AUTOUPDATETIME means update time when update, like UpdatedAt
+        type: string
+      time2:
+        description: AUTOCREATETIME means create time when insert, like CreatedAt
+        type: string
+      time3:
+        type: string
+      updatedAt:
+        description: UpdatedAt is a field that contains update time
+        type: string
+      version:
+        type: integer
+    type: object
+info:
+  contact: {}
+  description: This is a sample server celler server.
+  title: wire demo API
+  version: 1.0.0
+paths:
+  /hzw:
+    get:
+      consumes:
+      - application/json
+      description: 根据ID查询Hzw对象
+      parameters:
+      - description: Hzw ID
+        in: query
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Hzw'
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: 根据ID查询Hzw
+      tags:
+      - hzw
+    put:
+      consumes:
+      - application/json
+      description: 创建新的Hzw对象
+      parameters:
+      - description: Hzw信息
+        in: body
+        name: hzw
+        required: true
+        schema:
+          $ref: '#/definitions/model.Hzw'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Hzw'
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: 创建Hzw
+      tags:
+      - hzw
+  /hzwtxtest:
+    put:
+      consumes:
+      - application/json
+      description: 创建新的Hzw对象
+      parameters:
+      - description: Hzw信息
+        in: body
+        name: hzw
+        required: true
+        schema:
+          $ref: '#/definitions/model.Hzw'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Hzw'
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: 创建Hzw
+      tags:
+      - hzw
+  /hzwwithtx:
+    put:
+      consumes:
+      - application/json
+      description: 创建新的Hzw对象
+      parameters:
+      - description: Hzw信息
+        in: body
+        name: hzw
+        required: true
+        schema:
+          $ref: '#/definitions/model.Hzw'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Hzw'
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: 创建Hzw
+      tags:
+      - hzw
+swagger: "2.0"

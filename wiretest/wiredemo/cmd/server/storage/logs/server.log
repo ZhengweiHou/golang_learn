@@ -1,0 +1,327 @@
+2025-03-21 13:43:27.243668754	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-21 13:43:27.243938063	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:43	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-21 13:47:35.080166926	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-21 13:47:35.080291912	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:43	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-21 13:48:57.468736000	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-21 13:48:57.468906946	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:43	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-21 13:52:28.610257660	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-21 13:52:28.610397254	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:43	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-21 13:53:46.327485116	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:27	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-21 13:53:46.327797275	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:28	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-21 14:24:01.323200224	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-21 14:24:01.323316139	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-21 18:29:40.367541887	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-21 18:29:40.367720963	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-21 18:31:14.238839035	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-21 18:31:14.238990662	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 09:13:04.902726254	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/db.go:27	failed to initialize database, got error SQLDriverConnect: {57019} [IBM][CLI Driver] SQL1035N  The operation failed because the specified database cannot be connected to in the mode requested.  SQLSTATE=57019
+
+wiredemo/pkg/db.NewDB
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/db.go:27
+wiredemo/cmd/server/wire.NewWire
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/wire/wire_gen.go:26
+main.main
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:39
+runtime.main
+	/opt/golangs/go/src/runtime/proc.go:283
+2025-03-24 09:13:50.637465545	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 09:13:50.637570102	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 09:14:46.251906516	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 09:14:46.252055540	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 09:15:19.990146781	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 09:15:19.990278641	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 09:15:32.202870237	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 09:15:32.203047628	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 09:15:43.310277015	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:46	trace	{"elapsed": "9.635ms", "rows": 1, "sql": "SELECT * FROM hzw WHERE hzw.id = 2"}
+2025-03-24 09:16:33.633824231	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 09:16:33.633944387	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 09:17:05.850991893	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:46	trace	{"elapsed": "20.613ms", "rows": 1, "sql": "SELECT * FROM hzw WHERE hzw.id = 2"}
+2025-03-24 09:17:39.536790058	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:46	trace	{"elapsed": "0.957ms", "rows": 1, "sql": "SELECT * FROM hzw WHERE hzw.id = 2"}
+2025-03-24 09:17:58.359869117	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:46	trace	{"elapsed": "0.921ms", "rows": 1, "sql": "SELECT * FROM hzw WHERE hzw.id = 1"}
+2025-03-24 09:18:51.921204510	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:46	trace	{"elapsed": "1.006ms", "rows": 1, "sql": "SELECT * FROM hzw WHERE hzw.id = 1"}
+2025-03-24 09:20:35.540610679	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:36	trace	{"elapsed": "69.345ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙',22,0,'2025-03-24 09:20:35.471','2025-03-24 09:20:35.471','2025-03-24 09:20:35.471','2025-03-24 09:20:35.471','0000-00-00 00:00:00',0))"}
+2025-03-24 09:21:21.551294236	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:36	trace	{"elapsed": "1.626ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙',22,0,'2025-03-24 09:21:21.55','2025-03-24 09:21:21.55','2025-03-24 09:21:21.55','2025-03-24 09:21:21.55','0000-00-00 00:00:00',0))"}
+2025-03-24 09:21:37.049051082	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:36	trace	{"elapsed": "1.005ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙',22,0,'2025-03-24 09:21:37.048','2025-03-24 09:21:37.048','2025-03-24 09:21:37.048','2025-03-24 09:21:37.048','0000-00-00 00:00:00',0))"}
+2025-03-24 09:22:41.575392585	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:36	trace	{"elapsed": "0.880ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙',111,0,'2025-03-24 09:22:41.575','2025-03-24 09:22:41.575','2025-03-24 09:22:41.575','2025-03-24 09:22:41.575','0000-00-00 00:00:00',0))"}
+2025-03-24 09:44:35.867896883	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 09:44:35.868015913	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 09:45:00.159812777	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:46	trace	{"elapsed": "21.296ms", "rows": 1, "sql": "SELECT * FROM hzw WHERE hzw.id = 1"}
+2025-03-24 09:45:04.851079296	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 09:45:04.927013759	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:36	trace	{"elapsed": "75.824ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙',111,0,'2025-03-24 09:45:04.851','2025-03-24 09:45:04.851','2025-03-24 09:45:04.851','2025-03-24 09:45:04.851','0000-00-00 00:00:00',0))"}
+2025-03-24 09:47:35.205726819	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 09:47:35.205849989	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 09:47:39.747637421	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 09:47:39.819233322	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "71.500ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙',111,0,'2025-03-24 09:47:39.748','2025-03-24 09:47:39.748','2025-03-24 09:47:39.748','2025-03-24 09:47:39.748','0000-00-00 00:00:00',0))"}
+2025-03-24 09:47:57.118290269	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:52	新事务
+2025-03-24 09:47:57.124393739	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:44	trace	{"elapsed": "5.977ms", "rows": 1, "sql": "SELECT * FROM hzw WHERE hzw.id = 1"}
+2025-03-24 10:00:25.548143756	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 10:00:25.548267160	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 10:00:28.439587827	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:52	新事务
+2025-03-24 10:00:28.460054402	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:44	trace	{"elapsed": "20.312ms", "rows": 1, "sql": "SELECT * FROM hzw WHERE hzw.id = 1"}
+2025-03-24 10:00:32.704928144	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:62	开启事务
+2025-03-24 10:00:32.705000363	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 10:00:32.775898873	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "70.847ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙',111,0,'2025-03-24 10:00:32.705','2025-03-24 10:00:32.705','2025-03-24 10:00:32.705','2025-03-24 10:00:32.705','0000-00-00 00:00:00',0))"}
+2025-03-24 10:06:51.963387923	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 10:06:51.963542910	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 10:06:53.596111502	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 10:06:53.596195340	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 10:06:53.612534654	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:44	trace	{"elapsed": "16.250ms", "rows": 1, "sql": "SELECT * FROM hzw WHERE hzw.id = 1"}
+2025-03-24 10:59:49.125512625	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 10:59:49.125708770	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 11:01:05.641395014	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 11:01:05.641598942	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 11:01:38.050070251	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:01:38.050131723	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:01:38.058573971	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "8.393ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 11:01:38.05','2025-03-24 11:01:38.05','2025-03-24 11:01:38.05','2025-03-24 11:01:38.05','0000-00-00 00:00:00',0))"}
+2025-03-24 11:01:38.058634771	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:68	hzw1:&{121 小恐龙111 111 0 2025-03-24 11:01:38.05 +0800 CST 2025-03-24 11:01:38.05 +0800 CST 2025-03-24 11:01:38.05 +0800 CST 2025-03-24 11:01:38.05 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 11:01:38.062644013	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:01:38.062689512	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:01:56.475275515	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 11:01:56.475468366	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 11:02:00.257583549	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:02:00.257677881	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:02:00.259734699	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "1.992ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 11:02:00.259','2025-03-24 11:02:00.259','2025-03-24 11:02:00.259','2025-03-24 11:02:00.259','0000-00-00 00:00:00',0))"}
+2025-03-24 11:02:00.259814785	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:68	hzw1:&{122 小恐龙111 111 0 2025-03-24 11:02:00.259 +0800 CST 2025-03-24 11:02:00.259 +0800 CST 2025-03-24 11:02:00.259 +0800 CST 2025-03-24 11:02:00.259 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 11:02:00.263911879	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:02:00.263964828	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:04:13.680320090	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 11:04:13.680470833	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 11:04:16.289088356	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:04:16.289154034	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:04:16.290812130	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "1.596ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 11:04:16.289','2025-03-24 11:04:16.289','2025-03-24 11:04:16.289','2025-03-24 11:04:16.289','0000-00-00 00:00:00',0))"}
+2025-03-24 11:05:04.215863756	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 11:05:04.215980488	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 11:05:20.211937608	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:05:20.211996879	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:05:20.213250700	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "1.200ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 11:05:20.212','2025-03-24 11:05:20.212','2025-03-24 11:05:20.212','2025-03-24 11:05:20.212','0000-00-00 00:00:00',0))"}
+2025-03-24 11:05:22.630884809	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:68	hzw1:&{124 小恐龙111 111 0 2025-03-24 11:05:20.212 +0800 CST 2025-03-24 11:05:20.212 +0800 CST 2025-03-24 11:05:20.212 +0800 CST 2025-03-24 11:05:20.212 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 11:05:22.635708482	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:05:22.635781724	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:05:22.636617170	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "0.773ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('222',222,0,'2025-03-24 11:05:22.636','2025-03-24 11:05:22.636','2025-03-24 11:05:22.636','2025-03-24 11:05:22.636','0000-00-00 00:00:00',0))"}
+2025-03-24 11:05:22.636656729	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:79	hzw2:&{124 小恐龙111 111 0 2025-03-24 11:05:20.212 +0800 CST 2025-03-24 11:05:20.212 +0800 CST 2025-03-24 11:05:20.212 +0800 CST 2025-03-24 11:05:20.212 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 11:05:22.636912056	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:05:22.636936476	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:05:22.637491532	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "0.520ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('333',333,0,'2025-03-24 11:05:22.637','2025-03-24 11:05:22.637','2025-03-24 11:05:22.637','2025-03-24 11:05:22.637','0000-00-00 00:00:00',0))"}
+2025-03-24 11:05:22.637526875	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:93	hzw3:&{124 小恐龙111 111 0 2025-03-24 11:05:20.212 +0800 CST 2025-03-24 11:05:20.212 +0800 CST 2025-03-24 11:05:20.212 +0800 CST 2025-03-24 11:05:20.212 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 11:07:03.377642024	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 11:07:03.377801577	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 11:07:06.916973641	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:07:06.917029732	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:07:06.918232194	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "1.154ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 11:07:06.917','2025-03-24 11:07:06.917','2025-03-24 11:07:06.917','2025-03-24 11:07:06.917','0000-00-00 00:00:00',0))"}
+2025-03-24 11:07:16.189854930	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:67	hzw1:&{127 小恐龙111 111 0 2025-03-24 11:07:06.917 +0800 CST 2025-03-24 11:07:06.917 +0800 CST 2025-03-24 11:07:06.917 +0800 CST 2025-03-24 11:07:06.917 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 11:07:16.195571617	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:07:37.054786599	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:07:37.055918766	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "1.002ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('222',222,0,'2025-03-24 11:07:37.055','2025-03-24 11:07:37.055','2025-03-24 11:07:37.055','2025-03-24 11:07:37.055','0000-00-00 00:00:00',0))"}
+2025-03-24 11:08:08.535351493	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:78	hzw2:&{127 小恐龙111 111 0 2025-03-24 11:07:06.917 +0800 CST 2025-03-24 11:07:06.917 +0800 CST 2025-03-24 11:07:06.917 +0800 CST 2025-03-24 11:07:06.917 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 11:08:08.549373701	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:08:08.549440489	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:08:08.550408037	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "0.908ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('333',333,0,'2025-03-24 11:08:08.549','2025-03-24 11:08:08.549','2025-03-24 11:08:08.549','2025-03-24 11:08:08.549','0000-00-00 00:00:00',0))"}
+2025-03-24 11:08:08.550454149	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:93	hzw3:&{127 小恐龙111 111 0 2025-03-24 11:07:06.917 +0800 CST 2025-03-24 11:07:06.917 +0800 CST 2025-03-24 11:07:06.917 +0800 CST 2025-03-24 11:07:06.917 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 11:08:42.498935559	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 11:08:42.499097641	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 11:08:52.115506481	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:08:52.115571318	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:08:52.116830021	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "1.202ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 11:08:52.116','2025-03-24 11:08:52.116','2025-03-24 11:08:52.116','2025-03-24 11:08:52.116','0000-00-00 00:00:00',0))"}
+2025-03-24 11:08:52.116893170	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:68	hzw1:&{130 小恐龙111 111 0 2025-03-24 11:08:52.116 +0800 CST 2025-03-24 11:08:52.116 +0800 CST 2025-03-24 11:08:52.116 +0800 CST 2025-03-24 11:08:52.116 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 11:08:52.121612468	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:08:52.121684653	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:08:52.122677096	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "0.941ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('222',222,0,'2025-03-24 11:08:52.122','2025-03-24 11:08:52.122','2025-03-24 11:08:52.122','2025-03-24 11:08:52.122','0000-00-00 00:00:00',0))"}
+2025-03-24 11:08:52.122737372	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:79	hzw2:&{131 222 222 0 2025-03-24 11:08:52.122 +0800 CST 2025-03-24 11:08:52.122 +0800 CST 2025-03-24 11:08:52.122 +0800 CST 2025-03-24 11:08:52.122 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 11:08:52.123130800	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:63	开启事务
+2025-03-24 11:08:52.123399371	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:48	已开启事务
+2025-03-24 11:08:52.124138460	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "0.678ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('333',333,0,'2025-03-24 11:08:52.123','2025-03-24 11:08:52.123','2025-03-24 11:08:52.123','2025-03-24 11:08:52.123','0000-00-00 00:00:00',0))"}
+2025-03-24 11:08:52.124176284	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:94	hzw3:&{132 333 333 0 2025-03-24 11:08:52.123 +0800 CST 2025-03-24 11:08:52.123 +0800 CST 2025-03-24 11:08:52.123 +0800 CST 2025-03-24 11:08:52.123 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 14:35:34.418458844	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 14:35:34.418813212	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 14:36:16.728425944	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:50	已开启事务
+2025-03-24 14:36:16.731974748	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "3.143ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 14:36:16.729','2025-03-24 14:36:16.729','2025-03-24 14:36:16.729','2025-03-24 14:36:16.729','0000-00-00 00:00:00',0))"}
+2025-03-24 14:36:16.732071814	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:115	hzw:&{133 小恐龙111 111 0 2025-03-24 14:36:16.729 +0800 CST 2025-03-24 14:36:16.729 +0800 CST 2025-03-24 14:36:16.729 +0800 CST 2025-03-24 14:36:16.729 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 14:36:16.732088744	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:86	事务提交
+2025-03-24 14:37:35.242733244	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:50	已开启事务
+2025-03-24 14:37:35.245919887	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"error": "SQLExecute: {23505} [IBM][CLI Driver][DB2/LINUXX8664] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by \"1\" constrains table \"ENTTEST.HZW\" from having duplicate values for the index key.  SQLSTATE=23505\n", "elapsed": "3.039ms", "rows": 0, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1,id) VALUES ('小恐龙111',111,0,'2025-03-24 14:37:35.243','2025-03-24 14:37:35.243','2025-03-24 14:37:35.243','2025-03-24 14:37:35.243','0000-00-00 00:00:00',0,133))"}
+wiredemo/internal/repository.(*HzwDao).InsertOne
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34
+wiredemo/internal/service.(*HzwService).CreateHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:111
+wiredemo/internal/controller.(*HzwController).SaveHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/controller/hzwcontroller.go:125
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589
+net/http.serverHandler.ServeHTTP
+	/opt/golangs/go/src/net/http/server.go:3301
+net/http.(*conn).serve
+	/opt/golangs/go/src/net/http/server.go:2102
+2025-03-24 14:37:35.246003688	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:86	事务提交
+2025-03-24 14:38:24.568587616	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:50	已开启事务
+2025-03-24 14:38:24.570008872	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"error": "SQLExecute: {23505} [IBM][CLI Driver][DB2/LINUXX8664] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by \"1\" constrains table \"ENTTEST.HZW\" from having duplicate values for the index key.  SQLSTATE=23505\n", "elapsed": "1.259ms", "rows": 0, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1,id) VALUES ('小恐龙111',111,0,'2025-03-24 14:38:24.569','2025-03-24 14:38:24.569','2025-03-24 14:38:24.569','2025-03-24 14:38:24.569','0000-00-00 00:00:00',0,133))"}
+wiredemo/internal/repository.(*HzwDao).InsertOne
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34
+wiredemo/internal/service.(*HzwService).CreateHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:111
+wiredemo/internal/controller.(*HzwController).SaveHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/controller/hzwcontroller.go:125
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589
+net/http.serverHandler.ServeHTTP
+	/opt/golangs/go/src/net/http/server.go:3301
+net/http.(*conn).serve
+	/opt/golangs/go/src/net/http/server.go:2102
+2025-03-24 14:46:38.946771225	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 14:46:38.947375529	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 14:46:42.458568851	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:50	已开启事务
+2025-03-24 14:46:42.460588050	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"error": "SQLExecute: {23505} [IBM][CLI Driver][DB2/LINUXX8664] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by \"1\" constrains table \"ENTTEST.HZW\" from having duplicate values for the index key.  SQLSTATE=23505\n", "elapsed": "1.896ms", "rows": 0, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1,id) VALUES ('小恐龙111',111,0,'2025-03-24 14:46:42.459','2025-03-24 14:46:42.459','2025-03-24 14:46:42.459','2025-03-24 14:46:42.459','0000-00-00 00:00:00',0,133))"}
+wiredemo/internal/repository.(*HzwDao).InsertOne
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34
+wiredemo/internal/service.(*HzwService).CreateHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:113
+wiredemo/internal/controller.(*HzwController).SaveHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/controller/hzwcontroller.go:125
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589
+net/http.serverHandler.ServeHTTP
+	/opt/golangs/go/src/net/http/server.go:3301
+net/http.(*conn).serve
+	/opt/golangs/go/src/net/http/server.go:2102
+2025-03-24 14:46:50.568200239	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:83	事务回滚
+2025-03-24 14:54:14.484154300	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 14:54:14.484569252	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 14:54:18.846185422	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:54	新事务
+2025-03-24 14:54:18.852464510	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"error": "SQLExecute: {23505} [IBM][CLI Driver][DB2/LINUXX8664] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by \"1\" constrains table \"ENTTEST.HZW\" from having duplicate values for the index key.  SQLSTATE=23505\n", "elapsed": "6.156ms", "rows": 0, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1,id) VALUES ('小恐龙111',111,0,'2025-03-24 14:54:18.847','2025-03-24 14:54:18.847','2025-03-24 14:54:18.847','2025-03-24 14:54:18.847','0000-00-00 00:00:00',0,133))"}
+wiredemo/internal/repository.(*HzwDao).InsertOne
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34
+wiredemo/internal/service.(*HzwService).CreateHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:113
+wiredemo/internal/controller.(*HzwController).SaveHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/controller/hzwcontroller.go:125
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589
+net/http.serverHandler.ServeHTTP
+	/opt/golangs/go/src/net/http/server.go:3301
+net/http.(*conn).serve
+	/opt/golangs/go/src/net/http/server.go:2102
+2025-03-24 14:55:57.324041703	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:54	新事务
+2025-03-24 14:55:57.330017356	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "5.839ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 14:55:57.324','2025-03-24 14:55:57.324','2025-03-24 14:55:57.324','2025-03-24 14:55:57.324','0000-00-00 00:00:00',0))"}
+2025-03-24 14:55:57.330082568	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:117	hzw:&{134 小恐龙111 111 0 2025-03-24 14:55:57.324 +0800 CST 2025-03-24 14:55:57.324 +0800 CST 2025-03-24 14:55:57.324 +0800 CST 2025-03-24 14:55:57.324 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 14:56:03.428725635	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:54	新事务
+2025-03-24 14:56:03.433253090	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "4.418ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 14:56:03.429','2025-03-24 14:56:03.429','2025-03-24 14:56:03.429','2025-03-24 14:56:03.429','0000-00-00 00:00:00',0))"}
+2025-03-24 14:56:03.433334496	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:117	hzw:&{135 小恐龙111 111 0 2025-03-24 14:56:03.429 +0800 CST 2025-03-24 14:56:03.429 +0800 CST 2025-03-24 14:56:03.429 +0800 CST 2025-03-24 14:56:03.429 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0}
+2025-03-24 15:00:06.380324592	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 15:00:06.380489722	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 15:00:09.991699179	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:54	新事务
+2025-03-24 15:00:09.998043622	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "6.201ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 15:00:09.992','2025-03-24 15:00:09.992','2025-03-24 15:00:09.992','2025-03-24 15:00:09.992','0000-00-00 00:00:00',0))"}
+2025-03-24 15:00:09.998270282	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:54	新事务
+2025-03-24 15:00:10.004161854	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "5.716ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 15:00:09.999','2025-03-24 15:00:09.999','2025-03-24 15:00:09.999','2025-03-24 15:00:09.999','0000-00-00 00:00:00',0))"}
+2025-03-24 15:00:10.004319583	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:126	hzws:[0xc0002f40b0 0xc0002f4d10]
+2025-03-24 15:00:30.074294819	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:54	新事务
+2025-03-24 15:00:30.080068115	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "5.642ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 15:00:30.074','2025-03-24 15:00:30.074','2025-03-24 15:00:30.074','2025-03-24 15:00:30.074','0000-00-00 00:00:00',0))"}
+2025-03-24 15:00:30.080129683	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:54	新事务
+2025-03-24 15:00:30.086239613	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"error": "SQLExecute: {23505} [IBM][CLI Driver][DB2/LINUXX8664] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by \"1\" constrains table \"ENTTEST.HZW\" from having duplicate values for the index key.  SQLSTATE=23505\n", "elapsed": "6.032ms", "rows": 0, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1,id) VALUES ('小恐龙111',111,0,'2025-03-24 15:00:30.08','2025-03-24 15:00:30.08','2025-03-24 15:00:30.08','2025-03-24 15:00:30.08','0000-00-00 00:00:00',0,133))"}
+wiredemo/internal/repository.(*HzwDao).InsertOne
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34
+wiredemo/internal/service.(*HzwService).CreateHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:121
+wiredemo/internal/controller.(*HzwController).SaveHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/controller/hzwcontroller.go:125
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589
+net/http.serverHandler.ServeHTTP
+	/opt/golangs/go/src/net/http/server.go:3301
+net/http.(*conn).serve
+	/opt/golangs/go/src/net/http/server.go:2102
+2025-03-24 15:01:05.540403381	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-24 15:01:05.540551435	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-24 15:01:14.808054790	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:50	已开启事务
+2025-03-24 15:01:14.809342590	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "1.162ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 15:01:14.808','2025-03-24 15:01:14.808','2025-03-24 15:01:14.808','2025-03-24 15:01:14.808','0000-00-00 00:00:00',0))"}
+2025-03-24 15:01:14.809386900	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:50	已开启事务
+2025-03-24 15:01:14.810308386	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"error": "SQLExecute: {23505} [IBM][CLI Driver][DB2/LINUXX8664] SQL0803N  One or more values in the INSERT statement, UPDATE statement, or foreign key update caused by a DELETE statement are not valid because the primary key, unique constraint or unique index identified by \"1\" constrains table \"ENTTEST.HZW\" from having duplicate values for the index key.  SQLSTATE=23505\n", "elapsed": "0.873ms", "rows": 0, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1,id) VALUES ('小恐龙111',111,0,'2025-03-24 15:01:14.809','2025-03-24 15:01:14.809','2025-03-24 15:01:14.809','2025-03-24 15:01:14.809','0000-00-00 00:00:00',0,133))"}
+wiredemo/internal/repository.(*HzwDao).InsertOne
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34
+wiredemo/internal/service.(*HzwService).CreateHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:122
+wiredemo/internal/controller.(*HzwController).SaveHzwWithTx
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/controller/hzwcontroller.go:125
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589
+net/http.serverHandler.ServeHTTP
+	/opt/golangs/go/src/net/http/server.go:3301
+net/http.(*conn).serve
+	/opt/golangs/go/src/net/http/server.go:2102
+2025-03-24 15:01:14.810393347	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:84	事务回滚
+2025-03-24 15:01:28.572770965	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:50	已开启事务
+2025-03-24 15:01:28.574303651	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "1.154ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 15:01:28.573','2025-03-24 15:01:28.573','2025-03-24 15:01:28.573','2025-03-24 15:01:28.573','0000-00-00 00:00:00',0))"}
+2025-03-24 15:01:28.574341129	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:50	已开启事务
+2025-03-24 15:01:28.578815049	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/hzwdao.go:34	trace	{"elapsed": "4.422ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙111',111,0,'2025-03-24 15:01:28.574','2025-03-24 15:01:28.574','2025-03-24 15:01:28.574','2025-03-24 15:01:28.574','0000-00-00 00:00:00',0))"}
+2025-03-24 15:01:28.578857418	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:127	hzws:[0xc00047a0b0 0xc00010cb00]
+2025-03-24 15:01:28.578866371	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/db/repository.go:87	事务提交
