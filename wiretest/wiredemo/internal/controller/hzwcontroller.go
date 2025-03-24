@@ -104,6 +104,7 @@ func (ctl *HzwController) SaveHzwTxTest(ginc *gin.Context) {
 	ginc.JSON(200, result)
 }
 
+/*
 // SaveHzwWithTx 创建Hzw 事务测试
 // @Summary 创建Hzw
 // @Description 创建新的Hzw对象
@@ -131,3 +132,4 @@ func (ctl *HzwController) SaveHzwWithTx(ginc *gin.Context) {
 	ginc.JSON(200, result)
 
 }
+*/

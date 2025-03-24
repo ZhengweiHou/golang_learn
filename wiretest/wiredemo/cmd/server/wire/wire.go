@@ -56,7 +56,7 @@ func newApp(
 // wire 整合构建
 func NewWire(*viper.Viper, *log.Logger) (*app.App, func(), error) {
 	panic(wire.Build(
-		db.WireSet, // db子包中定义的wireset
+		db.DbWireSet, // db子包中定义的wireset
 		ServerSet,
 		ControllerSet,
 		ServiceSet,

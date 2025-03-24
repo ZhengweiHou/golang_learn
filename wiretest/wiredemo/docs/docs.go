@@ -166,58 +166,6 @@ const docTemplate = `{
                     }
                 }
             }
-        },
-        "/hzwwithtx": {
-            "put": {
-                "description": "创建新的Hzw对象",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "hzw"
-                ],
-                "summary": "创建Hzw",
-                "parameters": [
-                    {
-                        "description": "Hzw信息",
-                        "name": "hzw",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/model.Hzw"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/model.Hzw"
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request",
-                        "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                }
-            }
         }
     },
     "definitions": {

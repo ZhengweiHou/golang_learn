@@ -134,38 +134,4 @@ paths:
       summary: 创建Hzw
       tags:
       - hzw
-  /hzwwithtx:
-    put:
-      consumes:
-      - application/json
-      description: 创建新的Hzw对象
-      parameters:
-      - description: Hzw信息
-        in: body
-        name: hzw
-        required: true
-        schema:
-          $ref: '#/definitions/model.Hzw'
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/model.Hzw'
-        "400":
-          description: Bad Request
-          schema:
-            additionalProperties:
-              type: string
-            type: object
-        "500":
-          description: Internal Server Error
-          schema:
-            additionalProperties:
-              type: string
-            type: object
-      summary: 创建Hzw
-      tags:
-      - hzw
 swagger: "2.0"

@@ -71,7 +71,6 @@ func NewHTTPServer(
 		{
 			strictAuthRouter.PUT("/hzw", hzwController.SaveHzw)
 			strictAuthRouter.PUT("/hzwtxtest", hzwController.SaveHzwTxTest)
-			strictAuthRouter.PUT("/hzwwithtx", hzwController.SaveHzwWithTx)
 		}
 	}
 

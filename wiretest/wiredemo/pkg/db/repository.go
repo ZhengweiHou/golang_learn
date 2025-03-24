@@ -22,7 +22,6 @@ type Repository struct {
 type TransactionManager interface {
 	Transaction(ctx context.Context, fn func(ctx context.Context) error) error
 	WithTransaction(ctx context.Context, opts ...*sql.TxOptions) (context.Context, func(error))
-	// Transaction2(ctx context.Context, fn func() error) error
 }
 
 func NewRepository(
@@ -67,25 +66,25 @@ func (r *Repository) Transaction(ctx context.Context, fn func(ctx context.Contex
 	})
 }
 
-//func (r *Repository) Transaction2(ctx context.Context, fn func() error) error {
-//	// 将传入的业务处理fn包装到gorm的Transaction中处理
-//	return r.db.WithContext(ctx).Transaction(func(tx *gorm.DB) error {
-//		ctx = context.WithValue(ctx, CtxTxKey, tx) // ctx是新建实体，无法通过这种方式修改原ctx，下行无法实现事务注入
-//		return fn()
-//	})
-//}
-
 func (r *Repository) WithTransaction(ctx context.Context, opts ...*sql.TxOptions) (context.Context, func(error)) {
 	tx := r.db.Begin(opts...)
 	txctx := context.WithValue(ctx, CtxTxKey, tx)
+	r.logger.Info("开启事务")
 	return txctx, func(err error) {
 
 		if err != nil {
 			r.logger.Info("事务回滚")
 			tx.Rollback()
 		} else {
-			r.logger.Info("事务提交")
-			tx.Commit()
+			select {
+			case <-ctx.Done():
+				r.logger.Info("事务回滚")
+				tx.Rollback()
+				return
+			default:
+				r.logger.Info("事务提交")
+				tx.Commit()
+			}
 		}
 	}
 }
