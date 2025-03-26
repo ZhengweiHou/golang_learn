@@ -1,0 +1,5 @@
+- `kitex -module kitex_demo hello.thrift`
+- `mkdir -p rpc/hello`
+- `cd rpc/hello`
+- `kitex -module kitex_demo -service hzwapi -use kitex_demo/kitex_gen ../../hello.thrift`
+- 
