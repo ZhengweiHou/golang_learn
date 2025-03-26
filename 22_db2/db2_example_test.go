@@ -3,6 +3,7 @@ package db2
 import (
 	"database/sql"
 	"fmt"
+	"testing"
 
 	_ "github.com/ibmdb/go_ibm_db"
 )
@@ -80,8 +81,9 @@ func execquery(st *sql.Stmt) error {
 	return nil
 }
 
-func main() {
-	con := "HOSTNAME=localhost;DATABASE=testdb;PORT=50003;UID=db2inst1;PWD=db2inst1"
+func TestExample(t *testing.T) {
+	// con := "HOSTNAME=localhost;DATABASE=testdb;PORT=50001;UID=db2inst1;PWD=db2inst1"
+	con := "HOSTNAME=localhost;DATABASE=testdb;PORT=50001;UID=db2inst1;PWD=db2inst1;AUTHENTICATION=SERVER;CurrentSchema=TEST2"
 	type Db *sql.DB
 	var re Db
 	re = Create_Con(con)
@@ -93,8 +95,9 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	err = display(re)
-	if err != nil {
-		fmt.Println(err)
-	}
+	//	err = display(re)
+	//	if err != nil {
+	//		fmt.Println(err)
+	//	}
+
 }
