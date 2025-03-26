@@ -1,0 +1,20 @@
+{
+	"folders": [
+        {
+            "path": "wirehello"
+        },
+        {
+            "path": "wiredemo"
+        },
+        {
+            "path": "wire-hzw"
+        },
+        {
+            "path": "../../aic-ent"
+        },
+        {
+            "path": "aicgormdb"
+        }
+    ],
+    "settings": {}
+}
