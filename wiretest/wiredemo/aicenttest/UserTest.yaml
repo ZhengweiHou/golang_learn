@@ -1,0 +1,59 @@
+schemaname: cps
+tablename: USER_TEST
+columnlist:
+    - gotype: float64
+      dbcolname: AMT
+      primarykey: false
+      notnullflag: false
+      length: ""
+      comment: 金额
+    - gotype: '*time.Time'
+      dbcolname: BIRTHDAY
+      primarykey: false
+      notnullflag: false
+      comment: 生日
+      autoupdate: true
+      autocreate: true
+    - gotype: string
+      dbcolname: ID_NO
+      primarykey: false
+      notnullflag: true
+      comment: 证件号码
+      defaultval: ""
+    - gotype: string
+      gocolname: IdType
+      dbcolname: ID_TYPE
+      primarykey: false
+      notnullflag: true
+      comment: 证件类型
+      defaultval: ""
+    - gotype: int64
+      dbcolname: USER_ID
+      primarykey: true
+      notnullflag: true
+      length: ""
+      comment: 用户ID
+      defaultval: ""
+    - gotype: string
+      dbcolname: USER_NAME
+      primarykey: false
+      notnullflag: true
+      length: ""
+      comment: 用户名称
+primarykeylist:
+    - USER_ID
+generalindexlist:
+    - indexname: USER_TEST02
+      bindparamlist:
+          - dbcolname: USER_NAME
+uniqueindexlist:
+    - indexname: USER_TEST01
+      bindparamlist:
+        - dbcolname: ID_NO
+        - dbcolname: ID_TYPE
+namingsqllist:
+    - methodname: FindByAAA
+      paramcolnamelist:
+        - ID_NO
+        - BIRTHDAY
+      namingsql: SELECT * FROM USER_TEST WHERE ID_NO = @IdNo AND BIRTHDAY = @Birthday

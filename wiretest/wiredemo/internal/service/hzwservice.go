@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 	"sync"
-	"wiredemo/internal/model"
-	"wiredemo/internal/repository"
+	"wiredemo/internal/repository/dao"
+	"wiredemo/internal/repository/model"
 )
 
 type IHzwService interface {
@@ -18,11 +18,11 @@ type IHzwService interface {
 
 type HzwService struct {
 	*BaseService
-	hzwDao repository.IHzwDao
+	hzwDao dao.IHzwDao
 }
 
 // func NewHzwService(dao repository.IHzwDao) *HzwService {
-func NewHzwService(bs *BaseService, dao repository.IHzwDao) IHzwService {
+func NewHzwService(bs *BaseService, dao dao.IHzwDao) IHzwService {
 	return &HzwService{
 		BaseService: bs,
 		hzwDao:      dao,
@@ -137,7 +137,7 @@ func (s *HzwService) withTxCall(ctx context.Context, hzw *model.Hzw) (rhzws []*m
 
 	// 无主键正常插入
 	hzw1 := hzw.Clone()
-	hzw1.ID = 0 // 操作一：不报错
+	hzw1.Id = 0 // 操作一：不报错
 	rhzw, err := s.hzwDao.InsertOne(ctx, hzw1)
 	if err != nil {
 		return nil, err
@@ -146,7 +146,7 @@ func (s *HzwService) withTxCall(ctx context.Context, hzw *model.Hzw) (rhzws []*m
 
 	// 存在主键插入，可能发生主键冲突异常，导致事务回滚
 	hzw2 := hzw.Clone()
-	hzw2.ID = 1
+	hzw2.Id = 1
 	rhzw, err = s.hzwDao.InsertOne(ctx, hzw2)
 	if err != nil {
 		return nil, err
@@ -170,7 +170,7 @@ func (s *HzwService) withTxCallGoroutine(ctx context.Context, hzw *model.Hzw) (h
 
 	// 事务1操作1
 	hzw1 := hzw.Clone()
-	hzw1.ID = 0 // 操作一：不报错
+	hzw1.Id = 0 // 操作一：不报错
 	rhzw, rerr := s.hzwDao.InsertOne(ctx, hzw1)
 	if rerr != nil {
 		return nil, rerr
@@ -186,7 +186,7 @@ func (s *HzwService) withTxCallGoroutine(ctx context.Context, hzw *model.Hzw) (h
 	go func() {
 		defer rwg.Done()
 		_hzw := hzw.Clone()
-		_hzw.ID = 1 // 可能发生主键冲突异常
+		_hzw.Id = 1 // 可能发生主键冲突异常
 		_hzw.Name = fmt.Sprintf("goroutine_%v", "err")
 		swg.Wait()
 

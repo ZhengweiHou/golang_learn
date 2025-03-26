@@ -8,8 +8,8 @@ import (
 )
 
 type Hzw struct {
-	//gorm.Model      // this is a struct that contains ID, CreatedAt, UpdatedAt, DeletedAt
-	ID        uint      `gorm:"primarykey"`
+	//gorm.Model      // this is a struct that contains Id, CreatedAt, UpdatedAt, DeletedAt
+	Id        uint      `gorm:"primarykey"`
 	Name      string    `gorm:"column:NAME;size:100;not null"`
 	Age       int       `gorm:"column:AGE"`
 	Version   int32     `gorm:"column:VERSION;default:0"`
@@ -35,11 +35,11 @@ func (h *Hzw) BeforeCreate(tx *gorm.DB) (err error) {
 	return
 }
 func (h *Hzw) AfterCreate(tx *gorm.DB) (err error) {
-	fmt.Printf("====== AfterCreate  name=%s id=%d ======\n", h.Name, h.ID)
+	fmt.Printf("====== AfterCreate  name=%s id=%d ======\n", h.Name, h.Id)
 	return
 }
 func (h *Hzw) AfterSave(tx *gorm.DB) (err error) {
-	fmt.Printf("====== AfterSave  name=%s id=%d ======\n", h.Name, h.ID)
+	fmt.Printf("====== AfterSave  name=%s id=%d ======\n", h.Name, h.Id)
 	return
 }
 
@@ -56,11 +56,9 @@ CREATE TABLE "HZW"  (
 		  "TIME2" TIMESTAMP ,
 		  "TIME3" TIMESTAMP ,
 		  "DELETED_AT" TIMESTAMP ,
-		  "DECIMAL1" DECIMAL(10,4)
+		  "DECIMAL1" DECIMAL(10,4),
+		  PRIMARY KEY (ID)``
 		  ) ;
-ALTER TABLE "HZW"
-	ADD PRIMARY KEY
-		("ID");
 
 ======= MYSQL =======
 CREATE TABLE HZW (
@@ -82,7 +80,7 @@ CREATE TABLE HZW (
 // Hzw clone 方法
 func (h *Hzw) Clone() *Hzw {
 	return &Hzw{
-		ID:        h.ID,
+		Id:        h.Id,
 		Name:      h.Name,
 		Age:       h.Age,
 		Version:   h.Version,

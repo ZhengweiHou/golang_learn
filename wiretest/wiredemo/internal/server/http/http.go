@@ -1,10 +1,10 @@
-package server
+package http
 
 import (
+	"log/slog"
 	apiV1 "wiredemo/api/http/v1"
 	"wiredemo/docs"
 	"wiredemo/internal/controller"
-	"wiredemo/pkg/log"
 	"wiredemo/pkg/server/http"
 
 	"github.com/gin-gonic/gin"
@@ -14,9 +14,11 @@ import (
 )
 
 func NewHTTPServer(
-	logger *log.Logger,
+	//logger *log.Logger,
+	logger *slog.Logger,
 	conf *viper.Viper,
 	hzwController *controller.HzwController,
+	hzw2Controller *controller.Hzw2Controller,
 ) *http.Server {
 	gin.SetMode(gin.DebugMode)
 	s := http.NewServer(
@@ -36,7 +38,8 @@ func NewHTTPServer(
 	))
 
 	s.GET("/", func(ctx *gin.Context) {
-		logger.WithContext(ctx).Info("hello")
+		// logger.WithContext(ctx).Info("hello")
+		logger.InfoContext(ctx, "hello")
 		apiV1.HandleSuccess(ctx, map[string]interface{}{
 			":)": "hello wire demo",
 		})
@@ -49,7 +52,8 @@ func NewHTTPServer(
 		noAuthRouter := vapi.Group("/")
 		{
 			noAuthRouter.GET("/hello", func(ctx *gin.Context) {
-				logger.WithContext(ctx).Info("hello")
+				//logger.WithContext(ctx).Info("hello")
+				logger.InfoContext(ctx, "hello")
 				apiV1.HandleSuccess(ctx, map[string]interface{}{
 					":)": "hello wire demo",
 				})
@@ -62,6 +66,7 @@ func NewHTTPServer(
 		)
 		{
 			noStrictAuthRouter.GET("/hzw", hzwController.QueryById)
+			noStrictAuthRouter.GET("/hzw2", hzw2Controller.QueryById)
 		}
 
 		// 需要严格鉴权的router
@@ -70,6 +75,7 @@ func NewHTTPServer(
 		)
 		{
 			strictAuthRouter.PUT("/hzw", hzwController.SaveHzw)
+			strictAuthRouter.PUT("/hzw2", hzw2Controller.SaveHzw2)
 			strictAuthRouter.PUT("/hzwtxtest", hzwController.SaveHzwTxTest)
 		}
 	}

@@ -1,0 +1,83 @@
+schemaname: cps
+tablename: HZW2
+columnlist:
+    - gotype: uint
+      dbcolname: ID
+      primarykey: true
+      notnullflag: true
+      comment: 主键ID
+    - gotype: string
+      dbcolname: NAME
+      primarykey: false
+      notnullflag: true
+      length: ""
+      comment: 名字
+    - gotype: int
+      dbcolname: AGE
+      primarykey: false
+      notnullflag: false
+      comment: 年龄
+    - gotype: int32
+      dbcolname: VERSION
+      primarykey: false
+      notnullflag: false
+      comment: 版本号
+    - dbcolname: CREATED_AT
+      gotype: 'time.Time'
+      primarykey: false
+      notnullflag: false
+      comment: 创建时间
+      autoupdate: false
+      autocreate: false
+    - dbcolname: UPDATED_AT
+      gotype: 'time.Time'
+      primarykey: false
+      notnullflag: false
+      comment: 更新时间
+      autoupdate: false
+      autocreate: false
+    - dbcolname: TIME1
+      gotype: 'time.Time'
+      primarykey: false
+      notnullflag: false
+      comment: 时间1
+      autoupdate: true
+      autocreate: false
+    - dbcolname: TIME2
+      gotype: 'time.Time'
+      primarykey: false
+      notnullflag: false
+      comment: 时间2
+      autoupdate: false
+      autocreate: true
+    - dbcolname: TIME3
+      gotype: 'time.Time'
+      primarykey: false
+      notnullflag: false
+      comment: 时间3
+      autoupdate: false
+      autocreate: false
+    - dbcolname: DECIMAL1
+      gotype: 'float64'
+      primarykey: false
+      notnullflag: false
+      comment: 浮点1
+      autoupdate: false
+      autocreate: false
+primarykeylist:
+    - ID
+generalindexlist:
+    - indexname: HZW2_NAME
+      bindparamlist:
+          - dbcolname: NAME
+# uniqueindexlist:
+#     - indexname: USER_TEST01
+#       bindparamlist:
+#         - dbcolname: ID_NO
+#         - dbcolname: ID_TYPE
+# namingsqllist:
+#     - methodname: FindByAAA
+#       paramcolnamelist:
+#         - ID_NO
+#         - BIRTHDAY
+#       namingsql: SELECT * FROM USER_TEST WHERE ID_NO = @IdNo AND BIRTHDAY = @Birthday

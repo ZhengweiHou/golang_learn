@@ -9,7 +9,7 @@ definitions:
       decimal1:
         type: number
       id:
-        description: gorm.Model      // this is a struct that contains ID, CreatedAt,
+        description: gorm.Model      // this is a struct that contains Id, CreatedAt,
           UpdatedAt, DeletedAt
         type: integer
       name:
@@ -26,6 +26,29 @@ definitions:
         description: UpdatedAt is a field that contains update time
         type: string
       version:
+        type: integer
+    type: object
+  model.Hzw2:
+    properties:
+      Age:
+        type: integer
+      CreatedAt:
+        type: string
+      Decimal1:
+        type: number
+      Id:
+        type: integer
+      Name:
+        type: string
+      Time1:
+        type: string
+      Time2:
+        type: string
+      Time3:
+        type: string
+      UpdatedAt:
+        type: string
+      Version:
         type: integer
     type: object
 info:
@@ -98,6 +121,72 @@ paths:
               type: string
             type: object
       summary: 创建Hzw
+      tags:
+      - hzw
+  /hzw2:
+    get:
+      consumes:
+      - application/json
+      description: 根据ID查询Hzw2对象
+      parameters:
+      - description: Hzw2 ID
+        in: query
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Hzw2'
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: 根据ID查询Hzw2
+      tags:
+      - hzw
+    put:
+      consumes:
+      - application/json
+      description: 创建新的Hzw2对象
+      parameters:
+      - description: Hzw2信息
+        in: body
+        name: hzw
+        required: true
+        schema:
+          $ref: '#/definitions/model.Hzw2'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Hzw2'
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: 创建Hzw2
       tags:
       - hzw
   /hzwtxtest:

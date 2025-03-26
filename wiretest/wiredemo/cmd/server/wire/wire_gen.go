@@ -7,31 +7,40 @@
 package wire
 
 import (
+	"aic.com/pkg/aicgormdb"
 	"github.com/google/wire"
 	"github.com/spf13/viper"
+	"log/slog"
 	"wiredemo/internal/controller"
-	"wiredemo/internal/repository"
-	"wiredemo/internal/server"
+	"wiredemo/internal/repository/dao"
+	"wiredemo/internal/server/http"
 	"wiredemo/internal/service"
 	"wiredemo/pkg/app"
-	"wiredemo/pkg/db"
 	"wiredemo/pkg/log"
-	"wiredemo/pkg/server/http"
+	http2 "wiredemo/pkg/server/http"
 )
 
 // Injectors from wire.go:
 
 // wire 整合构建
-func NewWire(viperViper *viper.Viper, logger *log.Logger) (*app.App, func(), error) {
-	gormDB := db.NewDB(viperViper, logger)
-	dbRepository := db.NewRepository(logger, gormDB)
-	transactionManager := db.NewTransactionManager(dbRepository)
-	baseService := service.NewService(transactionManager, logger)
-	iHzwDao := repository.NewHzwDao(dbRepository)
+// func NewWire(*viper.Viper, *log.Logger) (*app.App, func(), error) {
+func NewWire(viperViper *viper.Viper) (*app.App, func(), error) {
+	logger := log.NewZapLog(viperViper)
+	zapHandler := log.NewZapHandler(logger)
+	slogLogger := log.NewZapSlog(zapHandler)
+	loggerInterface := aicgormdb.NewZapGormLog(logger)
+	db := aicgormdb.NewDB(viperViper, loggerInterface)
+	repository := aicgormdb.NewRepository(slogLogger, db)
+	transactionManager := aicgormdb.NewTransactionManager(repository)
+	baseService := service.NewService(transactionManager, slogLogger)
+	iHzwDao := dao.NewHzwDao(repository)
 	iHzwService := service.NewHzwService(baseService, iHzwDao)
 	hzwController := controller.NewHzwController(iHzwService)
-	httpServer := server.NewHTTPServer(logger, viperViper, hzwController)
-	appApp, cleanup := newApp(httpServer)
+	hzw2Dao := dao.GetHzw2Dao(repository)
+	iHzw2Service := service.NewHzw2Service(baseService, hzw2Dao)
+	hzw2Controller := controller.NewHzw2Controller(iHzw2Service)
+	server := http.NewHTTPServer(slogLogger, viperViper, hzwController, hzw2Controller)
+	appApp, cleanup := newApp(server, slogLogger)
 	return appApp, func() {
 		cleanup()
 	}, nil
@@ -40,21 +49,19 @@ func NewWire(viperViper *viper.Viper, logger *log.Logger) (*app.App, func(), err
 // wire.go:
 
 // 应用服务器实现
-var ServerSet = wire.NewSet(server.NewHTTPServer)
+var ServerSet = wire.NewSet(http.NewHTTPServer)
 
 // http 处理器
-var ControllerSet = wire.NewSet(controller.NewHzwController)
+var ControllerSet = wire.NewSet(controller.NewHzwController, controller.NewHzw2Controller)
 
 // 业务服务
-var ServiceSet = wire.NewSet(service.NewService, service.NewHzwService)
-
-// 数据访问层
-var RepositorySet = wire.NewSet(repository.NewHzwDao)
+var ServiceSet = wire.NewSet(service.NewService, service.NewHzwService, service.NewHzw2Service)
 
 // build App
 func newApp(
-	httpServer *http.Server,
+	httpServer *http2.Server,
 
+	logger *slog.Logger,
 ) (*app.App, func()) {
-	return app.NewApp(app.WithServer(httpServer), app.WithName("wiredemo-server"))
+	return app.NewApp(app.WithServer(httpServer), app.WithName("wiredemo-server"), app.WithLogger(logger))
 }

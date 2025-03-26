@@ -2,20 +2,26 @@ module wiredemo
 
 go 1.24.0
 
-replace gorm.io/driver/ibmdb v1.0.0 => /home/houzw/document/git-rep/HOUZW/ibmdb
+//go 1.23.6
+
+replace (
+	//aic.com/pkg/aicgormdb v0.0.0 => /home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb
+	aic.com/pkg/aicgormdb v0.0.0 => ../aicgormdb
+	// gitee.com/xiaohua_gitee/aic-ent v1.0.2 => /home/houzw/document/git-rep/HOUZW/golang/aic-ent
+	//gorm.io/driver/ibmdb v1.0.0 => /home/houzw/document/git-rep/HOUZW/ibmdb
+	gorm.io/driver/ibmdb v0.0.1 => github.com/ZhengweiHou/ibmdb v0.0.1
+)
 
 require (
+	aic.com/pkg/aicgormdb v0.0.0
 	github.com/gin-gonic/gin v1.10.0
 	github.com/google/wire v0.6.0
-	github.com/ibmdb/go_ibm_db v0.5.2
 	github.com/spf13/viper v1.20.0
 	github.com/swaggo/files v1.0.1
 	github.com/swaggo/gin-swagger v1.6.0
 	github.com/swaggo/swag v1.16.4
 	go.uber.org/zap v1.27.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	gorm.io/driver/ibmdb v1.0.0
-	gorm.io/driver/mysql v1.5.7
 	gorm.io/gorm v1.25.12
 )
 
@@ -41,6 +47,7 @@ require (
 	github.com/go-sql-driver/mysql v1.8.1 // indirect
 	github.com/go-viper/mapstructure/v2 v2.2.1 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
+	github.com/ibmdb/go_ibm_db v0.5.2 // indirect
 	github.com/ibmruntimes/go-recordio/v2 v2.0.0-20240416213906-ae0ad556db70 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
@@ -71,4 +78,6 @@ require (
 	google.golang.org/protobuf v1.36.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+	gorm.io/driver/ibmdb v0.0.1 // indirect
+	gorm.io/driver/mysql v1.5.7 // indirect
 )

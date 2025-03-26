@@ -1,18 +1,20 @@
 package service
 
 import (
-	"wiredemo/pkg/db"
-	"wiredemo/pkg/log"
+	"log/slog"
+
+	db "aic.com/pkg/aicgormdb"
 )
 
 type BaseService struct {
-	logger *log.Logger
+	// logger *log.Logger
+	logger *slog.Logger
 	tm     db.TransactionManager
 }
 
 func NewService(
 	tm db.TransactionManager,
-	logger *log.Logger,
+	logger *slog.Logger,
 ) *BaseService {
 	return &BaseService{
 		logger: logger,

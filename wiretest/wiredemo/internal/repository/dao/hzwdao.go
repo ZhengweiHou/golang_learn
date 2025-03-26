@@ -1,9 +1,11 @@
-package repository
+package dao
 
 import (
 	"context"
-	"wiredemo/internal/model"
-	"wiredemo/pkg/db"
+	"wiredemo/internal/repository/model"
+
+	//"wiredemo/pkg/db"
+	db "aic.com/pkg/aicgormdb"
 )
 
 // IHzwDao 接口

@@ -107,6 +107,106 @@
                 }
             }
         },
+        "/hzw2": {
+            "get": {
+                "description": "根据ID查询Hzw2对象",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "hzw"
+                ],
+                "summary": "根据ID查询Hzw2",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Hzw2 ID",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.Hzw2"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "description": "创建新的Hzw2对象",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "hzw"
+                ],
+                "summary": "创建Hzw2",
+                "parameters": [
+                    {
+                        "description": "Hzw2信息",
+                        "name": "hzw",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/model.Hzw2"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.Hzw2"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/hzwtxtest": {
             "put": {
                 "description": "创建新的Hzw对象",
@@ -175,7 +275,7 @@
                     "type": "number"
                 },
                 "id": {
-                    "description": "gorm.Model      // this is a struct that contains ID, CreatedAt, UpdatedAt, DeletedAt",
+                    "description": "gorm.Model      // this is a struct that contains Id, CreatedAt, UpdatedAt, DeletedAt",
                     "type": "integer"
                 },
                 "name": {
@@ -197,6 +297,41 @@
                     "type": "string"
                 },
                 "version": {
+                    "type": "integer"
+                }
+            }
+        },
+        "model.Hzw2": {
+            "type": "object",
+            "properties": {
+                "Age": {
+                    "type": "integer"
+                },
+                "CreatedAt": {
+                    "type": "string"
+                },
+                "Decimal1": {
+                    "type": "number"
+                },
+                "Id": {
+                    "type": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Time1": {
+                    "type": "string"
+                },
+                "Time2": {
+                    "type": "string"
+                },
+                "Time3": {
+                    "type": "string"
+                },
+                "UpdatedAt": {
+                    "type": "string"
+                },
+                "Version": {
                     "type": "integer"
                 }
             }
