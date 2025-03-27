@@ -22,8 +22,10 @@ func (s *HelloController) Echo(ctx context.Context, req *api.HelloRequest) (resp
 		fmt.Println(err)
 		return nil, err
 	}
-	fmt.Printf("echo end %s\n", hzw)
-	resp.Name = req.Name
+	fmt.Printf("echo end %s\n", hzw.Name)
+	resp = &api.HelloResponse{
+		Name: hzw.Name,
+	}
 	return
 }
 
