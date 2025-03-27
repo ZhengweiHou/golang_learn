@@ -3,8 +3,8 @@ package kitex
 import (
 	"context"
 	kitex "github.com/cloudwego/kitex/server"
+	"log/slog"
 	"time"
-	"wiredemo/pkg/log"
 )
 
 type Server struct {
@@ -13,12 +13,12 @@ type Server struct {
 	kitex.Server
 	host   string
 	port   int
-	logger *log.Logger
+	logger *slog.Logger
 }
 
 type Option func(s *Server)
 
-func NewServer(server kitex.Server, logger *log.Logger, opts ...Option) *Server {
+func NewServer(server kitex.Server, logger *slog.Logger, opts ...Option) *Server {
 	s := &Server{
 		Server: server,
 		logger: logger,
@@ -45,14 +45,14 @@ func (s *Server) Start(ctx context.Context) error {
 	err := s.Server.Run()
 
 	if err != nil {
-		s.logger.Sugar().Fatalf("Server running %s \n", err)
+		s.logger.Info("Server running %s \n", err)
 	}
 
 	return nil
 }
 
 func (s *Server) Stop(ctx context.Context) error {
-	s.logger.Sugar().Info("Shutting down server...")
+	s.logger.Info("Shutting down server...")
 
 	// The context is used to inform the server it has 5 seconds to finish
 	// the request it is currently handling
@@ -60,8 +60,8 @@ func (s *Server) Stop(ctx context.Context) error {
 	defer cancel()
 	err := s.Server.Stop()
 	if err != nil {
-		s.logger.Sugar().Fatal("Server forced to shutdown: ", err)
+		s.logger.Info("Server forced to shutdown: ", err)
 	}
-	s.logger.Sugar().Info("Server exiting")
+	s.logger.Info("Server exiting")
 	return nil
 }

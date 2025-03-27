@@ -4,14 +4,16 @@
 package wire
 
 import (
+	"aic.com/pkg/aicgormdb"
 	"github.com/google/wire"
 	"github.com/spf13/viper"
+
+	"log/slog"
 	"wiredemo/internal/controller"
 	"wiredemo/internal/repository"
 	"wiredemo/internal/server"
 	"wiredemo/internal/service"
 	"wiredemo/pkg/app"
-	"wiredemo/pkg/db"
 	"wiredemo/pkg/log"
 	"wiredemo/pkg/server/kitex"
 )
@@ -36,32 +38,29 @@ var ServiceSet = wire.NewSet(
 	//wire.Bind(new(service.IHzwService), new(*service.HzwService)), // 若实现构造器函数签名返回的不是接口，则需要绑定映射关系，否则wire无法通过接口关联实现依赖
 )
 
-// 数据访问层
-var RepositorySet = wire.NewSet(
-	//	repository.NewDb,
-	repository.NewHzwDao,
-	//wire.Bind(new(repository.IHzwDao), new(*repository.HzwDao)), // 若实现构造器函数签名返回的不是接口，则需要绑定映射关系，否则wire无法通过接口关联实现依赖
-)
-
 // build App
 func newApp(
 	kitexServer *kitex.Server,
+	logger *slog.Logger,
 	// grpcServer *grpc.Server,
 ) (*app.App, func()) {
 	return app.NewApp(
 		app.WithServer(kitexServer),
 		app.WithName("wiredemo-kitex-server"),
+		app.WithLogger(logger),
 	)
 }
 
 // wire 整合构建
-func NewWire(*viper.Viper, *log.Logger) (*app.App, func(), error) {
+func NewWire(*viper.Viper) (*app.App, func(), error) {
 	panic(wire.Build(
-		db.DbWireSet, // db子包中定义的wireset
+		log.LogWireSet,
+		aicgormdb.DbWireSet, // db子包中定义的wireset
+		repository.RepositoryWireSet,
+
 		ServerSet,
 		ControllerSet,
 		ServiceSet,
-		RepositorySet,
 		newApp,
 	))
 }

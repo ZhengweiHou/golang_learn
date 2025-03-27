@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"github.com/cloudwego/kitex/server"
 	"github.com/spf13/viper"
+	"log/slog"
 	"net"
 	"wiredemo/internal/controller"
 	"wiredemo/pkg/kitex/kitex_gen/api/byby"
 	"wiredemo/pkg/kitex/kitex_gen/api/hello"
-	"wiredemo/pkg/log"
 	"wiredemo/pkg/server/kitex"
 )
 
 func NewKitexServer(
-	logger *log.Logger,
+	logger *slog.Logger,
 	conf *viper.Viper,
 	helloc *controller.HelloController,
 	bybyc *controller.BybyController,
@@ -21,7 +21,7 @@ func NewKitexServer(
 	ip := fmt.Sprintf("%s:%d", conf.GetString("kitex.host"), conf.GetInt("kitex.port"))
 	addr, err := net.ResolveTCPAddr("tcp", ip)
 	if err != nil {
-		logger.Sugar().Error("%s", err)
+		logger.Error("%s", err)
 		return nil
 	}
 
@@ -30,7 +30,7 @@ func NewKitexServer(
 	err = byby.RegisterService(srv, bybyc)
 
 	if err != nil {
-		logger.Sugar().Error("%s", err)
+		logger.Error("%s", err)
 		return nil
 	}
 

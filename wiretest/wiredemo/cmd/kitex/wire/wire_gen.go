@@ -7,14 +7,15 @@
 package wire
 
 import (
+	"aic.com/pkg/aicgormdb"
 	"github.com/google/wire"
 	"github.com/spf13/viper"
+	"log/slog"
 	"wiredemo/internal/controller"
-	"wiredemo/internal/repository"
+	"wiredemo/internal/repository/dao"
 	"wiredemo/internal/server"
 	"wiredemo/internal/service"
 	"wiredemo/pkg/app"
-	"wiredemo/pkg/db"
 	"wiredemo/pkg/log"
 	"wiredemo/pkg/server/kitex"
 )
@@ -22,17 +23,21 @@ import (
 // Injectors from wire.go:
 
 // wire 整合构建
-func NewWire(viperViper *viper.Viper, logger *log.Logger) (*app.App, func(), error) {
-	gormDB := db.NewDB(viperViper, logger)
-	dbRepository := db.NewRepository(logger, gormDB)
-	transactionManager := db.NewTransactionManager(dbRepository)
-	baseService := service.NewService(transactionManager, logger)
-	iHzwDao := repository.NewHzwDao(dbRepository)
+func NewWire(viperViper *viper.Viper) (*app.App, func(), error) {
+	logger := log.NewZapLog(viperViper)
+	zapHandler := log.NewZapHandler(logger)
+	slogLogger := log.NewZapSlog(zapHandler)
+	loggerInterface := aicgormdb.NewZapGormLog(logger)
+	db := aicgormdb.NewDB(viperViper, loggerInterface)
+	repository := aicgormdb.NewRepository(slogLogger, db)
+	transactionManager := aicgormdb.NewTransactionManager(repository)
+	baseService := service.NewService(transactionManager, slogLogger)
+	iHzwDao := dao.NewHzwDao(repository)
 	iHzwService := service.NewHzwService(baseService, iHzwDao)
 	helloController := controller.NewHelloController(iHzwService)
 	bybyController := controller.NewBybyController(iHzwService)
-	kitexServer := server.NewKitexServer(logger, viperViper, helloController, bybyController)
-	appApp, cleanup := newApp(kitexServer)
+	kitexServer := server.NewKitexServer(slogLogger, viperViper, helloController, bybyController)
+	appApp, cleanup := newApp(kitexServer, slogLogger)
 	return appApp, func() {
 		cleanup()
 	}, nil
@@ -49,13 +54,11 @@ var ControllerSet = wire.NewSet(controller.NewHzwController, controller.NewHello
 // 业务服务
 var ServiceSet = wire.NewSet(service.NewService, service.NewHzwService)
 
-// 数据访问层
-var RepositorySet = wire.NewSet(repository.NewHzwDao)
-
 // build App
 func newApp(
 	kitexServer *kitex.Server,
+	logger *slog.Logger,
 
 ) (*app.App, func()) {
-	return app.NewApp(app.WithServer(kitexServer), app.WithName("wiredemo-kitex-server"))
+	return app.NewApp(app.WithServer(kitexServer), app.WithName("wiredemo-kitex-server"), app.WithLogger(logger))
 }

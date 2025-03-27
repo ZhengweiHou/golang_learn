@@ -10,9 +10,6 @@ github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 h1:d+Bc7a5rLufV
 github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578/go.mod h1:uGdkoq3SwY9Y+13GIhn11/XLaGBb4BfwItxLd5jeuXE=
 github.com/ZhengweiHou/ibmdb v0.0.1 h1:wtoQKVUAmJCPUJii3AqY/LGNHNtRLkDDb3X/FG23q+E=
 github.com/ZhengweiHou/ibmdb v0.0.1/go.mod h1:ZUrv4G8n5AyNwzJx7hvcYkuXmkHCqGGqnKfZ62YV/AI=
-github.com/bytedance/sonic v1.11.6 h1:oUp34TzMlL+OY1OUWxHqsdkgC/Zfc85zGqw9siXjrc0=
-github.com/ZhengweiHou/ibmdb v0.0.0-20250312083856-50baf4c8d628 h1:5JC5bE9Q14RglMPWt+XAzItmmsakwzq37r7URgTtemQ=
-github.com/ZhengweiHou/ibmdb v0.0.0-20250312083856-50baf4c8d628/go.mod h1:Z/gXgZcgz+WtdIahRGOh4ieeAjV8q49xVdNKhiRUHSE=
 github.com/apache/thrift v0.13.0 h1:5hryIiq9gtn+MiLVn0wP37kb/uTeRZgN08WoCsAhIhI=
 github.com/apache/thrift v0.13.0/go.mod h1:cp2SuWMxlEZw2r+iP2GNCdIi4C1qmUzdZFSVb+bacwQ=
 github.com/bytedance/gopkg v0.1.0/go.mod h1:FtQG3YbQG9L/91pbKSw787yBQPutC+457AvDW77fgUQ=
@@ -125,13 +122,16 @@ github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/
 github.com/google/pprof v0.0.0-20240727154555-813a5fbdbec8 h1:FKHo8hFI3A+7w0aUQuYXQ+6EN5stWmeY/AZqtM8xk9k=
 github.com/google/pprof v0.0.0-20240727154555-813a5fbdbec8/go.mod h1:K1liHPHnj73Fdn/EKuT8nrFqBihUSKXoLYU0BuatOYo=
 github.com/google/renameio v0.1.0/go.mod h1:KWCgfxg9yswjAJkECMjeO8J8rahYeXnNhOm40UhjYkI=
-github.com/google/subcommands v1.2.0 h1:vWQspBTo2nEqTUFita5/KeEWlUL8kQObDFbub/EN9oE=
 github.com/google/subcommands v1.2.0/go.mod h1:ZjhPrFU+Olkh9WazFPsl27BQ4UPiG37m3yTrtFlrHVk=
 github.com/google/wire v0.6.0 h1:HBkoIh4BdSxoyo9PveV8giw7ZsaBOvzWKfcg/6MrVwI=
 github.com/google/wire v0.6.0/go.mod h1:F4QhpQ9EDIdJ1Mbop/NZBRB+5yrR6qg3BnctaoUk6NA=
 github.com/gordonklaus/ineffassign v0.0.0-20200309095847-7953dde2c7bf/go.mod h1:cuNKsD1zp2v6XfE/orVX2QE1LC+i254ceGcVeDT3pTU=
 github.com/iancoleman/strcase v0.2.0 h1:05I4QRnGpI0m37iZQRuskXh+w77mr6Z41lwQzuHLwW0=
 github.com/iancoleman/strcase v0.2.0/go.mod h1:iwCmte+B7n89clKwxIoIXy/HfoL7AsD47ZCWhYzw7ho=
+github.com/ibmdb/go_ibm_db v0.5.2 h1:g5bHeJdy4SXhw6c9PX1I3Tn4KrCbAzl2faX1BfTTR/8=
+github.com/ibmdb/go_ibm_db v0.5.2/go.mod h1:BA12Alfe+h5BMGZGE+b0pqP4leILZkpoxe5qr/iMoHw=
+github.com/ibmruntimes/go-recordio/v2 v2.0.0-20240416213906-ae0ad556db70 h1:muF5XqVkHnMdbMDXusPdKtuT8qWzefBgSuLH1JVHcC4=
+github.com/ibmruntimes/go-recordio/v2 v2.0.0-20240416213906-ae0ad556db70/go.mod h1:NSpUK0x9IyEoM1EjTp2/S8ErxZfRHoA2DfwiYobFSkc=
 github.com/jhump/protoreflect v1.8.2 h1:k2xE7wcUomeqwY0LDCYA16y4WWfyTcMx5mKhk0d4ua0=
 github.com/jhump/protoreflect v1.8.2/go.mod h1:7GcYQDdMU/O/BBrl/cX6PNHpXh6cenjd8pneu5yW7Tg=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=
