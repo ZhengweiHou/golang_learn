@@ -1,8 +1,7 @@
 module aicgormdb
 
-go 1.24.0
 
-//go 1.23.6
+go 1.23
 
 replace gorm.io/driver/ibmdb v0.0.1 => github.com/ZhengweiHou/ibmdb v0.0.1
 
