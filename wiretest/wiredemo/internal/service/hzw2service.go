@@ -13,13 +13,13 @@ type IHzw2Service interface {
 
 type Hzw2Service struct {
 	*BaseService
-	hzwDao *dao.Hzw2Dao
+	hzw2Dao dao.IHzw2Dao
 }
 
-func NewHzw2Service(bs *BaseService, dao *dao.Hzw2Dao) IHzw2Service {
+func NewHzw2Service(bs *BaseService, dao dao.IHzw2Dao) IHzw2Service {
 	return &Hzw2Service{
 		BaseService: bs,
-		hzwDao:      dao,
+		hzw2Dao:     dao,
 	}
 }
 
@@ -28,7 +28,7 @@ func (s *Hzw2Service) CreateHzw2(ctx context.Context, hzw *model.Hzw2) (rhzw *mo
 	s.tm.Transaction(
 		ctx,
 		func(ctx context.Context) error {
-			affect, err := s.hzwDao.InsertOne(ctx, hzw)
+			affect, err := s.hzw2Dao.InsertOne(ctx, hzw)
 			s.logger.Info("affect", affect)
 			return err
 		})
@@ -40,7 +40,7 @@ func (s *Hzw2Service) GetHzw2(ctx context.Context, key int) (hzw *model.Hzw2, er
 	s.tm.Transaction(
 		ctx,
 		func(ctx context.Context) error {
-			hzw, err = s.hzwDao.FindByPrimaryKey(ctx, uint(key))
+			hzw, err = s.hzw2Dao.FindByPrimaryKey(ctx, uint(key))
 			return err
 		})
 	//db.TM.Transaction2(

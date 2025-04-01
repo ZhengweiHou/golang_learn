@@ -1,4 +1,4 @@
-package model
+package test
 
 import (
 	"fmt"
@@ -8,8 +8,8 @@ import (
 )
 
 type Hzw struct {
-	//gorm.Model      // this is a struct that contains Id, CreatedAt, UpdatedAt, DeletedAt
-	Id        int32     `gorm:"column:ID;primarykey"`
+	//gorm.Model      // this is a struct that contains ID, CreatedAt, UpdatedAt, DeletedAt
+	ID        uint      `gorm:"primarykey"`
 	Name      string    `gorm:"column:NAME;size:100;not null"`
 	Age       int       `gorm:"column:AGE"`
 	Version   int32     `gorm:"column:VERSION;default:0"`
@@ -27,8 +27,6 @@ func (Hzw) TableName() string {
 }
 
 func (h *Hzw) BeforeSave(tx *gorm.DB) (err error) {
-	// 1. 获取当前实体或表的BeforeSave hooks方法
-	// 2. 遍历执行hooks方法
 	fmt.Printf("====== BeforeSave  name=%s ======\n", h.Name)
 	return
 }
@@ -37,11 +35,11 @@ func (h *Hzw) BeforeCreate(tx *gorm.DB) (err error) {
 	return
 }
 func (h *Hzw) AfterCreate(tx *gorm.DB) (err error) {
-	fmt.Printf("====== AfterCreate  name=%s id=%d ======\n", h.Name, h.Id)
+	fmt.Printf("====== AfterCreate  name=%s id=%d ======\n", h.Name, h.ID)
 	return
 }
 func (h *Hzw) AfterSave(tx *gorm.DB) (err error) {
-	fmt.Printf("====== AfterSave  name=%s id=%d ======\n", h.Name, h.Id)
+	fmt.Printf("====== AfterSave  name=%s id=%d ======\n", h.Name, h.ID)
 	return
 }
 
@@ -58,9 +56,11 @@ CREATE TABLE "HZW"  (
 		  "TIME2" TIMESTAMP ,
 		  "TIME3" TIMESTAMP ,
 		  "DELETED_AT" TIMESTAMP ,
-		  "DECIMAL1" DECIMAL(10,4),
-		  PRIMARY KEY (ID)``
+		  "DECIMAL1" DECIMAL(10,4)
 		  ) ;
+ALTER TABLE "HZW"
+	ADD PRIMARY KEY
+		("ID");
 
 ======= MYSQL =======
 CREATE TABLE HZW (
@@ -78,19 +78,3 @@ CREATE TABLE HZW (
     PRIMARY KEY (ID)
 )
 **/
-
-// Hzw clone 方法
-func (h *Hzw) Clone() *Hzw {
-	return &Hzw{
-		Id:        h.Id,
-		Name:      h.Name,
-		Age:       h.Age,
-		Version:   h.Version,
-		CreatedAt: h.CreatedAt,
-		UpdatedAt: h.UpdatedAt,
-		Time1:     h.Time1,
-		Time2:     h.Time2,
-		Time3:     h.Time3,
-		Decimal1:  h.Decimal1,
-	}
-}

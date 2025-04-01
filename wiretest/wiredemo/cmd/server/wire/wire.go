@@ -8,13 +8,16 @@ package wire
 
 import (
 	"log/slog"
-	"wiredemo/internal/controller"
+	"wiredemo/internal/adapter/adapterhttp"
+	"wiredemo/internal/adapter/adapterkitex"
 	"wiredemo/internal/repository"
 	"wiredemo/internal/server/http"
+	"wiredemo/internal/server/kitex"
 	"wiredemo/internal/service"
 	"wiredemo/pkg/app"
 	"wiredemo/pkg/log"
 	http2 "wiredemo/pkg/server/http"
+	kitex2 "wiredemo/pkg/server/kitex"
 
 	//"aic.com/pkg/aicdb"
 	"aic.com/pkg/aicgormdb"
@@ -23,15 +26,27 @@ import (
 )
 
 // 应用服务器实现
-var ServerSet = wire.NewSet(
+var HttpServerSet = wire.NewSet(
 	// http服务
 	http.NewHTTPServer,
 )
 
+// KitexServerSet Kitex服务相关provider
+var KitexServerSet = wire.NewSet(
+	kitex.NewKitexOriginalServer,
+	kitex.NewKitexServer,
+	kitex2.NewHzwKCReporter,
+)
+
 // http 处理器
-var ControllerSet = wire.NewSet(
-	controller.NewHzwController,
-	controller.NewHzw2Controller,
+var AdapterhttpSet = wire.NewSet(
+	adapterhttp.NewHzwController,
+	adapterhttp.NewHzw2Controller,
+)
+
+// AsapterKitexSet kitex处理器
+var AdapterkitexSet = wire.NewSet(
+	adapterkitex.NewHzwKitexCtl,
 )
 
 // 业务服务
@@ -45,11 +60,15 @@ var ServiceSet = wire.NewSet(
 // build App
 func newApp(
 	httpServer *http2.Server,
+	kitexServer *kitex2.Server,
 	// grpcServer *grpc.Server,
 	logger *slog.Logger,
 ) (*app.App, func()) {
 	return app.NewApp(
-		app.WithServer(httpServer),
+		app.WithServer(
+			httpServer,
+			kitexServer,
+		),
 		app.WithName("wiredemo-server"),
 		app.WithLogger(logger),
 	)
@@ -62,9 +81,10 @@ func NewWire(*viper.Viper) (*app.App, func(), error) {
 		log.LogWireSet,
 		aicgormdb.DbWireSet,
 		repository.RepositoryWireSet,
-		//aicdb.DbWireSet,
-		ServerSet,
-		ControllerSet,
+		HttpServerSet,
+		AdapterhttpSet,
+		KitexServerSet,
+		AdapterkitexSet,
 		ServiceSet,
 		newApp,
 	))

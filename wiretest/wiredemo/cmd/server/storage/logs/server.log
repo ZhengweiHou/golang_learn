@@ -1,0 +1,433 @@
+2025-03-26 19:26:09.870241228	[34minfo[0m	server/main.go:44	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-26 19:26:09.870453934	[34minfo[0m	server/main.go:45	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-28 10:23:32.283783571	[34minfo[0m	kitex/kitex.go:39	kitex host:%s	{"!BADKEY": "127.0.0.1:8001"}
+2025-03-28 10:23:32.292884694	[34minfo[0m	server/main.go:42	=============starring==========
+2025-03-28 10:23:32.292932164	[34minfo[0m	server/main.go:46	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-28 10:23:32.292946764	[34minfo[0m	server/main.go:47	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-28 10:24:26.610839668	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:39	kitex host:%s	{"!BADKEY": "127.0.0.1:8001"}
+2025-03-28 10:24:26.610996101	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	=============starring==========
+2025-03-28 10:24:26.611018546	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:46	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-28 10:24:26.611034786	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:47	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-28 10:25:35.307355461	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:39	kitex	{"host": "127.0.0.1:8001"}
+2025-03-28 10:25:35.307581398	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	=============starring==========
+2025-03-28 10:25:35.307619932	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:46	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-28 10:25:35.307639218	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:47	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-28 10:27:52.280244829	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:39	kitex	{"host": "127.0.0.1:8001"}
+2025-03-28 10:27:52.280497583	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	=============starring==========
+2025-03-28 10:27:52.280535030	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:46	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-28 10:27:52.280554335	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:47	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-28 10:27:52.280683764	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:31	kitex server start	{"host": "", "port": 0}
+2025-03-28 13:50:16.234694594	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:41	kitex	{"host": "127.0.0.1:8001"}
+2025-03-28 13:50:16.234849575	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	=============starring==========
+2025-03-28 13:50:16.234869691	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:46	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-28 13:50:16.234881408	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:47	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-28 13:50:22.510887516	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:27	CreateHzw
+2025-03-28 15:18:43.724240912	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-28 15:18:43.724475898	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	=============starring==========
+2025-03-28 15:18:43.724512012	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:46	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-28 15:18:43.724531934	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:47	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-28 15:18:54.951583567	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:29	CreateHzw
+2025-03-28 15:18:54.951720722	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-28 15:18:54.951738118	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-28 15:18:55.055705259	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"error": "sql: Scan error on column index 0, name \"ID\": unsupported Scan, storing driver.Value type int32 into type *model.Hzw", "elapsed": "103.895ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00',0))"}
+wiredemo/internal/repository/dao.(*HzwDao).InsertOne
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36
+wiredemo/internal/service.(*HzwService).CreateHzw.func1
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:38
+aic.com/pkg/aicgormdb.(*Repository).Transaction.func1
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:67
+gorm.io/gorm.(*DB).Transaction
+	/home/houzw/document/golang_project/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:651
+aic.com/pkg/aicgormdb.(*Repository).Transaction
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:64
+wiredemo/internal/service.(*HzwService).CreateHzw
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:35
+wiredemo/internal/adapter/adapterkitex.(*HzwKitexCtl).CreateHzw
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:33
+wiredemo/api/kitex/hzw/hzwservice.createHzwHandler
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/api/kitex/hzw/hzwservice/hzwservice.go:106
+github.com/cloudwego/kitex/server.(*server).invokeHandleEndpoint.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/server/server.go:408
+github.com/cloudwego/kitex/server.(*server).buildCoreMiddleware.func1.1
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/server/server.go:365
+github.com/cloudwego/kitex/pkg/remote/trans.(*svrTransHandler).OnMessage
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans/default_server_handler.go:242
+github.com/cloudwego/kitex/pkg/remote/trans/detection.(*svrTransHandler).OnMessage
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans/detection/server_handler.go:130
+github.com/cloudwego/kitex/pkg/remote.(*TransPipeline).OnMessage
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans_pipeline.go:156
+github.com/cloudwego/kitex/pkg/remote/trans.(*svrTransHandler).OnRead
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans/default_server_handler.go:217
+github.com/cloudwego/kitex/pkg/remote/trans/detection.(*svrTransHandler).OnRead
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans/detection/server_handler.go:114
+github.com/cloudwego/kitex/pkg/remote.(*TransPipeline).OnRead
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans_pipeline.go:129
+github.com/cloudwego/kitex/pkg/remote/trans/netpoll.(*transServer).onConnRead
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans/netpoll/trans_server.go:170
+github.com/cloudwego/netpoll.(*connection).onProcess.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/netpoll@v0.6.5/connection_onevent.go:229
+github.com/bytedance/gopkg/util/gopool.(*worker).run.func1.1
+	/home/houzw/document/golang_project/pkg/mod/github.com/bytedance/gopkg@v0.1.1/util/gopool/worker.go:69
+github.com/bytedance/gopkg/util/gopool.(*worker).run.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/bytedance/gopkg@v0.1.1/util/gopool/worker.go:70
+2025-03-28 15:21:16.393351974	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-28 15:21:16.394189840	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	=============starring==========
+2025-03-28 15:21:16.394268519	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:46	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-28 15:21:16.394305049	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:47	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-28 15:21:23.890941504	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:29	CreateHzw
+2025-03-28 15:21:23.891094684	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-28 15:21:23.891113644	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-28 15:21:23.973238760	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"error": "sql: Scan error on column index 0, name \"ID\": unsupported Scan, storing driver.Value type int32 into type *model.Hzw", "elapsed": "82.074ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00',0))"}
+wiredemo/internal/repository/dao.(*HzwDao).InsertOne
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36
+wiredemo/internal/service.(*HzwService).CreateHzw.func1
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:38
+aic.com/pkg/aicgormdb.(*Repository).Transaction.func1
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:67
+gorm.io/gorm.(*DB).Transaction
+	/home/houzw/document/golang_project/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:651
+aic.com/pkg/aicgormdb.(*Repository).Transaction
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:64
+wiredemo/internal/service.(*HzwService).CreateHzw
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:35
+wiredemo/internal/adapter/adapterkitex.(*HzwKitexCtl).CreateHzw
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:33
+wiredemo/api/kitex/hzw/hzwservice.createHzwHandler
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/api/kitex/hzw/hzwservice/hzwservice.go:106
+github.com/cloudwego/kitex/server.(*server).invokeHandleEndpoint.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/server/server.go:408
+github.com/cloudwego/kitex/server.(*server).buildCoreMiddleware.func1.1
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/server/server.go:365
+github.com/cloudwego/kitex/pkg/remote/trans.(*svrTransHandler).OnMessage
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans/default_server_handler.go:242
+github.com/cloudwego/kitex/pkg/remote/trans/detection.(*svrTransHandler).OnMessage
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans/detection/server_handler.go:130
+github.com/cloudwego/kitex/pkg/remote.(*TransPipeline).OnMessage
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans_pipeline.go:156
+github.com/cloudwego/kitex/pkg/remote/trans.(*svrTransHandler).OnRead
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans/default_server_handler.go:217
+github.com/cloudwego/kitex/pkg/remote/trans/detection.(*svrTransHandler).OnRead
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans/detection/server_handler.go:114
+github.com/cloudwego/kitex/pkg/remote.(*TransPipeline).OnRead
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans_pipeline.go:129
+github.com/cloudwego/kitex/pkg/remote/trans/netpoll.(*transServer).onConnRead
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.12.3/pkg/remote/trans/netpoll/trans_server.go:170
+github.com/cloudwego/netpoll.(*connection).onProcess.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/netpoll@v0.6.5/connection_onevent.go:229
+github.com/bytedance/gopkg/util/gopool.(*worker).run.func1.1
+	/home/houzw/document/golang_project/pkg/mod/github.com/bytedance/gopkg@v0.1.1/util/gopool/worker.go:69
+github.com/bytedance/gopkg/util/gopool.(*worker).run.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/bytedance/gopkg@v0.1.1/util/gopool/worker.go:70
+2025-03-28 15:22:02.466465247	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-28 15:22:02.466525156	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-28 15:22:02.467526288	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"error": "sql: Scan error on column index 0, name \"ID\": unsupported Scan, storing driver.Value type int32 into type *model.Hzw", "elapsed": "0.951ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙',111,0,'2025-03-28 15:22:02.467','2025-03-28 15:22:02.467','2025-03-28 15:22:02.467','2025-03-28 15:22:02.467','0000-00-00 00:00:00',0))"}
+wiredemo/internal/repository/dao.(*HzwDao).InsertOne
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36
+wiredemo/internal/service.(*HzwService).CreateHzw.func1
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:38
+aic.com/pkg/aicgormdb.(*Repository).Transaction.func1
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:67
+gorm.io/gorm.(*DB).Transaction
+	/home/houzw/document/golang_project/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:651
+aic.com/pkg/aicgormdb.(*Repository).Transaction
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:64
+wiredemo/internal/service.(*HzwService).CreateHzw
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:35
+wiredemo/internal/adapter/adapterhttp.(*HzwController).SaveHzw
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterhttp/hzwcontroller.go:42
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589
+net/http.serverHandler.ServeHTTP
+	/opt/golangs/go/src/net/http/server.go:3301
+net/http.(*conn).serve
+	/opt/golangs/go/src/net/http/server.go:2102
+2025-03-28 15:22:16.877676888	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-28 15:22:16.877729623	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-28 15:22:16.878518445	[31merror[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"error": "sql: Scan error on column index 0, name \"ID\": unsupported Scan, storing driver.Value type int32 into type *model.Hzw", "elapsed": "0.745ms", "rows": 1, "sql": "SELECT id FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('小恐龙',111,0,'2025-03-28 15:22:16.878','2025-03-28 15:22:16.878','2025-03-28 15:22:16.878','2025-03-28 15:22:16.878','0000-00-00 00:00:00',0))"}
+wiredemo/internal/repository/dao.(*HzwDao).InsertOne
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36
+wiredemo/internal/service.(*HzwService).CreateHzw.func1
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:38
+aic.com/pkg/aicgormdb.(*Repository).Transaction.func1
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:67
+gorm.io/gorm.(*DB).Transaction
+	/home/houzw/document/golang_project/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:651
+aic.com/pkg/aicgormdb.(*Repository).Transaction
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:64
+wiredemo/internal/service.(*HzwService).CreateHzw
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/service/hzwservice.go:35
+wiredemo/internal/adapter/adapterhttp.(*HzwController).SaveHzw
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterhttp/hzwcontroller.go:42
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249
+github.com/gin-gonic/gin.(*Context).Next
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/home/houzw/document/golang_project/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589
+net/http.serverHandler.ServeHTTP
+	/opt/golangs/go/src/net/http/server.go:3301
+net/http.(*conn).serve
+	/opt/golangs/go/src/net/http/server.go:2102
+2025-03-31 10:04:32.436458382	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:04:32.436732624	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	=============starring==========
+2025-03-31 10:04:32.436773169	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:46	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:04:32.436795982	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:47	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-31 10:09:35.136252527	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:09:35.136510446	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:42	=============starring==========
+2025-03-31 10:09:35.136548307	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:46	server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:09:35.136571277	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:47	docs addr	{"addr": "http://127.0.0.1:8000/swagger/index.html"}
+2025-03-31 10:09:35.136712898	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:30	kitex	{"servicesError": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 10:11:47.674352030	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:11:47.674676249	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:11:47.674848379	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:11:47.674834870	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:30	kitex	{"servicesError": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 10:12:20.981996511	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:12:20.982219508	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:15:51.118198615	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:15:51.118469422	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:17:59.244473614	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:17:59.244710713	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:17:59.244840512	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:33	kitex	{"name": "HzwService"}
+2025-03-31 10:17:59.244855050	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:20:39.347048436	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:20:39.347364237	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:20:39.347506235	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:20:39.347510034	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:32	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 10:20:39.347685203	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:40	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 10:26:51.666832891	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:26:51.667061003	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:26:51.667270854	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:26:51.667232175	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:32	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 10:26:51.667452851	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:40	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 10:27:26.085863728	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:29	CreateHzw
+2025-03-31 10:27:26.086149536	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 10:27:26.086173503	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 10:27:26.109684438	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "23.461ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00',0))"}
+2025-03-31 10:31:09.892724128	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:31:09.892885768	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:31:09.892984354	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:31:09.892978869	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:32	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 10:31:09.893409179	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:40	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 10:31:21.046119779	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:29	CreateHzw
+2025-03-31 10:31:21.046289384	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 10:31:21.046307531	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 10:31:21.047578586	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.223ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00',0))"}
+2025-03-31 10:33:22.707219254	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:33:22.707393649	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:33:22.707540114	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:33:22.707481625	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:32	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 10:33:22.707784932	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:40	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 10:33:31.020776821	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:29	CreateHzw
+2025-03-31 10:33:31.020907221	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 10:33:31.020921529	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 10:33:31.022275976	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.298ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00','1970-01-01 08:00:00',0))"}
+2025-03-31 10:52:20.552087142	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:52:20.552284178	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:52:20.552437262	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:52:20.552375664	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:32	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 10:52:20.552609162	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:40	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 10:52:26.223483718	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 10:52:26.223685750	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 10:52:26.223711163	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 10:52:26.224919604	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.160ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 10:52:26.224','2025-03-31 10:52:26.224','2025-03-31 10:52:26.224','2025-03-31 10:52:26.224','0000-00-00 00:00:00',0))"}
+2025-03-31 10:56:30.904265253	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:56:30.904518843	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:56:30.904661158	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:56:30.904615368	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:32	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 10:56:30.904718816	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:40	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 10:56:36.718020259	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:29	CreateHzw
+2025-03-31 10:56:36.718180591	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 10:56:36.718197790	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 10:56:36.719361339	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.122ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 10:56:36.718','1970-01-01 07:58:57.864','2025-03-31 10:56:36.718','2025-03-31 10:56:36.718','0000-00-00 00:00:00',0))"}
+2025-03-31 10:57:53.052078730	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 10:57:53.052274678	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 10:57:53.052415266	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 10:57:53.052369485	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:32	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 10:57:53.052485632	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:40	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 10:58:09.426991820	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:29	CreateHzw
+2025-03-31 11:03:27.722148710	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 11:03:27.722433494	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 11:03:27.722613944	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:32	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 11:03:27.722951110	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:40	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 11:03:27.723244768	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 11:05:39.662720483	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:43	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 11:05:39.663175019	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 11:05:39.663318274	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 11:05:39.663287451	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:32	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 11:05:39.663452348	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:40	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 11:05:50.128026458	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:29	CreateHzw
+2025-03-31 11:32:44.983115522	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:47	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 11:32:44.983323820	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 11:32:44.983518460	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 11:32:44.983458853	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:35	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 11:32:44.983613948	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:43	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 11:33:35.148047279	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:48	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 11:33:35.148302296	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:33	SerReporter	{"!BADKEY": {}}
+2025-03-31 11:33:35.148381825	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 11:33:35.148535632	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 11:33:35.148494492	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:35	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 11:33:35.148659931	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:43	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 11:34:14.731465565	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 11:34:27.383093258	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 11:34:27.383149718	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 11:34:27.384498355	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.290ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 11:34:27.383','2025-03-31 11:34:27.383','2025-03-31 11:34:27.383','2025-03-31 11:34:27.383','0000-00-00 00:00:00',0))"}
+2025-03-31 11:34:52.599953390	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:48	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 11:34:52.600361506	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:33	SerReporter	{"!BADKEY": {}}
+2025-03-31 11:34:52.600425884	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 11:34:52.600551069	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 11:34:52.600542207	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:35	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 11:34:52.600655077	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:43	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 11:35:02.910407992	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 11:35:02.910546234	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 11:35:02.910572267	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 11:35:02.911767499	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.152ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 11:35:02.911','2025-03-31 11:35:02.911','2025-03-31 11:35:02.911','2025-03-31 11:35:02.911','0000-00-00 00:00:00',0))"}
+2025-03-31 11:37:43.047865170	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 11:37:43.048014429	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 11:37:43.048034983	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 11:37:43.049015812	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.928ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 11:37:43.048','2025-03-31 11:37:43.048','2025-03-31 11:37:43.048','2025-03-31 11:37:43.048','0000-00-00 00:00:00',0))"}
+2025-03-31 11:41:32.957834570	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:48	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 11:41:32.958154707	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:33	SerReporter	{"!BADKEY": {}}
+2025-03-31 11:41:32.958284019	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 11:41:32.958432393	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 11:41:32.958398907	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:35	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 11:41:32.958533348	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:43	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 11:42:13.414349769	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:48	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 11:42:13.414632312	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:33	SerReporter	{"!BADKEY": {}}
+2025-03-31 11:42:13.414674345	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 11:42:13.414806081	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 11:42:13.414781594	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:35	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 11:42:13.414897161	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:43	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 11:42:29.320737570	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 11:42:29.320896875	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 11:42:29.320913958	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 11:42:29.322177344	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.219ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 11:42:29.321','2025-03-31 11:42:29.321','2025-03-31 11:42:29.321','2025-03-31 11:42:29.321','0000-00-00 00:00:00',0))"}
+2025-03-31 11:43:21.865882466	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:48	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 11:43:21.866085967	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:33	SerReporter	{"!BADKEY": {}}
+2025-03-31 11:43:21.866129714	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 11:43:21.866273985	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 11:43:21.866241607	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:35	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 11:43:21.866558243	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:43	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 11:43:57.808795616	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 11:43:57.808944960	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 11:43:57.808967462	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 11:43:57.810336690	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.312ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 11:43:57.809','2025-03-31 11:43:57.809','2025-03-31 11:43:57.809','2025-03-31 11:43:57.809','0000-00-00 00:00:00',0))"}
+2025-03-31 11:44:51.732635900	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:48	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 11:44:51.732944969	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:33	SerReporter	{"!BADKEY": {}}
+2025-03-31 11:44:51.732993493	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 11:44:51.733139817	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 11:44:51.733085825	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:35	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 11:44:51.733243550	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:43	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 13:37:57.947863193	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:49	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 13:37:57.948101252	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:34	SerReporter	{"!BADKEY": {}}
+2025-03-31 13:37:57.948157944	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 13:37:57.948293312	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 13:37:57.948243185	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:35	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 13:37:57.948350354	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:43	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 13:39:47.971137868	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:49	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 13:39:47.971339707	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:34	SerReporter	{"!BADKEY": {}}
+2025-03-31 13:39:47.971394741	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 13:39:47.971526728	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 13:39:47.971489364	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:35	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 13:39:47.971766287	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:43	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 13:41:12.277836433	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:41:12.277973702	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:41:12.277990658	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:41:12.290345480	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "12.306ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:41:12.278','2025-03-31 13:41:12.278','2025-03-31 13:41:12.278','2025-03-31 13:41:12.278','0000-00-00 00:00:00',0))"}
+2025-03-31 13:46:45.004240055	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:46:45.004381663	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:46:45.004402206	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:46:45.005292736	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.846ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:46:45.004','2025-03-31 13:46:45.004','2025-03-31 13:46:45.004','2025-03-31 13:46:45.004','0000-00-00 00:00:00',0))"}
+2025-03-31 13:47:27.316816755	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:47:27.316950411	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:47:27.316971764	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:47:27.317906981	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.894ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:47:27.317','2025-03-31 13:47:27.317','2025-03-31 13:47:27.317','2025-03-31 13:47:27.317','0000-00-00 00:00:00',0))"}
+2025-03-31 13:47:42.762592704	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:47:42.762741001	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:47:42.762761416	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:47:42.763660000	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.856ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:47:42.763','2025-03-31 13:47:42.763','2025-03-31 13:47:42.763','2025-03-31 13:47:42.763','0000-00-00 00:00:00',0))"}
+2025-03-31 13:48:27.840899382	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:48:27.841042853	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:48:27.841058936	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:48:27.842110949	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.985ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:48:27.841','2025-03-31 13:48:27.841','2025-03-31 13:48:27.841','2025-03-31 13:48:27.841','0000-00-00 00:00:00',0))"}
+2025-03-31 13:48:29.931927280	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:48:29.932061958	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:48:29.932087041	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:48:29.933099498	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.968ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:48:29.932','2025-03-31 13:48:29.932','2025-03-31 13:48:29.932','2025-03-31 13:48:29.932','0000-00-00 00:00:00',0))"}
+2025-03-31 13:48:31.334678628	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:48:31.334826479	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:48:31.334848055	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:48:31.335790540	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.899ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:48:31.335','2025-03-31 13:48:31.335','2025-03-31 13:48:31.335','2025-03-31 13:48:31.335','0000-00-00 00:00:00',0))"}
+2025-03-31 13:48:32.733793021	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:48:32.734028221	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:48:32.734059838	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:48:32.735374560	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.263ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:48:32.734','2025-03-31 13:48:32.734','2025-03-31 13:48:32.734','2025-03-31 13:48:32.734','0000-00-00 00:00:00',0))"}
+2025-03-31 13:48:34.129749785	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:48:34.129949088	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:48:34.129989286	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:48:34.145371952	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "15.288ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:48:34.13','2025-03-31 13:48:34.13','2025-03-31 13:48:34.13','2025-03-31 13:48:34.13','0000-00-00 00:00:00',0))"}
+2025-03-31 13:48:36.265931980	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:48:36.266136937	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:48:36.266173462	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:48:36.267572803	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.330ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:48:36.266','2025-03-31 13:48:36.266','2025-03-31 13:48:36.266','2025-03-31 13:48:36.266','0000-00-00 00:00:00',0))"}
+2025-03-31 13:48:37.915825242	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:48:37.915964155	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:48:37.915986940	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:48:37.917112414	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.075ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:48:37.916','2025-03-31 13:48:37.916','2025-03-31 13:48:37.916','2025-03-31 13:48:37.916','0000-00-00 00:00:00',0))"}
+2025-03-31 13:48:38.307746037	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:48:38.307967745	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:48:38.307988295	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:48:38.308955479	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.922ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:48:38.308','2025-03-31 13:48:38.308','2025-03-31 13:48:38.308','2025-03-31 13:48:38.308','0000-00-00 00:00:00',0))"}
+2025-03-31 13:48:48.447085109	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:48:48.447217301	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:48:48.447236820	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:48:48.448179267	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.894ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:48:48.447','2025-03-31 13:48:48.447','2025-03-31 13:48:48.447','2025-03-31 13:48:48.447','0000-00-00 00:00:00',0))"}
+2025-03-31 13:48:52.027723824	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:48:52.027879729	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:48:52.027904266	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:48:52.028988366	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.024ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:48:52.028','2025-03-31 13:48:52.028','2025-03-31 13:48:52.028','2025-03-31 13:48:52.028','0000-00-00 00:00:00',0))"}
+2025-03-31 13:49:16.685410007	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:49:16.685590835	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:49:16.685609656	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:49:16.686439896	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.780ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:49:16.686','2025-03-31 13:49:16.686','2025-03-31 13:49:16.686','2025-03-31 13:49:16.686','0000-00-00 00:00:00',0))"}
+2025-03-31 13:49:21.033748580	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:49:21.033859538	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:49:21.033874630	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:49:21.034850251	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.939ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:49:21.034','2025-03-31 13:49:21.034','2025-03-31 13:49:21.034','2025-03-31 13:49:21.034','0000-00-00 00:00:00',0))"}
+2025-03-31 13:49:53.273221460	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:49	kitex	{"host": "127.0.0.1:8001"}
+2025-03-31 13:49:53.273419122	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/server/kitex/kitex.go:34	SerReporter	{"!BADKEY": {}}
+2025-03-31 13:49:53.273467272	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/cmd/server/main.go:41	=============starting==========
+2025-03-31 13:49:53.273599941	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/http/http.go:49	gin server start	{"host": "http://127.0.0.1:8000"}
+2025-03-31 13:49:53.273604143	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:35	Kitex服务信息	{"服务名称": "HzwService", "方法数量": 3, "方法列表": {"CreateHzw":{},"CreateHzwTxTest":{},"GetHzw":{}}, "额外信息": {"PackageName":"hzw"}}
+2025-03-31 13:49:53.274017966	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/pkg/server/kitex/kitex.go:43	Kitex服务启动	{"总服务数": 1, "详细信息Error": "json: unsupported type: func(string) serviceinfo.MethodInfo"}
+2025-03-31 13:50:39.340348934	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:50:39.340614729	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:50:39.340639283	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:50:39.341759952	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "1.081ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:50:39.341','2025-03-31 13:50:39.341','2025-03-31 13:50:39.341','2025-03-31 13:50:39.341','0000-00-00 00:00:00',0))"}
+2025-03-31 13:51:21.391132170	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:51:21.391301188	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:51:21.391321704	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:51:21.392310275	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.937ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:51:21.391','2025-03-31 13:51:21.391','2025-03-31 13:51:21.391','2025-03-31 13:51:21.391','0000-00-00 00:00:00',0))"}
+2025-03-31 13:51:31.929208316	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/adapter/adapterkitex/handler_HzwService.go:28	CreateHzw
+2025-03-31 13:51:31.929311877	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:66	开启事务
+2025-03-31 13:51:31.929327555	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/aicgormdb/repository.go:51	已开启事务
+2025-03-31 13:51:31.930259790	[34minfo[0m	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/wiretest/wiredemo/internal/repository/dao/hzwdao.go:36	trace	{"elapsed": "0.890ms", "rows": 1, "sql": "SELECT ID FROM FINAL TABLE ( INSERT INTO hzw (NAME,AGE,VERSION,CREATED_AT,UPDATED_AT,TIME1,TIME2,TIME3,DECIMAL1) VALUES ('kitextest',22,0,'2025-03-31 13:51:31.929','2025-03-31 13:51:31.929','2025-03-31 13:51:31.929','2025-03-31 13:51:31.929','0000-00-00 00:00:00',0))"}

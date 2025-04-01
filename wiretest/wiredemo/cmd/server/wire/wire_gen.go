@@ -11,13 +11,16 @@ import (
 	"github.com/google/wire"
 	"github.com/spf13/viper"
 	"log/slog"
-	"wiredemo/internal/controller"
+	"wiredemo/internal/adapter/adapterhttp"
+	"wiredemo/internal/adapter/adapterkitex"
 	"wiredemo/internal/repository/dao"
 	"wiredemo/internal/server/http"
+	"wiredemo/internal/server/kitex"
 	"wiredemo/internal/service"
 	"wiredemo/pkg/app"
 	"wiredemo/pkg/log"
 	http2 "wiredemo/pkg/server/http"
+	kitex2 "wiredemo/pkg/server/kitex"
 )
 
 // Injectors from wire.go:
@@ -35,12 +38,16 @@ func NewWire(viperViper *viper.Viper) (*app.App, func(), error) {
 	baseService := service.NewService(transactionManager, slogLogger)
 	iHzwDao := dao.NewHzwDao(repository)
 	iHzwService := service.NewHzwService(baseService, iHzwDao)
-	hzwController := controller.NewHzwController(iHzwService)
-	hzw2Dao := dao.GetHzw2Dao(repository)
-	iHzw2Service := service.NewHzw2Service(baseService, hzw2Dao)
-	hzw2Controller := controller.NewHzw2Controller(iHzw2Service)
+	hzwController := adapterhttp.NewHzwController(iHzwService)
+	iHzw2Dao := dao.NewHzw2Dao(repository)
+	iHzw2Service := service.NewHzw2Service(baseService, iHzw2Dao)
+	hzw2Controller := adapterhttp.NewHzw2Controller(iHzw2Service)
 	server := http.NewHTTPServer(slogLogger, viperViper, hzwController, hzw2Controller)
-	appApp, cleanup := newApp(server, slogLogger)
+	serverServer := kitex.NewKitexOriginalServer(slogLogger, viperViper)
+	hzwKCReporter := kitex2.NewHzwKCReporter()
+	hzwService := adapterkitex.NewHzwKitexCtl(iHzwService)
+	kitexServer := kitex.NewKitexServer(serverServer, slogLogger, hzwKCReporter, hzwService)
+	appApp, cleanup := newApp(server, kitexServer, slogLogger)
 	return appApp, func() {
 		cleanup()
 	}, nil
@@ -49,10 +56,16 @@ func NewWire(viperViper *viper.Viper) (*app.App, func(), error) {
 // wire.go:
 
 // 应用服务器实现
-var ServerSet = wire.NewSet(http.NewHTTPServer)
+var HttpServerSet = wire.NewSet(http.NewHTTPServer)
+
+// KitexServerSet Kitex服务相关provider
+var KitexServerSet = wire.NewSet(kitex.NewKitexOriginalServer, kitex.NewKitexServer, kitex2.NewHzwKCReporter)
 
 // http 处理器
-var ControllerSet = wire.NewSet(controller.NewHzwController, controller.NewHzw2Controller)
+var AdapterhttpSet = wire.NewSet(adapterhttp.NewHzwController, adapterhttp.NewHzw2Controller)
+
+// AsapterKitexSet kitex处理器
+var AdapterkitexSet = wire.NewSet(adapterkitex.NewHzwKitexCtl)
 
 // 业务服务
 var ServiceSet = wire.NewSet(service.NewService, service.NewHzwService, service.NewHzw2Service)
@@ -60,8 +73,13 @@ var ServiceSet = wire.NewSet(service.NewService, service.NewHzwService, service.
 // build App
 func newApp(
 	httpServer *http2.Server,
+	kitexServer *kitex2.Server,
 
 	logger *slog.Logger,
 ) (*app.App, func()) {
-	return app.NewApp(app.WithServer(httpServer), app.WithName("wiredemo-server"), app.WithLogger(logger))
+	return app.NewApp(app.WithServer(
+		httpServer,
+		kitexServer,
+	), app.WithName("wiredemo-server"), app.WithLogger(logger),
+	)
 }

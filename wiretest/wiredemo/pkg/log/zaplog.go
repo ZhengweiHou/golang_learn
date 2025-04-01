@@ -56,8 +56,8 @@ func NewZapLog(conf *viper.Viper) *zap.Logger {
 			EncodeLevel:    zapcore.LowercaseColorLevelEncoder,
 			EncodeTime:     timeEncoder,
 			EncodeDuration: zapcore.SecondsDurationEncoder,
-			//EncodeCaller:   zapcore.FullCallerEncoder,
-			EncodeCaller: zapcore.ShortCallerEncoder,
+			EncodeCaller:   zapcore.FullCallerEncoder,
+			//EncodeCaller: zapcore.ShortCallerEncoder,
 		})
 	} else {
 		encoder = zapcore.NewJSONEncoder(zapcore.EncoderConfig{

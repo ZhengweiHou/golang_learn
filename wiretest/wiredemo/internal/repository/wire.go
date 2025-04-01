@@ -13,6 +13,6 @@ import (
 )
 
 var RepositoryWireSet = wire.NewSet(
-	dao.GetHzw2Dao,
+	dao.NewHzw2Dao,
 	dao.NewHzwDao,
 )

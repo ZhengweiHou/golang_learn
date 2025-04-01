@@ -46,6 +46,8 @@ func WithServerPort(port int) Option {
 }
 
 func (s *Server) Start(ctx context.Context) error {
+	s.logger.Info("gin server start", "host", fmt.Sprintf("http://%s:%d", s.host, s.port))
+	//	app.Logger.Info("docs addr", "addr", fmt.Sprintf("http://%s:%d/swagger/index.html", conf.GetString("http.host"), conf.GetInt("http.port")))
 	s.httpSrv = &http.Server{
 		Addr:    fmt.Sprintf("%s:%d", s.host, s.port),
 		Handler: s,

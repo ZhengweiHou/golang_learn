@@ -141,7 +141,7 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/model.Hzw2"
+                            "$ref": "#/definitions/wiredemo_internal_repository_model.Hzw2"
                         }
                     },
                     "400": {
@@ -183,7 +183,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/model.Hzw2"
+                            "$ref": "#/definitions/wiredemo_internal_repository_model.Hzw2"
                         }
                     }
                 ],
@@ -191,7 +191,7 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/model.Hzw2"
+                            "$ref": "#/definitions/wiredemo_internal_repository_model.Hzw2"
                         }
                     },
                     "400": {
@@ -309,7 +309,7 @@ const docTemplate = `{
                 }
             }
         },
-        "model.Hzw2": {
+        "wiredemo_internal_repository_model.Hzw2": {
             "type": "object",
             "properties": {
                 "Age": {

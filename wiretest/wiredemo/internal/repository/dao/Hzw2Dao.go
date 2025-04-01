@@ -6,15 +6,25 @@ package dao
 import (
     "context"
     "wiredemo/internal/repository/model"
-	db "aic.com/pkg/aicgormdb"
+    db "aic.com/pkg/aicgormdb"
 )
+
+
+type IHzw2Dao interface{
+    InsertOne(ctx context.Context,arg *model.Hzw2)(int64,error)
+    FindByPrimaryKey(ctx context.Context, Id uint) (*model.Hzw2,error)
+    UpdateByPrimaryKey(ctx context.Context,arg *model.Hzw2)(int64,error)
+    UpdateByPriIngoreNullCols(ctx context.Context,arg *model.Hzw2)(int64,error)
+    DeleteByPrimaryKey(ctx context.Context, Id uint)(int64,error)
+    FindByName(ctx context.Context,Name string)([]model.Hzw2,error)
+}
 
 type Hzw2Dao struct{
 	*db.Repository
 }
 
-// GetHzw2Dao get dao instance
-func GetHzw2Dao(repository *db.Repository) *Hzw2Dao{
+// NewHzw2Dao get dao instance
+func NewHzw2Dao(repository *db.Repository) IHzw2Dao{
     return &Hzw2Dao{
         Repository: repository,
     }
@@ -33,6 +43,11 @@ func (dao *Hzw2Dao) FindByPrimaryKey(ctx context.Context, Id uint) (*model.Hzw2,
 
 func (dao *Hzw2Dao) UpdateByPrimaryKey(ctx context.Context,arg *model.Hzw2)(int64,error){
       result:=dao.DB(ctx).Save(arg)
+      return result.RowsAffected, result.Error
+}
+
+func (dao *Hzw2Dao) UpdateByPriIngoreNullCols(ctx context.Context,arg *model.Hzw2)(int64,error){
+      result:=dao.DB(ctx).Model(arg).Updates(arg)
       return result.RowsAffected, result.Error
 }
 

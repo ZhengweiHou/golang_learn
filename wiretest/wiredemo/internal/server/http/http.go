@@ -4,7 +4,7 @@ import (
 	"log/slog"
 	apiV1 "wiredemo/api/http/v1"
 	"wiredemo/docs"
-	"wiredemo/internal/controller"
+	"wiredemo/internal/adapter/adapterhttp"
 	"wiredemo/pkg/server/http"
 
 	"github.com/gin-gonic/gin"
@@ -17,8 +17,8 @@ func NewHTTPServer(
 	//logger *log.Logger,
 	logger *slog.Logger,
 	conf *viper.Viper,
-	hzwController *controller.HzwController,
-	hzw2Controller *controller.Hzw2Controller,
+	hzwController *adapterhttp.HzwController,
+	hzw2Controller *adapterhttp.Hzw2Controller,
 ) *http.Server {
 	gin.SetMode(gin.DebugMode)
 	s := http.NewServer(

@@ -6,8 +6,7 @@ package model
 import (
 	"time"
 )
-
-const TableNameProduct = "HZW2"
+ 
 
 // Hzw2 mapped from table HZW2
 type Hzw2 struct {
@@ -25,5 +24,5 @@ type Hzw2 struct {
 
 // TableName HZW2 table name
 func (*Hzw2) TableName() string {
-   return TableNameProduct
+   return "HZW2"
 }

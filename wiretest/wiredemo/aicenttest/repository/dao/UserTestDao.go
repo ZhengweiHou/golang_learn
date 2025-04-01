@@ -9,12 +9,23 @@ import (
 	db "aic.com/pkg/aicgormdb"
 )
 
+
+type IUserTestDao interface{
+    InsertOne(ctx context.Context,arg *model.UserTest)(int64,error)
+    FindByPrimaryKey(ctx context.Context, UserId int64) (*model.UserTest,error)
+    UpdateByPrimaryKey(ctx context.Context,arg *model.UserTest)(int64,error)
+    DeleteByPrimaryKey(ctx context.Context, UserId int64)(int64,error)
+    FindByUserName(ctx context.Context,UserName string)([]model.UserTest,error)
+    FindByIdNoIdType(ctx context.Context,IdNo string,IdType string)(*model.UserTest,error)
+    FindByAAA (ctx context.Context,arg *model.FindByAAAArg) ([]*model.UserTest,error)
+}
+
 type UserTestDao struct{
 	*db.Repository
 }
 
-// GetUserTestDao get dao instance
-func GetUserTestDao(repository *db.Repository) *UserTestDao{
+// NewUserTestDao get dao instance
+func NewUserTestDao(repository *db.Repository) IUserTestDao{
     return &UserTestDao{
         Repository: repository,
     }

@@ -28,7 +28,7 @@ definitions:
       version:
         type: integer
     type: object
-  model.Hzw2:
+  wiredemo_internal_repository_model.Hzw2:
     properties:
       Age:
         type: integer
@@ -140,7 +140,7 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/model.Hzw2'
+            $ref: '#/definitions/wiredemo_internal_repository_model.Hzw2'
         "400":
           description: Bad Request
           schema:
@@ -166,14 +166,14 @@ paths:
         name: hzw
         required: true
         schema:
-          $ref: '#/definitions/model.Hzw2'
+          $ref: '#/definitions/wiredemo_internal_repository_model.Hzw2'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/model.Hzw2'
+            $ref: '#/definitions/wiredemo_internal_repository_model.Hzw2'
         "400":
           description: Bad Request
           schema:
