@@ -267,11 +267,15 @@ func TestHzwUpdate(t *testing.T) {
 	// == Model + updates 只更新非空字段 ==
 	hzw2 := &Hzw{
 		ID:  hzw.ID,
-		Age: 22,
+		Age: 0,
 	}
 	db.Model(hzw2).Updates(hzw2) // 只更新非空字段
 	jstr, _ = json.Marshal(hzw2)
 	fmt.Printf("save hzw: %s\n", jstr) // 其他字段不会自动从库中赋值到 实体 中
+
+	// ==
+	hzw.Age = 0
+	db.Save(hzw) // 指定的主键为update，默认更新所有字段包含所有空值
 
 	// == Save() 有主键时为Update操作 但包含所有空值 ==
 	hzw3 := &Hzw{

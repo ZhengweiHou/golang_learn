@@ -4,17 +4,24 @@
             "path": "wirehello"
         },
         {
-            "path": "wiredemo"
-        },
-        {
             "path": "wire-hzw"
         },
         {
             "path": "../../aic-ent"
         },
         {
-            "path": "aicgormdb"
+            "path": "../../../../golang/wire"
         }
     ],
-    "settings": {}
+    "settings": {
+        "marscode.codeCompletionPro": {
+            "enableCodeCompletionPro": true
+        },
+        "marscode.enableInlineCommand": false,
+        "marscode.enableCodelens": {
+            "enableInlineDocumentation": true,
+            "enableInlineUnitTest": true,
+            "enableInlineExplain": true
+        }
+    }
 }

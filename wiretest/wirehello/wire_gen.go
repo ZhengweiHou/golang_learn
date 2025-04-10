@@ -6,6 +6,10 @@
 
 package wirehello
 
+import (
+	"github.com/google/wire"
+)
+
 // Injectors from wire.go:
 
 // InitializeEvent 声明injector的函数签名
@@ -15,3 +19,17 @@ func InitializeEvent(msg string) Event {
 	event := NewEvent(greeter)
 	return event
 }
+
+func InitApp() *App {
+	serviceA := _wireServiceAValue
+	app := NewAppA(serviceA)
+	return app
+}
+
+var (
+	_wireServiceAValue = &ServiceA{}
+)
+
+// wire.go:
+
+var wireSet = wire.NewSet(wire.Value(&ServiceA{}), wire.Value(&ServiceB{}), NewAppA)

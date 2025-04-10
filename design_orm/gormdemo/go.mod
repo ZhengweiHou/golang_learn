@@ -1,10 +1,11 @@
 module gormdemo
 
-go 1.24.0
+//go 1.24.0
+go 1.23.6
 
 replace gorm.io/gorm v1.25.12 => /home/houzw/document/git-rep/golang/gorm
 
-replace gorm.io/driver/ibmdb v1.0.0 => /home/houzw/document/git-rep/HOUZW/ibmdb
+replace gorm.io/driver/ibmdb v1.0.0 => /home/houzw/document/git-rep/HOUZW/golang/ibmdb
 
 //replace gorm.io/driver/ibmdb v1.0.0 => github.com/ZhengweiHou/ibmdb v0.0.0-20250312083856-50baf4c8d628
 
@@ -22,7 +23,6 @@ require (
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
-	gitee.com/xiaohua_gitee/aic-ent v1.0.1 // indirect
 	github.com/go-sql-driver/mysql v1.9.0 // indirect
 	github.com/golang-sql/civil v0.0.0-20220223132316-b832511892a9 // indirect
 	github.com/golang-sql/sqlexp v0.1.0 // indirect

@@ -1,8 +1,8 @@
 module aicgormdb
 
-go 1.24.0
+//go 1.24.0
 
-//go 1.23.6
+go 1.23.6
 
 replace gorm.io/driver/ibmdb v0.0.1 => github.com/ZhengweiHou/ibmdb v0.0.1
 
@@ -15,6 +15,7 @@ require (
 	gorm.io/driver/mysql v1.5.7
 	gorm.io/gorm v1.25.12
 )
+
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect

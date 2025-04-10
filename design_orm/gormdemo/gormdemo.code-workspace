@@ -7,7 +7,7 @@
             "path": "../../../../../golang/gorm"
         },
         {
-            "path": "../../../../ibmdb"
+            "path": "../../../ibmdb"
         }
     ]
 }

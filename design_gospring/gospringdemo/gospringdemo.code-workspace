@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../../document/git-rep/HOUZW/golang/golang_learn/design_gospring/gospringdemo"
+		},
+		{
+			"path": "../../../../../../../document/git-rep/HOUZW/golang/spring-core"
+		}
+	],
+    "settings": {
+        "marscode.chatLanguage": "cn",
+        "marscode.codeCompletionPro": {
+            "enableCodeCompletionPro": true
+        }
+    },
+    "marscode.indexing.enable": true,
+    "search.useIgnoreFiles": true,
+    "search.followSymlinks": false
+}

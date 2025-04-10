@@ -26,3 +26,14 @@ func TestOs1(t *testing.T) {
 	var f1 os.FileMode = 0777
 	fmt.Printf("%s\n", f1)
 }
+
+func TestOs2(t *testing.T) {
+	ep, _ := os.Executable()
+	fmt.Printf("ep:%v\n", ep)
+
+	_, err := os.Stat("/tmp/hhh")
+	fmt.Printf("ep:%v\n", err)
+	if os.IsExist(err) {
+		fmt.Println("=====")
+	}
+}
