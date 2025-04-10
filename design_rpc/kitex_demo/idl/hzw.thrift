@@ -13,7 +13,7 @@
 // limitations under the License. 
 // 
 
-namespace go hzwapi
+namespace go hzw
 
 struct Request {
 	1: string message
@@ -23,6 +23,10 @@ struct Response {
 	1: string message
 }
 
-service Hello {
-    Response echo(1: Request req)
+service HzwCmdService {
+    Response echo2(1: Request req)
+}
+
+service HzwQueryService {
+    Response echo1(1: Request req)
 }

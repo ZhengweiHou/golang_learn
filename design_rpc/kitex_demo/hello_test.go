@@ -1,11 +1,11 @@
-package main
+package kitexdemo
 
 import (
 	"context"
 	"fmt"
-	"kitex_demo/kitex_gen/hzwapi"
-	helloapi "kitex_demo/kitex_gen/hzwapi/hello"
-	"kitex_demo/rpc/hello"
+	"kitex_demo/api/kitex/hello"
+	"kitex_demo/api/kitex/hello/helloservice"
+	"kitex_demo/kservice"
 	"log"
 	"testing"
 	"time"
@@ -15,7 +15,8 @@ import (
 )
 
 func TestHelloServer(t *testing.T) {
-	svr := helloapi.NewServer(new(hello.HelloImpl))
+	// svr := hello.NewServer(new(rpc.HelloImpl))
+	svr := helloservice.NewServer(new(kservice.HelloServiceImpl))
 
 	err := svr.Run()
 
@@ -25,12 +26,12 @@ func TestHelloServer(t *testing.T) {
 }
 
 func TestHelloClient(t *testing.T) {
-	c, err := helloapi.NewClient("hello", client.WithHostPorts("0.0.0.0:8888"))
+	c, err := helloservice.NewClient("hello", client.WithHostPorts("0.0.0.0:8888"))
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	hreq := hzwapi.NewRequest()
+	hreq := hello.NewRequest()
 	hreq.Message = "hello req"
 
 	resp, err := c.Echo(context.Background(), hreq, callopt.WithRPCTimeout(3*time.Second))
