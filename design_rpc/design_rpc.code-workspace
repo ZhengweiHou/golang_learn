@@ -5,6 +5,15 @@
         },
         {
             "path": "grpc_demo"
+        },
+        {
+            "path": "../../../../../golang_project/pkg/mod/github.com/cloudwego/kitex@v0.13.1"
+        },
+        {
+            "path": "../design_gospring/aopdemo"
+        },
+        {
+            "path": "../design_otel/otel_demo"
         }
     ],
     "settings": {

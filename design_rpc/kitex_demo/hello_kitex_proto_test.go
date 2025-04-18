@@ -7,14 +7,21 @@ import (
 	"kitex_demo/api/kitex/helloproto/helloprotoservice"
 	"kitex_demo/kservice"
 	"log"
+	"net"
 	"testing"
 
 	"github.com/cloudwego/kitex/client"
+	"github.com/cloudwego/kitex/server"
 	"github.com/cloudwego/kitex/transport"
 
 	// https://github.com/cloudwego/kitex/issues/1377
+	"github.com/cloudwego/kitex/pkg/klog"
 	_ "github.com/cloudwego/kitex/pkg/remote/codec/protobuf/encoding/gzip"
 	"github.com/cloudwego/kitex/pkg/transmeta"
+
+	// kitexzap "github.com/kitex-contrib/obs-opentelemetry/logging/zap"
+	// kitexslog "github.com/kitex-contrib/obs-opentelemetry/logging/slog"
+	kitexslog "github.com/kitex-contrib/obs-opentelemetry/logging/slog"
 )
 
 func TestHK2JavaClient(t *testing.T) {
@@ -47,7 +54,16 @@ func helloProtoCall(port int) {
 
 // == kitex server ==
 func TestHelloProtoServer(t *testing.T) {
-	svr := helloprotoservice.NewServer(new(kservice.HelloProtoServiceImpl))
+	// klog.SetLogger(kitexzap.NewLogger())
+	klog.SetLogger(kitexslog.NewLogger())
+
+	addr, _ := net.ResolveTCPAddr("tcp", "127.0.0.1:8888")
+	svr := server.NewServer(
+		server.WithServiceAddr(addr),
+	)
+
+	// svr := helloprotoservice.NewServer(new(kservice.HelloProtoServiceImpl))
+	svr.RegisterService(helloprotoservice.NewServiceInfo(), new(kservice.HelloProtoServiceImpl))
 
 	err := svr.Run()
 

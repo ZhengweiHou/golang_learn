@@ -25,6 +25,7 @@ public class Java2GoKitexTest {
     @Test
     public void togokitex() throws InterruptedException {
         call(8888);
+//        call(8001);
 //        callFuture(8888);
     }
 

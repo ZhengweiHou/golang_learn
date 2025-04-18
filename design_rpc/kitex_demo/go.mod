@@ -4,11 +4,16 @@ go 1.23.6
 
 // go 1.24.0
 
+replace github.com/cloudwego/kitex => /home/houzw/document/golang_project/pkg/mod/github.com/cloudwego/kitex@v0.13.1
+
 require (
 	github.com/cloudwego/gopkg v0.1.4
-	github.com/cloudwego/kitex v0.13.1
+	// github.com/cloudwego/kitex v0.13.1
 	github.com/cloudwego/prutal v0.1.0
+	github.com/kitex-contrib/obs-opentelemetry/logging/slog v0.0.0-20241120035129-55da83caab1b
 )
+
+require github.com/cloudwego/kitex v0.11.3
 
 require (
 	github.com/bytedance/gopkg v0.1.2 // indirect
@@ -40,6 +45,8 @@ require (
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
+	go.opentelemetry.io/otel v1.25.0 // indirect
+	go.opentelemetry.io/otel/trace v1.25.0 // indirect
 	golang.org/x/arch v0.14.0 // indirect
 	golang.org/x/net v0.24.0 // indirect
 	golang.org/x/sync v0.8.0 // indirect

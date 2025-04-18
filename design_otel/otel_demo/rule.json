@@ -1,0 +1,9 @@
+[
+    {
+      "ImportPath": "otel_demo/hellodo",
+      "Function": "HelloOTEL3",
+      "OnEnter": "onEnterHelloOTEL3",
+      "Path": "hooks",
+      "GoVersion": "1.23.6"
+    }
+]

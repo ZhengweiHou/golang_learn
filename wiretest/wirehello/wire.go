@@ -1,7 +1,8 @@
-/*
 //go:build wireinject
 // +build wireinject
-*/
+
+/*
+ */
 
 // 标示 该文件只在运行wire是被编译
 
