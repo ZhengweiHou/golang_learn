@@ -1,0 +1,15 @@
+@startuml
+title 时序图示例
+
+actor 用户 as User
+participant "客户端" as Client
+participant "服务器" as Server
+database "数据库" as DB
+
+User -> Client: 输入请求
+Client -> Server: 发送请求
+Server -> DB: 查询数据
+DB --> Server: 返回数据
+Server --> Client: 返回响应
+Client --> User: 显示结果
+@enduml

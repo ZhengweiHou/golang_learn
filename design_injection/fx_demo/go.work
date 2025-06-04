@@ -1,0 +1,8 @@
+go 1.23.6
+
+use (
+	/home/houzw/document/git-rep/HOUZW/golang/golang_learn/design_injection/fx_demo
+	/home/houzw/document/git-rep/golang/fx
+)
+
+replace go.uber.org/fx v1.24.0 => /home/houzw/document/git-rep/golang/fx

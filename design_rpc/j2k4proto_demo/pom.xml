@@ -11,9 +11,9 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
 
-        <protobuf.version>3.21.7</protobuf.version>
+        <protobuf.version>3.23.4</protobuf.version>
         <protobuf-plugin.version>0.6.1</protobuf-plugin.version>
-        <grpc.version>1.51.0</grpc.version>
+        <grpc.version>1.58.0</grpc.version>
 
     </properties>
 
@@ -38,7 +38,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
-            <!--            <scope>test</scope>-->
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -46,8 +46,19 @@
             <version>4.13.1</version>
             <scope>compile</scope>
         </dependency>
-    </dependencies>
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <version>2.1.1</version>
+            <scope>compile</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>5.3.16</version>
+        </dependency>
+    </dependencies>
     <build>
         <extensions>
             <extension>

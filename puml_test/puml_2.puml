@@ -1,0 +1,25 @@
+@startuml
+title 用户登录时序图
+
+actor 用户 as User
+participant "Web浏览器" as Browser
+participant "认证服务" as Auth
+database "用户数据库" as DB
+
+User -> Browser: 输入用户名密码
+Browser -> Auth: 发送登录请求
+activate Auth
+
+Auth -> DB: 查询用户信息
+DB --> Auth: 返回用户数据
+
+alt 认证成功
+    Auth --> Browser: 返回token
+    Browser -> User: 显示主页
+else 认证失败
+    Auth --> Browser: 返回错误
+    Browser -> User: 显示错误
+end
+
+deactivate Auth
+@enduml

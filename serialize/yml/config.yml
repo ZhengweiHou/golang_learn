@@ -3,3 +3,11 @@ database:
   port: 123
   username: h
   password: z
+students:
+  - "1111"
+  - "2222"
+  - "3333"
+  - a: 1
+    b: 1
+    c: 1
+

@@ -1,23 +1,15 @@
 {
 	"folders": [
         {
-            "path": "kitex_demo"
+            "path": "j2k4proto_demo"
         },
         {
-            "path": "grpc_demo"
-        },
-        {
-            "path": "../../../../../golang_project/pkg/mod/github.com/cloudwego/kitex@v0.13.1"
-        },
-        {
-            "path": "../design_gospring/aopdemo"
-        },
-        {
-            "path": "../design_otel/otel_demo"
+            "path": "../../../../../../document/git-rep/HOUZW/golang/golang_learn/design_rpc/kitex_demo"
         }
     ],
     "settings": {
         "java.configuration.updateBuildConfiguration": "interactive",
-        "marscode.chatLanguage": "cn"
+        "marscode.chatLanguage": "cn",
+        "java.compile.nullAnalysis.mode": "automatic"
     }
 }

@@ -1,13 +1,22 @@
-package com.hzw.learn.j2gokitex;
+package com.hzw.learn.test;
 
 
 import com.hzw.learn.j2golitex.HelloProtoServiceGrpc;
 import com.hzw.learn.j2golitex.Request;
 import com.hzw.learn.j2golitex.Response;
+
+import io.grpc.Grpc;
+import io.grpc.InsecureServerCredentials;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import org.junit.Test;
+import io.grpc.ServerCredentials;
+import io.grpc.TlsServerCredentials;
+import io.grpc.TlsServerCredentials.Builder;
 
+import org.junit.Test;
+import org.springframework.core.io.ClassPathResource;
+
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -16,7 +25,7 @@ import java.io.IOException;
  * @Author houzw
  * @Date 2025/4/10
  **/
-public class JavaServerTest {
+public class JavaServerTest2 {
     // 启动服务
     @Test
     public void testServer() throws IOException, InterruptedException {
@@ -28,6 +37,22 @@ public class JavaServerTest {
         System.out.println("Server started, listening on " + port);
 
         server.awaitTermination();
+    }
+
+    @Test
+    public void testServer_https() throws IOException, InterruptedException {
+        int port = 8082;
+
+        // TlsServerCredentials.Builder tlsBuilder = TlsServerCredentials.newBuilder();
+        // File serverCert = new ClassPathResource("x509/server.crt").getFile();
+        // File serverKey = new ClassPathResource("x509/server.key").getFile();
+        // File caCert = new ClassPathResource("x509/ca.crt").getFile();
+        // ServerCredentials credentials  = tlsBuilder.trustManager(caCert).keyManager(serverCert, serverKey).build();
+        ServerCredentials credentials = InsecureServerCredentials.create(); // 不建议使用,非常坑
+        Server server = Grpc.newServerBuilderForPort(port, credentials)
+        .addService(new HelloGrpcServerImpl()).build();
+        server.start().awaitTermination();
+        
     }
 
     // 实现服务接口

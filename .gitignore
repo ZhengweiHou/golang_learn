@@ -1,2 +1,3 @@
+*.code-workspace
 .idea
 **/.otel-build
