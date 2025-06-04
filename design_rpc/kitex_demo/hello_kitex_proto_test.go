@@ -25,11 +25,14 @@ import (
 )
 
 func TestHK2JavaClient(t *testing.T) {
-	helloProtoCall(8082)
+	// helloProtoCall(8082)
+	// helloProtoCall(8099)
+	helloProtoCall(19883)
 }
 
 func TestHK2KitexClient(t *testing.T) {
-	helloProtoCall(8888)
+	// helloProtoCall(8888)
+	helloProtoCall(8001)
 }
 
 func helloProtoCall(port int) {
