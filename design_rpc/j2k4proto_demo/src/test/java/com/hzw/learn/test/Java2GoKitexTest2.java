@@ -28,25 +28,45 @@ import io.grpc.stub.StreamObserver;
  **/
 public class Java2GoKitexTest2 {
 
-    @Test
-    public void tojava() throws Exception {
-        // call(8082);
-        // calltsl(8082);
-        // calltsl(8099);
-        // call(8099);
-        // call(8001);
-        call(14890);
-    }
 
     @Test
     public void togokitex() throws InterruptedException {
-        // call(8888);
-        call(8099);
-//        call(8001);
-//        callFuture(8888);
+	    call(8886, false); // golang
     }
 
-    public void call( int port) throws InterruptedException {
+    @Test
+    public void testclient() {
+	    try {
+	        call(8886, true); // golang
+        } catch (InterruptedException e) {e.printStackTrace();} 
+   }
+    @Test
+    public void t1() {
+	    try {
+	        call(1111, false); // golang
+        } catch (InterruptedException e) {e.printStackTrace();} 
+   }
+    @Test
+    public void t2() {
+	    try {
+	        call(7777, false); // golang
+        } catch (InterruptedException e) {e.printStackTrace();} 
+   }
+    @Test
+    public void t3() {
+	    try {
+	        call(8082, false); // golang
+        } catch (InterruptedException e) {e.printStackTrace();} 
+   }
+    @Test
+    public void t4() {
+	    try {
+	        call(8886, false); // golang
+        } catch (InterruptedException e) {e.printStackTrace();} 
+   }
+    
+
+    public void call(int port, boolean e) throws InterruptedException {
         // 创建一个非安全的 gRPC 通道，连接到指定端口的本地服务器
         ManagedChannelBuilder<?> build = ManagedChannelBuilder.forAddress("localhost", port);
         build.usePlaintext();
@@ -58,12 +78,17 @@ public class Java2GoKitexTest2 {
         HelloProtoServiceGrpc.HelloProtoServiceBlockingStub stub
                 = HelloProtoServiceGrpc.newBlockingStub(channel);
 
+        String msg = "Hello from Java client";
+        if (e) {
+            msg = "err" + msg;
+        }
+
         // 发送请求并接收响应
         for (int i = 0; i < 5; i++) {
-            Request request = Request.newBuilder().setMessage("Hello from Java client " + i).build();
+            Request request = Request.newBuilder().setMessage(msg + i).build();
             Response response = stub.echo(request);
             System.out.println("Response from server: " + response.getMessage());
-            Thread.sleep(1000);
+            Thread.sleep(500);
         }
         // 关闭通道
         channel.shutdown();

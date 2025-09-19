@@ -12,6 +12,8 @@ import (
 )
 
 func TestBasedao(t *testing.T) {
+	dao.InitDb()
+
 	ctx := context.Background()
 	studao := dao.StudentDao{}
 

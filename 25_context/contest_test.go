@@ -2,14 +2,16 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"math/rand"
+	"testing"
 	"time"
 )
 
 const keyID = "id"
 
-func main() {
+func Testmain1(t *testing.T) {
 	// 定义上下文值
 	rand.Seed(time.Now().Unix())
 	ctx := context.WithValue(context.Background(), keyID, rand.Int())
@@ -29,4 +31,25 @@ func operation2(ctx context.Context) {
 
 	// this way, the same ID is passed from one function call to the next
 	log.Println("operation2 for id:", ctx.Value(keyID), " completed")
+}
+
+func TestCancel(t *testing.T) {
+	ctx, cancel := context.WithCancel(context.Background())
+	go func() {
+		time.Sleep(2 * time.Second)
+		cancel()
+	}()
+
+	select {
+	case <-ctx.Done():
+		fmt.Printf("context canceled: %v\n", ctx.Err())
+	}
+
+	if ctx.Err() != nil {
+		fmt.Printf("context canceled: %v\n", ctx.Err())
+	}
+
+	if ctx.Err() == context.Canceled {
+		fmt.Println("context canceled")
+	}
 }

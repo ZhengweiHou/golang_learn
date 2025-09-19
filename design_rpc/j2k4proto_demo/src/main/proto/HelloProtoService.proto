@@ -3,6 +3,7 @@ syntax = "proto3";
 package helloproto;
 
 option go_package = "helloproto";
+
 option java_package = "com.hzw.learn.j2golitex";
 // 生成类包含在该类内部
 option java_outer_classname = "HelloProto";

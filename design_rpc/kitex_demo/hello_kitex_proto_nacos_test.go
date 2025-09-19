@@ -85,16 +85,19 @@ func TestHelloProtoServerNacos(t *testing.T) {
 		server.WithServerBasicInfo(&rpcinfo.EndpointBasicInfo{ServiceName: hzwendpoint}),
 		// server.WithStatsLevel(stats.LevelDetailed),
 		server.WithStatsLevel(stats.LevelDisabled),
+		// nacos
+		server.WithRegistry(registry.NewNacosRegistry(naming_client)),
 	}
 
-	options = append(options, server.WithRegistry(registry.NewNacosRegistry(naming_client)))
 	svr := server.NewServer(options...)
 
-	// helloprotoservice.RegisterService(svr, new(kservice.HelloProtoServiceImpl))
+	// 注册方式1
+	helloprotoservice.RegisterService(svr, new(kservice.HelloProtoServiceImpl))
 
-	sinfo := helloprotoservice.NewServiceInfo()
-	simpl := new(kservice.HelloProtoServiceImpl)
-	svr.RegisterService(sinfo, simpl)
+	// 注册方式2
+	// sinfo := helloprotoservice.NewServiceInfo()
+	// simpl := new(kservice.HelloProtoServiceImpl)
+	// svr.RegisterService(sinfo, simpl)
 
 	err := svr.Run()
 

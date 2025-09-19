@@ -29,7 +29,8 @@ public class JavaServerTest2 {
     // 启动服务
     @Test
     public void testServer() throws IOException, InterruptedException {
-        int port = 8082;
+        // int port = 8082;
+        int port = 7777;
         Server server = ServerBuilder.forPort(port)
                 .addService(new HelloGrpcServerImpl())
                 .build()
@@ -64,6 +65,10 @@ public class JavaServerTest2 {
             String msg = request.getMessage();
             System.out.println("get msg:" + msg);
             String message = "Hello, we are java!";
+
+            if (msg != null && msg.startsWith("err")) {
+                throw new RuntimeException("err");
+            }
 
             Response response = Response.newBuilder().setMessage(message).build();
             responseObserver.onNext(response);

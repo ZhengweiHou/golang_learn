@@ -153,10 +153,11 @@ func TestPrepareStmt(t *testing.T) {
 	}
 
 	stmt := stmtManger.Stmts
-	for sql, stmt := range stmt {
-		log.Printf("sql:%v,stmt:%v", sql, stmt)
-		stmt.Close()
-	}
+	fmt.Println(stmt)
+	// for sql, stmt := range stmt {
+	// 	log.Printf("sql:%v,stmt:%v", sql, stmt)
+	// 	stmt.Close()
+	// }
 	stmtManger.Close()
 
 }

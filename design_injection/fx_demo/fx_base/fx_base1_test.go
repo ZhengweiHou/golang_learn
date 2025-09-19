@@ -53,9 +53,11 @@ func TestBase1modules(t *testing.T) {
 			},
 		),
 
-		fx.Decorate(func(s M1S1) M1S1 { // 装饰器 修改原来的对象
-			return M1S1(fmt.Sprintf("d1[%s]", s))
-		}),
+		fx.Decorate(
+			func(s M1S1) M1S1 { // 装饰器 修改原来的对象
+				return M1S1(fmt.Sprintf("d1[%s]", s))
+			},
+		),
 
 		// fx.Decorate(func(s M1S1) M1S1 {
 		// 	return M1S1(fmt.Sprintf("d2[%s]", s))

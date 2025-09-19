@@ -12,7 +12,7 @@ var conhzw = "HOSTNAME=localhost;DATABASE=testdb;PORT=50001;UID=db2inst1;PWD=db2
 
 var globaldb *gorm.DB
 
-func init() {
+func InitDb() {
 	dialector := ibmdb.Open(conhzw)
 
 	conf := &gorm.Config{
