@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package api.hzw;
+
+import "google/api/annotations.proto";
+import "google/api/field_behavior.proto";
+import "google/protobuf/descriptor.proto";
+
+option go_package = "github.hzw.cn/api/hzw;hzw";
+option java_multiple_files = true;
+option java_package = "api.hzw";
+option java_outer_classname = "HzwProto";
+
+service HzwHello {
+	rpc HelloHzw (HzwRequest) returns (HzwReply){};
+
+    rpc HelloHzwStream(stream HzwRequest) returns (stream HzwReply) {}; // 双向流
+}
+
+// service HzwGetService {
+// 	rpc GetHzw (HzwRequest) returns (HzwReply){
+// 	    option (google.api.http) = {
+//             get: "/v1/hzw/get/:name"
+//             response_body: "msg"
+//         };
+//     };
+// }
+
+message HzwRequest {
+  string name = 1;
+}
+message HzwReply {
+    string msg = 1;
+}

@@ -1,0 +1,6 @@
+github.com/cloudwego/prutal v0.1.2 h1:npQie1NB2WAOmxge6pdN4iYH0O4Yuceg4iNWtOp+Ol8=
+github.com/cloudwego/prutal v0.1.2/go.mod h1:PHt8jxqWkVFv7VcXGVy5IJA/6CTbAtagHZGwCfNSMVA=
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/emicklei/proto v1.14.2 h1:wJPxPy2Xifja9cEMrcA/g08art5+7CGJNFNk35iXC1I=
+github.com/emicklei/proto v1.14.2/go.mod h1:rn1FgRS/FANiZdD2djyH7TMA9jdRDcYQ9IEN9yvjX0A=
