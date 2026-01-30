@@ -1,0 +1,8 @@
+{
+  "threads": 10,
+  "iterations": 1000,
+  "warmup_time": "5s",
+  "test_time": "30s",
+  "batch_size": 100,
+  "report_interval": "5s"
+}

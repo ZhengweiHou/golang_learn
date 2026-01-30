@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	_ "github.com/ibmdb/go_ibm_db"
-	"gorm.io/driver/ibmdb"
+	ibmdb "github.com/ZhengweiHou/gorm_ibmdb"
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
 	"gorm.io/driver/sqlite"

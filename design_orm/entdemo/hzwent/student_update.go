@@ -22,94 +22,80 @@ type StudentUpdate struct {
 }
 
 // Where appends a list predicates to the StudentUpdate builder.
-func (su *StudentUpdate) Where(ps ...predicate.Student) *StudentUpdate {
-	su.mutation.Where(ps...)
-	return su
-}
-
-// SetStuNo sets the "stuNo" field.
-func (su *StudentUpdate) SetStuNo(s string) *StudentUpdate {
-	su.mutation.SetStuNo(s)
-	return su
-}
-
-// SetNillableStuNo sets the "stuNo" field if the given value is not nil.
-func (su *StudentUpdate) SetNillableStuNo(s *string) *StudentUpdate {
-	if s != nil {
-		su.SetStuNo(*s)
-	}
-	return su
+func (_u *StudentUpdate) Where(ps ...predicate.Student) *StudentUpdate {
+	_u.mutation.Where(ps...)
+	return _u
 }
 
 // SetName sets the "name" field.
-func (su *StudentUpdate) SetName(s string) *StudentUpdate {
-	su.mutation.SetName(s)
-	return su
+func (_u *StudentUpdate) SetName(v string) *StudentUpdate {
+	_u.mutation.SetName(v)
+	return _u
 }
 
 // SetNillableName sets the "name" field if the given value is not nil.
-func (su *StudentUpdate) SetNillableName(s *string) *StudentUpdate {
-	if s != nil {
-		su.SetName(*s)
+func (_u *StudentUpdate) SetNillableName(v *string) *StudentUpdate {
+	if v != nil {
+		_u.SetName(*v)
 	}
-	return su
+	return _u
 }
 
 // SetAge sets the "age" field.
-func (su *StudentUpdate) SetAge(i int) *StudentUpdate {
-	su.mutation.ResetAge()
-	su.mutation.SetAge(i)
-	return su
+func (_u *StudentUpdate) SetAge(v int) *StudentUpdate {
+	_u.mutation.ResetAge()
+	_u.mutation.SetAge(v)
+	return _u
 }
 
 // SetNillableAge sets the "age" field if the given value is not nil.
-func (su *StudentUpdate) SetNillableAge(i *int) *StudentUpdate {
-	if i != nil {
-		su.SetAge(*i)
+func (_u *StudentUpdate) SetNillableAge(v *int) *StudentUpdate {
+	if v != nil {
+		_u.SetAge(*v)
 	}
-	return su
+	return _u
 }
 
-// AddAge adds i to the "age" field.
-func (su *StudentUpdate) AddAge(i int) *StudentUpdate {
-	su.mutation.AddAge(i)
-	return su
+// AddAge adds value to the "age" field.
+func (_u *StudentUpdate) AddAge(v int) *StudentUpdate {
+	_u.mutation.AddAge(v)
+	return _u
 }
 
 // SetVersion sets the "version" field.
-func (su *StudentUpdate) SetVersion(i int32) *StudentUpdate {
-	su.mutation.ResetVersion()
-	su.mutation.SetVersion(i)
-	return su
+func (_u *StudentUpdate) SetVersion(v int32) *StudentUpdate {
+	_u.mutation.ResetVersion()
+	_u.mutation.SetVersion(v)
+	return _u
 }
 
 // SetNillableVersion sets the "version" field if the given value is not nil.
-func (su *StudentUpdate) SetNillableVersion(i *int32) *StudentUpdate {
-	if i != nil {
-		su.SetVersion(*i)
+func (_u *StudentUpdate) SetNillableVersion(v *int32) *StudentUpdate {
+	if v != nil {
+		_u.SetVersion(*v)
 	}
-	return su
+	return _u
 }
 
-// AddVersion adds i to the "version" field.
-func (su *StudentUpdate) AddVersion(i int32) *StudentUpdate {
-	su.mutation.AddVersion(i)
-	return su
+// AddVersion adds value to the "version" field.
+func (_u *StudentUpdate) AddVersion(v int32) *StudentUpdate {
+	_u.mutation.AddVersion(v)
+	return _u
 }
 
 // Mutation returns the StudentMutation object of the builder.
-func (su *StudentUpdate) Mutation() *StudentMutation {
-	return su.mutation
+func (_u *StudentUpdate) Mutation() *StudentMutation {
+	return _u.mutation
 }
 
 // Save executes the query and returns the number of nodes affected by the update operation.
-func (su *StudentUpdate) Save(ctx context.Context) (int, error) {
-	return withHooks(ctx, su.sqlSave, su.mutation, su.hooks)
+func (_u *StudentUpdate) Save(ctx context.Context) (int, error) {
+	return withHooks(ctx, _u.sqlSave, _u.mutation, _u.hooks)
 }
 
 // SaveX is like Save, but panics if an error occurs.
-func (su *StudentUpdate) SaveX(ctx context.Context) int {
-	affected, err := su.Save(ctx)
+func (_u *StudentUpdate) SaveX(ctx context.Context) int {
+	affected, err := _u.Save(ctx)
 	if err != nil {
 		panic(err)
 	}
@@ -117,46 +103,43 @@ func (su *StudentUpdate) SaveX(ctx context.Context) int {
 }
 
 // Exec executes the query.
-func (su *StudentUpdate) Exec(ctx context.Context) error {
-	_, err := su.Save(ctx)
+func (_u *StudentUpdate) Exec(ctx context.Context) error {
+	_, err := _u.Save(ctx)
 	return err
 }
 
 // ExecX is like Exec, but panics if an error occurs.
-func (su *StudentUpdate) ExecX(ctx context.Context) {
-	if err := su.Exec(ctx); err != nil {
+func (_u *StudentUpdate) ExecX(ctx context.Context) {
+	if err := _u.Exec(ctx); err != nil {
 		panic(err)
 	}
 }
 
-func (su *StudentUpdate) sqlSave(ctx context.Context) (n int, err error) {
+func (_u *StudentUpdate) sqlSave(ctx context.Context) (_node int, err error) {
 	_spec := sqlgraph.NewUpdateSpec(student.Table, student.Columns, sqlgraph.NewFieldSpec(student.FieldID, field.TypeInt))
-	if ps := su.mutation.predicates; len(ps) > 0 {
+	if ps := _u.mutation.predicates; len(ps) > 0 {
 		_spec.Predicate = func(selector *sql.Selector) {
 			for i := range ps {
 				ps[i](selector)
 			}
 		}
 	}
-	if value, ok := su.mutation.StuNo(); ok {
-		_spec.SetField(student.FieldStuNo, field.TypeString, value)
-	}
-	if value, ok := su.mutation.Name(); ok {
+	if value, ok := _u.mutation.Name(); ok {
 		_spec.SetField(student.FieldName, field.TypeString, value)
 	}
-	if value, ok := su.mutation.Age(); ok {
+	if value, ok := _u.mutation.Age(); ok {
 		_spec.SetField(student.FieldAge, field.TypeInt, value)
 	}
-	if value, ok := su.mutation.AddedAge(); ok {
+	if value, ok := _u.mutation.AddedAge(); ok {
 		_spec.AddField(student.FieldAge, field.TypeInt, value)
 	}
-	if value, ok := su.mutation.Version(); ok {
+	if value, ok := _u.mutation.Version(); ok {
 		_spec.SetField(student.FieldVersion, field.TypeInt32, value)
 	}
-	if value, ok := su.mutation.AddedVersion(); ok {
+	if value, ok := _u.mutation.AddedVersion(); ok {
 		_spec.AddField(student.FieldVersion, field.TypeInt32, value)
 	}
-	if n, err = sqlgraph.UpdateNodes(ctx, su.driver, _spec); err != nil {
+	if _node, err = sqlgraph.UpdateNodes(ctx, _u.driver, _spec); err != nil {
 		if _, ok := err.(*sqlgraph.NotFoundError); ok {
 			err = &NotFoundError{student.Label}
 		} else if sqlgraph.IsConstraintError(err) {
@@ -164,8 +147,8 @@ func (su *StudentUpdate) sqlSave(ctx context.Context) (n int, err error) {
 		}
 		return 0, err
 	}
-	su.mutation.done = true
-	return n, nil
+	_u.mutation.done = true
+	return _node, nil
 }
 
 // StudentUpdateOne is the builder for updating a single Student entity.
@@ -176,102 +159,88 @@ type StudentUpdateOne struct {
 	mutation *StudentMutation
 }
 
-// SetStuNo sets the "stuNo" field.
-func (suo *StudentUpdateOne) SetStuNo(s string) *StudentUpdateOne {
-	suo.mutation.SetStuNo(s)
-	return suo
-}
-
-// SetNillableStuNo sets the "stuNo" field if the given value is not nil.
-func (suo *StudentUpdateOne) SetNillableStuNo(s *string) *StudentUpdateOne {
-	if s != nil {
-		suo.SetStuNo(*s)
-	}
-	return suo
-}
-
 // SetName sets the "name" field.
-func (suo *StudentUpdateOne) SetName(s string) *StudentUpdateOne {
-	suo.mutation.SetName(s)
-	return suo
+func (_u *StudentUpdateOne) SetName(v string) *StudentUpdateOne {
+	_u.mutation.SetName(v)
+	return _u
 }
 
 // SetNillableName sets the "name" field if the given value is not nil.
-func (suo *StudentUpdateOne) SetNillableName(s *string) *StudentUpdateOne {
-	if s != nil {
-		suo.SetName(*s)
+func (_u *StudentUpdateOne) SetNillableName(v *string) *StudentUpdateOne {
+	if v != nil {
+		_u.SetName(*v)
 	}
-	return suo
+	return _u
 }
 
 // SetAge sets the "age" field.
-func (suo *StudentUpdateOne) SetAge(i int) *StudentUpdateOne {
-	suo.mutation.ResetAge()
-	suo.mutation.SetAge(i)
-	return suo
+func (_u *StudentUpdateOne) SetAge(v int) *StudentUpdateOne {
+	_u.mutation.ResetAge()
+	_u.mutation.SetAge(v)
+	return _u
 }
 
 // SetNillableAge sets the "age" field if the given value is not nil.
-func (suo *StudentUpdateOne) SetNillableAge(i *int) *StudentUpdateOne {
-	if i != nil {
-		suo.SetAge(*i)
+func (_u *StudentUpdateOne) SetNillableAge(v *int) *StudentUpdateOne {
+	if v != nil {
+		_u.SetAge(*v)
 	}
-	return suo
+	return _u
 }
 
-// AddAge adds i to the "age" field.
-func (suo *StudentUpdateOne) AddAge(i int) *StudentUpdateOne {
-	suo.mutation.AddAge(i)
-	return suo
+// AddAge adds value to the "age" field.
+func (_u *StudentUpdateOne) AddAge(v int) *StudentUpdateOne {
+	_u.mutation.AddAge(v)
+	return _u
 }
 
 // SetVersion sets the "version" field.
-func (suo *StudentUpdateOne) SetVersion(i int32) *StudentUpdateOne {
-	suo.mutation.ResetVersion()
-	suo.mutation.SetVersion(i)
-	return suo
+func (_u *StudentUpdateOne) SetVersion(v int32) *StudentUpdateOne {
+	_u.mutation.ResetVersion()
+	_u.mutation.SetVersion(v)
+	return _u
 }
 
 // SetNillableVersion sets the "version" field if the given value is not nil.
-func (suo *StudentUpdateOne) SetNillableVersion(i *int32) *StudentUpdateOne {
-	if i != nil {
-		suo.SetVersion(*i)
+func (_u *StudentUpdateOne) SetNillableVersion(v *int32) *StudentUpdateOne {
+	if v != nil {
+		_u.SetVersion(*v)
 	}
-	return suo
+	return _u
 }
 
-// AddVersion adds i to the "version" field.
-func (suo *StudentUpdateOne) AddVersion(i int32) *StudentUpdateOne {
-	suo.mutation.AddVersion(i)
-	return suo
+// AddVersion adds value to the "version" field.
+func (_u *StudentUpdateOne) AddVersion(v int32) *StudentUpdateOne {
+	_u.mutation.AddVersion(v)
+	return _u
 }
 
 // Mutation returns the StudentMutation object of the builder.
-func (suo *StudentUpdateOne) Mutation() *StudentMutation {
-	return suo.mutation
+func (_u *StudentUpdateOne) Mutation() *StudentMutation {
+	return _u.mutation
 }
 
 // Where appends a list predicates to the StudentUpdate builder.
-func (suo *StudentUpdateOne) Where(ps ...predicate.Student) *StudentUpdateOne {
-	suo.mutation.Where(ps...)
-	return suo
+func (_u *StudentUpdateOne) Where(ps ...predicate.Student) *StudentUpdateOne {
+	_u.mutation.Where(ps...)
+	return _u
 }
 
 // Select allows selecting one or more fields (columns) of the returned entity.
 // The default is selecting all fields defined in the entity schema.
-func (suo *StudentUpdateOne) Select(field string, fields ...string) *StudentUpdateOne {
-	suo.fields = append([]string{field}, fields...)
-	return suo
+func (_u *StudentUpdateOne) Select(field string, fields ...string) *StudentUpdateOne {
+	_u.fields = append([]string{field}, fields...)
+	return _u
 }
 
 // Save executes the query and returns the updated Student entity.
-func (suo *StudentUpdateOne) Save(ctx context.Context) (*Student, error) {
-	return withHooks(ctx, suo.sqlSave, suo.mutation, suo.hooks)
+func (_u *StudentUpdateOne) Save(ctx context.Context) (*Student, error) {
+	return withHooks(ctx, _u.sqlSave, _u.mutation, _u.hooks)
 }
 
 // SaveX is like Save, but panics if an error occurs.
-func (suo *StudentUpdateOne) SaveX(ctx context.Context) *Student {
-	node, err := suo.Save(ctx)
+func (_u *StudentUpdateOne) SaveX(ctx context.Context) *Student {
+	node, err := _u.Save(ctx)
 	if err != nil {
 		panic(err)
 	}
@@ -279,26 +248,26 @@ func (suo *StudentUpdateOne) SaveX(ctx context.Context) *Student {
 }
 
 // Exec executes the query on the entity.
-func (suo *StudentUpdateOne) Exec(ctx context.Context) error {
-	_, err := suo.Save(ctx)
+func (_u *StudentUpdateOne) Exec(ctx context.Context) error {
+	_, err := _u.Save(ctx)
 	return err
 }
 
 // ExecX is like Exec, but panics if an error occurs.
-func (suo *StudentUpdateOne) ExecX(ctx context.Context) {
-	if err := suo.Exec(ctx); err != nil {
+func (_u *StudentUpdateOne) ExecX(ctx context.Context) {
+	if err := _u.Exec(ctx); err != nil {
 		panic(err)
 	}
 }
 
-func (suo *StudentUpdateOne) sqlSave(ctx context.Context) (_node *Student, err error) {
+func (_u *StudentUpdateOne) sqlSave(ctx context.Context) (_node *Student, err error) {
 	_spec := sqlgraph.NewUpdateSpec(student.Table, student.Columns, sqlgraph.NewFieldSpec(student.FieldID, field.TypeInt))
-	id, ok := suo.mutation.ID()
+	id, ok := _u.mutation.ID()
 	if !ok {
 		return nil, &ValidationError{Name: "id", err: errors.New(`hzwent: missing "Student.id" for update`)}
 	}
 	_spec.Node.ID.Value = id
-	if fields := suo.fields; len(fields) > 0 {
+	if fields := _u.fields; len(fields) > 0 {
 		_spec.Node.Columns = make([]string, 0, len(fields))
 		_spec.Node.Columns = append(_spec.Node.Columns, student.FieldID)
 		for _, f := range fields {
@@ -310,35 +279,32 @@ func (suo *StudentUpdateOne) sqlSave(ctx context.Context) (_node *Student, err e
 			}
 		}
 	}
-	if ps := suo.mutation.predicates; len(ps) > 0 {
+	if ps := _u.mutation.predicates; len(ps) > 0 {
 		_spec.Predicate = func(selector *sql.Selector) {
 			for i := range ps {
 				ps[i](selector)
 			}
 		}
 	}
-	if value, ok := suo.mutation.StuNo(); ok {
-		_spec.SetField(student.FieldStuNo, field.TypeString, value)
-	}
-	if value, ok := suo.mutation.Name(); ok {
+	if value, ok := _u.mutation.Name(); ok {
 		_spec.SetField(student.FieldName, field.TypeString, value)
 	}
-	if value, ok := suo.mutation.Age(); ok {
+	if value, ok := _u.mutation.Age(); ok {
 		_spec.SetField(student.FieldAge, field.TypeInt, value)
 	}
-	if value, ok := suo.mutation.AddedAge(); ok {
+	if value, ok := _u.mutation.AddedAge(); ok {
 		_spec.AddField(student.FieldAge, field.TypeInt, value)
 	}
-	if value, ok := suo.mutation.Version(); ok {
+	if value, ok := _u.mutation.Version(); ok {
 		_spec.SetField(student.FieldVersion, field.TypeInt32, value)
 	}
-	if value, ok := suo.mutation.AddedVersion(); ok {
+	if value, ok := _u.mutation.AddedVersion(); ok {
 		_spec.AddField(student.FieldVersion, field.TypeInt32, value)
 	}
-	_node = &Student{config: suo.config}
+	_node = &Student{config: _u.config}
 	_spec.Assign = _node.assignValues
 	_spec.ScanValues = _node.scanValues
-	if err = sqlgraph.UpdateNode(ctx, suo.driver, _spec); err != nil {
+	if err = sqlgraph.UpdateNode(ctx, _u.driver, _spec); err != nil {
 		if _, ok := err.(*sqlgraph.NotFoundError); ok {
 			err = &NotFoundError{student.Label}
 		} else if sqlgraph.IsConstraintError(err) {
@@ -346,6 +312,6 @@ func (suo *StudentUpdateOne) sqlSave(ctx context.Context) (_node *Student, err e
 		}
 		return nil, err
 	}
-	suo.mutation.done = true
+	_u.mutation.done = true
 	return _node, nil
 }

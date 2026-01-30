@@ -6,7 +6,7 @@ import (
 	"log"
 	"testing"
 
-	"gorm.io/driver/ibmdb"
+	ibmdb "github.com/ZhengweiHou/gorm_ibmdb"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )

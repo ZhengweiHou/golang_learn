@@ -31,7 +31,7 @@ func CreateStudentByFileds(ctx context.Context, client *hzwent.Client, name, stu
 	istu, err := client.Student.
 		Create().
 		SetName(name).
-		SetStuNo(stuno).
+		// SetStuNo(stuno).
 		SetAge(age).
 		Save(ctx)
 	if err != nil {
@@ -44,7 +44,7 @@ func CreateStudentByObj(ctx context.Context, client *hzwent.Client, stu *hzwent.
 	istu, err := client.Student.
 		Create().
 		SetName(stu.Name).
-		SetStuNo(stu.StuNo).
+		// SetStuNo(stu.StuNo).
 		SetAge(stu.Age).
 		Save(ctx)
 	if err != nil {
@@ -58,7 +58,7 @@ func CreateStudent(ctx context.Context, client *hzwent.Client) (*hzwent.Student,
 	u, err := client.Student.
 		Create().
 		SetName("张三").
-		SetStuNo("001").
+		// SetStuNo("001").
 		SetAge(18).
 		Save(ctx)
 	if err != nil {

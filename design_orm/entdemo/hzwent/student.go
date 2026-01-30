@@ -16,8 +16,6 @@ type Student struct {
 	config `json:"-"`
 	// ID of the ent.
 	ID int `json:"id,omitempty"`
-	// StuNo holds the value of the "stuNo" field.
-	StuNo string `json:"stuNo,omitempty"`
 	// Name holds the value of the "name" field.
 	Name string `json:"name,omitempty"`
 	// Age holds the value of the "age" field.
@@ -34,7 +32,7 @@ func (*Student) scanValues(columns []string) ([]any, error) {
 		switch columns[i] {
 		case student.FieldID, student.FieldAge, student.FieldVersion:
 			values[i] = new(sql.NullInt64)
-		case student.FieldStuNo, student.FieldName:
+		case student.FieldName:
 			values[i] = new(sql.NullString)
 		default:
 			values[i] = new(sql.UnknownType)
@@ -45,7 +43,7 @@ func (*Student) scanValues(columns []string) ([]any, error) {
 
 // assignValues assigns the values that were returned from sql.Rows (after scanning)
 // to the Student fields.
-func (s *Student) assignValues(columns []string, values []any) error {
+func (_m *Student) assignValues(columns []string, values []any) error {
 	if m, n := len(values), len(columns); m < n {
 		return fmt.Errorf("mismatch number of scan values: %d != %d", m, n)
 	}
@@ -56,33 +54,27 @@ func (s *Student) assignValues(columns []string, values []any) error {
 			if !ok {
 				return fmt.Errorf("unexpected type %T for field id", value)
 			}
-			s.ID = int(value.Int64)
-		case student.FieldStuNo:
-			if value, ok := values[i].(*sql.NullString); !ok {
-				return fmt.Errorf("unexpected type %T for field stuNo", values[i])
-			} else if value.Valid {
-				s.StuNo = value.String
-			}
+			_m.ID = int(value.Int64)
 		case student.FieldName:
 			if value, ok := values[i].(*sql.NullString); !ok {
 				return fmt.Errorf("unexpected type %T for field name", values[i])
 			} else if value.Valid {
-				s.Name = value.String
+				_m.Name = value.String
 			}
 		case student.FieldAge:
 			if value, ok := values[i].(*sql.NullInt64); !ok {
 				return fmt.Errorf("unexpected type %T for field age", values[i])
 			} else if value.Valid {
-				s.Age = int(value.Int64)
+				_m.Age = int(value.Int64)
 			}
 		case student.FieldVersion:
 			if value, ok := values[i].(*sql.NullInt64); !ok {
 				return fmt.Errorf("unexpected type %T for field version", values[i])
 			} else if value.Valid {
-				s.Version = int32(value.Int64)
+				_m.Version = int32(value.Int64)
 			}
 		default:
-			s.selectValues.Set(columns[i], values[i])
+			_m.selectValues.Set(columns[i], values[i])
 		}
 	}
 	return nil
@@ -90,44 +82,41 @@ func (s *Student) assignValues(columns []string, values []any) error {
 
 // Value returns the ent.Value that was dynamically selected and assigned to the Student.
 // This includes values selected through modifiers, order, etc.
-func (s *Student) Value(name string) (ent.Value, error) {
-	return s.selectValues.Get(name)
+func (_m *Student) Value(name string) (ent.Value, error) {
+	return _m.selectValues.Get(name)
 }
 
 // Update returns a builder for updating this Student.
 // Note that you need to call Student.Unwrap() before calling this method if this Student
 // was returned from a transaction, and the transaction was committed or rolled back.
-func (s *Student) Update() *StudentUpdateOne {
-	return NewStudentClient(s.config).UpdateOne(s)
+func (_m *Student) Update() *StudentUpdateOne {
+	return NewStudentClient(_m.config).UpdateOne(_m)
 }
 
 // Unwrap unwraps the Student entity that was returned from a transaction after it was closed,
 // so that all future queries will be executed through the driver which created the transaction.
-func (s *Student) Unwrap() *Student {
-	_tx, ok := s.config.driver.(*txDriver)
+func (_m *Student) Unwrap() *Student {
+	_tx, ok := _m.config.driver.(*txDriver)
 	if !ok {
 		panic("hzwent: Student is not a transactional entity")
 	}
-	s.config.driver = _tx.drv
-	return s
+	_m.config.driver = _tx.drv
+	return _m
 }
 
 // String implements the fmt.Stringer.
-func (s *Student) String() string {
+func (_m *Student) String() string {
 	var builder strings.Builder
 	builder.WriteString("Student(")
-	builder.WriteString(fmt.Sprintf("id=%v, ", s.ID))
-	builder.WriteString("stuNo=")
-	builder.WriteString(s.StuNo)
-	builder.WriteString(", ")
+	builder.WriteString(fmt.Sprintf("id=%v, ", _m.ID))
 	builder.WriteString("name=")
-	builder.WriteString(s.Name)
+	builder.WriteString(_m.Name)
 	builder.WriteString(", ")
 	builder.WriteString("age=")
-	builder.WriteString(fmt.Sprintf("%v", s.Age))
+	builder.WriteString(fmt.Sprintf("%v", _m.Age))
 	builder.WriteString(", ")
 	builder.WriteString("version=")
-	builder.WriteString(fmt.Sprintf("%v", s.Version))
+	builder.WriteString(fmt.Sprintf("%v", _m.Version))
 	builder.WriteByte(')')
 	return builder.String()
 }

@@ -26,7 +26,6 @@ var (
 	// StudentColumns holds the columns for the "student" table.
 	StudentColumns = []*schema.Column{
 		{Name: "ID", Type: field.TypeInt, Increment: true},
-		{Name: "STU_NO", Type: field.TypeString},
 		{Name: "NAME", Type: field.TypeString},
 		{Name: "AGE", Type: field.TypeInt},
 		{Name: "VERSION", Type: field.TypeInt32, Default: 0},

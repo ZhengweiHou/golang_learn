@@ -79,11 +79,38 @@ func Test3(t *testing.T) {
 
 }
 
+func Test3_1(t *testing.T) {
+	/* == 通过反射初始化指针对象 == */
+	var my *MyStruct // nil 指针
+	nv := reflect.ValueOf(my)
+	nt := nv.Type()
+	// nt := reflect.TypeOf(my)
+	fmt.Printf("my: %v %T \n", my, my) // my: <nil> *hzwrefl.MyStruct
+	fmt.Printf("nv: %v %T \n", nv, nv) // nv: <nil> reflect.Value
+	fmt.Printf("nt: %v %T \n", nt, nt) // nt: *hzwrefl.MyStruct *reflect.rtype
+
+	if nt.Kind() == reflect.Ptr {
+		stype := nt.Elem()
+		newv := reflect.New(stype)
+
+		// 设置结构体字段的值
+		newve := newv.Elem()
+		newve.FieldByName("Id").SetInt(100)
+		newve.FieldByName("Name").SetString("hzw")
+
+		my = newv.Interface().(*MyStruct)
+		// 能否通过nv设置指针指向的结构体值
+	}
+	fmt.Printf("my: %v %T \n", my, my) // &{100 hzw} *hzwrefl.MyStruct
+}
+
 func Test4(t *testing.T) {
 	// 创建一个 MyStruct 类型的实例
 	myv := MyStruct{Id: 1, Name: "hzw"}
 	// 创建一个指向 MyStruct 类型实例的指针
 	myp := &MyStruct{Id: 1, Name: "hzw"}
+	var myn *MyStruct
+
 	// 将实例和指针转换为空接口类型
 	amyv := any(myv)
 	amyp := any(myp)
@@ -91,11 +118,14 @@ func Test4(t *testing.T) {
 	// 使用反射获取值 reflect.ValueOf()返回的是 reflect.Value 类型
 	vv := reflect.ValueOf(myv)
 	pv := reflect.ValueOf(myp)
+	nv := reflect.ValueOf(myn)
 	avv := reflect.ValueOf(amyv)
 	apv := reflect.ValueOf(amyp)
+
 	// 使用反射获取类型 reflect.TypeOf()返回的是 *reflect.Type 类型
 	vt := reflect.TypeOf(myv) // 获取的值为目标的类型
 	pt := reflect.TypeOf(myp)
+	nt := reflect.TypeOf(myn)
 	avt := reflect.TypeOf(amyv)
 	apt := reflect.TypeOf(amyp)
 	fmt.Printf("myv.T %T = vt.v %v\n", myv, vt) // myv.T hzwrefl.MyStruct = vt.v hzwrefl.MyStruct 值的type 和reflect.TypeOf获取的值是一样的
@@ -104,10 +134,12 @@ func Test4(t *testing.T) {
 	fmt.Printf("myp: %v %T \n", myp, myp) // myp: &{1 hzw} *hzwrefl.MyStruct
 	fmt.Printf("vv: %v %T \n", vv, vv)    // vv: {1 hzw} reflect.Value
 	fmt.Printf("pv: %v %T \n", pv, pv)    // pv: &{1 hzw} reflect.Value
+	fmt.Printf("nv: %v %T \n", nv, nv)    // nv: <nil> reflect.Value
 	fmt.Printf("avv: %v %T \n", avv, avv) // avv: {1 hzw} reflect.Value
 	fmt.Printf("apv: %v %T \n", apv, apv) // apv: &{1 hzw} reflect.Value
 	fmt.Printf("vt: %v %T \n", vt, vt)    // vt: hzwrefl.MyStruct *reflect.rtype
 	fmt.Printf("pt: %v %T \n", pt, pt)    // pt: *hzwrefl.MyStruct *reflect.rtype
+	fmt.Printf("nt: %v %T \n", nt, nt)    // nt: *hzwrefl.MyStruct *reflect.rtype
 	fmt.Printf("avt: %v %T \n", avt, avt) // avt: hzwrefl.MyStruct *reflect.rtype
 	fmt.Printf("apt: %v %T \n", apt, apt) // apt: *hzwrefl.MyStruct *reflect.rtype
 

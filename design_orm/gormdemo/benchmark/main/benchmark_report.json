@@ -1,0 +1,54 @@
+{
+  "create": {
+    "test_name": "创建性能测试",
+    "total_ops": 902,
+    "total_time_ms": 5003.536785,
+    "ops_per_second": 180.27248299724454,
+    "avg_latency_ms": 5.546769,
+    "min_latency_ms": 2.720475,
+    "max_latency_ms": 18.814628,
+    "p95_latency_ms": 9.582579,
+    "p99_latency_ms": 13.92553,
+    "error_count": 0,
+    "memory_usage_mb": 2.0933380126953125
+  },
+  "delete": {
+    "test_name": "删除性能测试",
+    "total_ops": 453,
+    "total_time_ms": 5010.899865,
+    "ops_per_second": 90.40292406641417,
+    "avg_latency_ms": 5.41196,
+    "min_latency_ms": 4.585554,
+    "max_latency_ms": 14.32204,
+    "p95_latency_ms": 9.416077,
+    "p99_latency_ms": 13.911345,
+    "error_count": 0,
+    "memory_usage_mb": 2.9719467163085938
+  },
+  "read": {
+    "test_name": "读取性能测试",
+    "total_ops": 19082,
+    "total_time_ms": 5000.052709,
+    "ops_per_second": 3816.35976869859,
+    "avg_latency_ms": 0.261838,
+    "min_latency_ms": 0.146337,
+    "max_latency_ms": 2.418262,
+    "p95_latency_ms": 0.358195,
+    "p99_latency_ms": 0.492387,
+    "error_count": 0,
+    "memory_usage_mb": 2.4296951293945312
+  },
+  "update": {
+    "test_name": "更新性能测试",
+    "total_ops": 925,
+    "total_time_ms": 5001.726674,
+    "ops_per_second": 184.93613511676668,
+    "avg_latency_ms": 5.406804,
+    "min_latency_ms": 4.748863,
+    "max_latency_ms": 14.602686,
+    "p95_latency_ms": 5.874489,
+    "p99_latency_ms": 14.038595,
+    "error_count": 0,
+    "memory_usage_mb": 0.7156600952148438
+  }
+}

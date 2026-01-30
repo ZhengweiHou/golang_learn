@@ -105,7 +105,7 @@ func Driver(driver dialect.Driver) Option {
 // Optional parameters can be added for configuring the client.
 func Open(driverName, dataSourceName string, options ...Option) (*Client, error) {
 	switch driverName {
-	case dialect.GoIbmDb, dialect.MySQL, dialect.Postgres, dialect.SQLite:
+	case dialect.MySQL, dialect.Postgres, dialect.SQLite:
 		drv, err := sql.Open(driverName, dataSourceName)
 		if err != nil {
 			return nil, err
@@ -263,8 +263,8 @@ func (c *HzwClient) Update() *HzwUpdate {
 }
 
 // UpdateOne returns an update builder for the given entity.
-func (c *HzwClient) UpdateOne(h *Hzw) *HzwUpdateOne {
-	mutation := newHzwMutation(c.config, OpUpdateOne, withHzw(h))
+func (c *HzwClient) UpdateOne(_m *Hzw) *HzwUpdateOne {
+	mutation := newHzwMutation(c.config, OpUpdateOne, withHzw(_m))
 	return &HzwUpdateOne{config: c.config, hooks: c.Hooks(), mutation: mutation}
 }
 
@@ -281,8 +281,8 @@ func (c *HzwClient) Delete() *HzwDelete {
 }
 
 // DeleteOne returns a builder for deleting the given entity.
-func (c *HzwClient) DeleteOne(h *Hzw) *HzwDeleteOne {
-	return c.DeleteOneID(h.ID)
+func (c *HzwClient) DeleteOne(_m *Hzw) *HzwDeleteOne {
+	return c.DeleteOneID(_m.ID)
 }
 
 // DeleteOneID returns a builder for deleting the given entity by its id.
@@ -396,8 +396,8 @@ func (c *StudentClient) Update() *StudentUpdate {
 }
 
 // UpdateOne returns an update builder for the given entity.
-func (c *StudentClient) UpdateOne(s *Student) *StudentUpdateOne {
-	mutation := newStudentMutation(c.config, OpUpdateOne, withStudent(s))
+func (c *StudentClient) UpdateOne(_m *Student) *StudentUpdateOne {
+	mutation := newStudentMutation(c.config, OpUpdateOne, withStudent(_m))
 	return &StudentUpdateOne{config: c.config, hooks: c.Hooks(), mutation: mutation}
 }
 
@@ -414,8 +414,8 @@ func (c *StudentClient) Delete() *StudentDelete {
 }
 
 // DeleteOne returns a builder for deleting the given entity.
-func (c *StudentClient) DeleteOne(s *Student) *StudentDeleteOne {
-	return c.DeleteOneID(s.ID)
+func (c *StudentClient) DeleteOne(_m *Student) *StudentDeleteOne {
+	return c.DeleteOneID(_m.ID)
 }
 
 // DeleteOneID returns a builder for deleting the given entity by its id.

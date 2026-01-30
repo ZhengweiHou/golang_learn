@@ -1,3 +1,9 @@
 *.code-workspace
 .idea
 **/.otel-build
+design_raft/raftdemo/raft-data
+*.tar.gz
+design_orm/entdemo/benchmark/benchmark_main
+design_orm/gormdemo/benchmark/main/main
+design_orm/gormdemo/benchmark/test/test.test
+design_orm/entdemo/benchmark/test/test.test

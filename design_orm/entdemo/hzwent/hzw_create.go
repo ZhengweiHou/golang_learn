@@ -21,65 +21,65 @@ type HzwCreate struct {
 }
 
 // SetStuNo sets the "stuNo" field.
-func (hc *HzwCreate) SetStuNo(s string) *HzwCreate {
-	hc.mutation.SetStuNo(s)
-	return hc
+func (_c *HzwCreate) SetStuNo(v string) *HzwCreate {
+	_c.mutation.SetStuNo(v)
+	return _c
 }
 
 // SetName sets the "name" field.
-func (hc *HzwCreate) SetName(s string) *HzwCreate {
-	hc.mutation.SetName(s)
-	return hc
+func (_c *HzwCreate) SetName(v string) *HzwCreate {
+	_c.mutation.SetName(v)
+	return _c
 }
 
 // SetAge sets the "age" field.
-func (hc *HzwCreate) SetAge(i int) *HzwCreate {
-	hc.mutation.SetAge(i)
-	return hc
+func (_c *HzwCreate) SetAge(v int) *HzwCreate {
+	_c.mutation.SetAge(v)
+	return _c
 }
 
 // SetVersion sets the "version" field.
-func (hc *HzwCreate) SetVersion(i int32) *HzwCreate {
-	hc.mutation.SetVersion(i)
-	return hc
+func (_c *HzwCreate) SetVersion(v int32) *HzwCreate {
+	_c.mutation.SetVersion(v)
+	return _c
 }
 
 // SetNillableVersion sets the "version" field if the given value is not nil.
-func (hc *HzwCreate) SetNillableVersion(i *int32) *HzwCreate {
-	if i != nil {
-		hc.SetVersion(*i)
+func (_c *HzwCreate) SetNillableVersion(v *int32) *HzwCreate {
+	if v != nil {
+		_c.SetVersion(*v)
 	}
-	return hc
+	return _c
 }
 
 // SetID sets the "id" field.
-func (hc *HzwCreate) SetID(u uuid.UUID) *HzwCreate {
-	hc.mutation.SetID(u)
-	return hc
+func (_c *HzwCreate) SetID(v uuid.UUID) *HzwCreate {
+	_c.mutation.SetID(v)
+	return _c
 }
 
 // SetNillableID sets the "id" field if the given value is not nil.
-func (hc *HzwCreate) SetNillableID(u *uuid.UUID) *HzwCreate {
-	if u != nil {
-		hc.SetID(*u)
+func (_c *HzwCreate) SetNillableID(v *uuid.UUID) *HzwCreate {
+	if v != nil {
+		_c.SetID(*v)
 	}
-	return hc
+	return _c
 }
 
 // Mutation returns the HzwMutation object of the builder.
-func (hc *HzwCreate) Mutation() *HzwMutation {
-	return hc.mutation
+func (_c *HzwCreate) Mutation() *HzwMutation {
+	return _c.mutation
 }
 
 // Save creates the Hzw in the database.
-func (hc *HzwCreate) Save(ctx context.Context) (*Hzw, error) {
-	hc.defaults()
-	return withHooks(ctx, hc.sqlSave, hc.mutation, hc.hooks)
+func (_c *HzwCreate) Save(ctx context.Context) (*Hzw, error) {
+	_c.defaults()
+	return withHooks(ctx, _c.sqlSave, _c.mutation, _c.hooks)
 }
 
 // SaveX calls Save and panics if Save returns an error.
-func (hc *HzwCreate) SaveX(ctx context.Context) *Hzw {
-	v, err := hc.Save(ctx)
+func (_c *HzwCreate) SaveX(ctx context.Context) *Hzw {
+	v, err := _c.Save(ctx)
 	if err != nil {
 		panic(err)
 	}
@@ -87,53 +87,53 @@ func (hc *HzwCreate) SaveX(ctx context.Context) *Hzw {
 }
 
 // Exec executes the query.
-func (hc *HzwCreate) Exec(ctx context.Context) error {
-	_, err := hc.Save(ctx)
+func (_c *HzwCreate) Exec(ctx context.Context) error {
+	_, err := _c.Save(ctx)
 	return err
 }
 
 // ExecX is like Exec, but panics if an error occurs.
-func (hc *HzwCreate) ExecX(ctx context.Context) {
-	if err := hc.Exec(ctx); err != nil {
+func (_c *HzwCreate) ExecX(ctx context.Context) {
+	if err := _c.Exec(ctx); err != nil {
 		panic(err)
 	}
 }
 
 // defaults sets the default values of the builder before save.
-func (hc *HzwCreate) defaults() {
-	if _, ok := hc.mutation.Version(); !ok {
+func (_c *HzwCreate) defaults() {
+	if _, ok := _c.mutation.Version(); !ok {
 		v := hzw.DefaultVersion
-		hc.mutation.SetVersion(v)
+		_c.mutation.SetVersion(v)
 	}
-	if _, ok := hc.mutation.ID(); !ok {
+	if _, ok := _c.mutation.ID(); !ok {
 		v := hzw.DefaultID()
-		hc.mutation.SetID(v)
+		_c.mutation.SetID(v)
 	}
 }
 
 // check runs all checks and user-defined validators on the builder.
-func (hc *HzwCreate) check() error {
-	if _, ok := hc.mutation.StuNo(); !ok {
+func (_c *HzwCreate) check() error {
+	if _, ok := _c.mutation.StuNo(); !ok {
 		return &ValidationError{Name: "stuNo", err: errors.New(`hzwent: missing required field "Hzw.stuNo"`)}
 	}
-	if _, ok := hc.mutation.Name(); !ok {
+	if _, ok := _c.mutation.Name(); !ok {
 		return &ValidationError{Name: "name", err: errors.New(`hzwent: missing required field "Hzw.name"`)}
 	}
-	if _, ok := hc.mutation.Age(); !ok {
+	if _, ok := _c.mutation.Age(); !ok {
 		return &ValidationError{Name: "age", err: errors.New(`hzwent: missing required field "Hzw.age"`)}
 	}
-	if _, ok := hc.mutation.Version(); !ok {
+	if _, ok := _c.mutation.Version(); !ok {
 		return &ValidationError{Name: "version", err: errors.New(`hzwent: missing required field "Hzw.version"`)}
 	}
 	return nil
 }
 
-func (hc *HzwCreate) sqlSave(ctx context.Context) (*Hzw, error) {
-	if err := hc.check(); err != nil {
+func (_c *HzwCreate) sqlSave(ctx context.Context) (*Hzw, error) {
+	if err := _c.check(); err != nil {
 		return nil, err
 	}
-	_node, _spec := hc.createSpec()
-	if err := sqlgraph.CreateNode(ctx, hc.driver, _spec); err != nil {
+	_node, _spec := _c.createSpec()
+	if err := sqlgraph.CreateNode(ctx, _c.driver, _spec); err != nil {
 		if sqlgraph.IsConstraintError(err) {
 			err = &ConstraintError{msg: err.Error(), wrap: err}
 		}
@@ -146,33 +146,33 @@ func (hc *HzwCreate) sqlSave(ctx context.Context) (*Hzw, error) {
 			return nil, err
 		}
 	}
-	hc.mutation.id = &_node.ID
-	hc.mutation.done = true
+	_c.mutation.id = &_node.ID
+	_c.mutation.done = true
 	return _node, nil
 }
 
-func (hc *HzwCreate) createSpec() (*Hzw, *sqlgraph.CreateSpec) {
+func (_c *HzwCreate) createSpec() (*Hzw, *sqlgraph.CreateSpec) {
 	var (
-		_node = &Hzw{config: hc.config}
+		_node = &Hzw{config: _c.config}
 		_spec = sqlgraph.NewCreateSpec(hzw.Table, sqlgraph.NewFieldSpec(hzw.FieldID, field.TypeUUID))
 	)
-	if id, ok := hc.mutation.ID(); ok {
+	if id, ok := _c.mutation.ID(); ok {
 		_node.ID = id
 		_spec.ID.Value = &id
 	}
-	if value, ok := hc.mutation.StuNo(); ok {
+	if value, ok := _c.mutation.StuNo(); ok {
 		_spec.SetField(hzw.FieldStuNo, field.TypeString, value)
 		_node.StuNo = value
 	}
-	if value, ok := hc.mutation.Name(); ok {
+	if value, ok := _c.mutation.Name(); ok {
 		_spec.SetField(hzw.FieldName, field.TypeString, value)
 		_node.Name = value
 	}
-	if value, ok := hc.mutation.Age(); ok {
+	if value, ok := _c.mutation.Age(); ok {
 		_spec.SetField(hzw.FieldAge, field.TypeInt, value)
 		_node.Age = value
 	}
-	if value, ok := hc.mutation.Version(); ok {
+	if value, ok := _c.mutation.Version(); ok {
 		_spec.SetField(hzw.FieldVersion, field.TypeInt32, value)
 		_node.Version = value
 	}
@@ -187,16 +187,16 @@ type HzwCreateBulk struct {
 }
 
 // Save creates the Hzw entities in the database.
-func (hcb *HzwCreateBulk) Save(ctx context.Context) ([]*Hzw, error) {
-	if hcb.err != nil {
-		return nil, hcb.err
+func (_c *HzwCreateBulk) Save(ctx context.Context) ([]*Hzw, error) {
+	if _c.err != nil {
+		return nil, _c.err
 	}
-	specs := make([]*sqlgraph.CreateSpec, len(hcb.builders))
-	nodes := make([]*Hzw, len(hcb.builders))
-	mutators := make([]Mutator, len(hcb.builders))
-	for i := range hcb.builders {
+	specs := make([]*sqlgraph.CreateSpec, len(_c.builders))
+	nodes := make([]*Hzw, len(_c.builders))
+	mutators := make([]Mutator, len(_c.builders))
+	for i := range _c.builders {
 		func(i int, root context.Context) {
-			builder := hcb.builders[i]
+			builder := _c.builders[i]
 			builder.defaults()
 			var mut Mutator = MutateFunc(func(ctx context.Context, m Mutation) (Value, error) {
 				mutation, ok := m.(*HzwMutation)
@@ -210,11 +210,11 @@ func (hcb *HzwCreateBulk) Save(ctx context.Context) ([]*Hzw, error) {
 				var err error
 				nodes[i], specs[i] = builder.createSpec()
 				if i < len(mutators)-1 {
-					_, err = mutators[i+1].Mutate(root, hcb.builders[i+1].mutation)
+					_, err = mutators[i+1].Mutate(root, _c.builders[i+1].mutation)
 				} else {
 					spec := &sqlgraph.BatchCreateSpec{Nodes: specs}
 					// Invoke the actual operation on the latest mutation in the chain.
-					if err = sqlgraph.BatchCreate(ctx, hcb.driver, spec); err != nil {
+					if err = sqlgraph.BatchCreate(ctx, _c.driver, spec); err != nil {
 						if sqlgraph.IsConstraintError(err) {
 							err = &ConstraintError{msg: err.Error(), wrap: err}
 						}
@@ -234,7 +234,7 @@ func (hcb *HzwCreateBulk) Save(ctx context.Context) ([]*Hzw, error) {
 		}(i, ctx)
 	}
 	if len(mutators) > 0 {
-		if _, err := mutators[0].Mutate(ctx, hcb.builders[0].mutation); err != nil {
+		if _, err := mutators[0].Mutate(ctx, _c.builders[0].mutation); err != nil {
 			return nil, err
 		}
 	}
@@ -242,8 +242,8 @@ func (hcb *HzwCreateBulk) Save(ctx context.Context) ([]*Hzw, error) {
 }
 
 // SaveX is like Save, but panics if an error occurs.
-func (hcb *HzwCreateBulk) SaveX(ctx context.Context) []*Hzw {
-	v, err := hcb.Save(ctx)
+func (_c *HzwCreateBulk) SaveX(ctx context.Context) []*Hzw {
+	v, err := _c.Save(ctx)
 	if err != nil {
 		panic(err)
 	}
@@ -251,14 +251,14 @@ func (hcb *HzwCreateBulk) SaveX(ctx context.Context) []*Hzw {
 }
 
 // Exec executes the query.
-func (hcb *HzwCreateBulk) Exec(ctx context.Context) error {
-	_, err := hcb.Save(ctx)
+func (_c *HzwCreateBulk) Exec(ctx context.Context) error {
+	_, err := _c.Save(ctx)
 	return err
 }
 
 // ExecX is like Exec, but panics if an error occurs.
-func (hcb *HzwCreateBulk) ExecX(ctx context.Context) {
-	if err := hcb.Exec(ctx); err != nil {
+func (_c *HzwCreateBulk) ExecX(ctx context.Context) {
+	if err := _c.Exec(ctx); err != nil {
 		panic(err)
 	}
 }

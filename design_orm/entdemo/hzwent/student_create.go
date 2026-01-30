@@ -19,58 +19,52 @@ type StudentCreate struct {
 	hooks    []Hook
 }
 
-// SetStuNo sets the "stuNo" field.
-func (sc *StudentCreate) SetStuNo(s string) *StudentCreate {
-	sc.mutation.SetStuNo(s)
-	return sc
-}
-
 // SetName sets the "name" field.
-func (sc *StudentCreate) SetName(s string) *StudentCreate {
-	sc.mutation.SetName(s)
-	return sc
+func (_c *StudentCreate) SetName(v string) *StudentCreate {
+	_c.mutation.SetName(v)
+	return _c
 }
 
 // SetAge sets the "age" field.
-func (sc *StudentCreate) SetAge(i int) *StudentCreate {
-	sc.mutation.SetAge(i)
-	return sc
+func (_c *StudentCreate) SetAge(v int) *StudentCreate {
+	_c.mutation.SetAge(v)
+	return _c
 }
 
 // SetVersion sets the "version" field.
-func (sc *StudentCreate) SetVersion(i int32) *StudentCreate {
-	sc.mutation.SetVersion(i)
-	return sc
+func (_c *StudentCreate) SetVersion(v int32) *StudentCreate {
+	_c.mutation.SetVersion(v)
+	return _c
 }
 
 // SetNillableVersion sets the "version" field if the given value is not nil.
-func (sc *StudentCreate) SetNillableVersion(i *int32) *StudentCreate {
-	if i != nil {
-		sc.SetVersion(*i)
+func (_c *StudentCreate) SetNillableVersion(v *int32) *StudentCreate {
+	if v != nil {
+		_c.SetVersion(*v)
 	}
-	return sc
+	return _c
 }
 
 // SetID sets the "id" field.
-func (sc *StudentCreate) SetID(i int) *StudentCreate {
-	sc.mutation.SetID(i)
-	return sc
+func (_c *StudentCreate) SetID(v int) *StudentCreate {
+	_c.mutation.SetID(v)
+	return _c
 }
 
 // Mutation returns the StudentMutation object of the builder.
-func (sc *StudentCreate) Mutation() *StudentMutation {
-	return sc.mutation
+func (_c *StudentCreate) Mutation() *StudentMutation {
+	return _c.mutation
 }
 
 // Save creates the Student in the database.
-func (sc *StudentCreate) Save(ctx context.Context) (*Student, error) {
-	sc.defaults()
-	return withHooks(ctx, sc.sqlSave, sc.mutation, sc.hooks)
+func (_c *StudentCreate) Save(ctx context.Context) (*Student, error) {
+	_c.defaults()
+	return withHooks(ctx, _c.sqlSave, _c.mutation, _c.hooks)
 }
 
 // SaveX calls Save and panics if Save returns an error.
-func (sc *StudentCreate) SaveX(ctx context.Context) *Student {
-	v, err := sc.Save(ctx)
+func (_c *StudentCreate) SaveX(ctx context.Context) *Student {
+	v, err := _c.Save(ctx)
 	if err != nil {
 		panic(err)
 	}
@@ -78,41 +72,38 @@ func (sc *StudentCreate) SaveX(ctx context.Context) *Student {
 }
 
 // Exec executes the query.
-func (sc *StudentCreate) Exec(ctx context.Context) error {
-	_, err := sc.Save(ctx)
+func (_c *StudentCreate) Exec(ctx context.Context) error {
+	_, err := _c.Save(ctx)
 	return err
 }
 
 // ExecX is like Exec, but panics if an error occurs.
-func (sc *StudentCreate) ExecX(ctx context.Context) {
-	if err := sc.Exec(ctx); err != nil {
+func (_c *StudentCreate) ExecX(ctx context.Context) {
+	if err := _c.Exec(ctx); err != nil {
 		panic(err)
 	}
 }
 
 // defaults sets the default values of the builder before save.
-func (sc *StudentCreate) defaults() {
-	if _, ok := sc.mutation.Version(); !ok {
+func (_c *StudentCreate) defaults() {
+	if _, ok := _c.mutation.Version(); !ok {
 		v := student.DefaultVersion
-		sc.mutation.SetVersion(v)
+		_c.mutation.SetVersion(v)
 	}
 }
 
 // check runs all checks and user-defined validators on the builder.
-func (sc *StudentCreate) check() error {
-	if _, ok := sc.mutation.StuNo(); !ok {
-		return &ValidationError{Name: "stuNo", err: errors.New(`hzwent: missing required field "Student.stuNo"`)}
-	}
-	if _, ok := sc.mutation.Name(); !ok {
+func (_c *StudentCreate) check() error {
+	if _, ok := _c.mutation.Name(); !ok {
 		return &ValidationError{Name: "name", err: errors.New(`hzwent: missing required field "Student.name"`)}
 	}
-	if _, ok := sc.mutation.Age(); !ok {
+	if _, ok := _c.mutation.Age(); !ok {
 		return &ValidationError{Name: "age", err: errors.New(`hzwent: missing required field "Student.age"`)}
 	}
-	if _, ok := sc.mutation.Version(); !ok {
+	if _, ok := _c.mutation.Version(); !ok {
 		return &ValidationError{Name: "version", err: errors.New(`hzwent: missing required field "Student.version"`)}
 	}
-	if v, ok := sc.mutation.ID(); ok {
+	if v, ok := _c.mutation.ID(); ok {
 		if err := student.IDValidator(v); err != nil {
 			return &ValidationError{Name: "id", err: fmt.Errorf(`hzwent: validator failed for field "Student.id": %w`, err)}
 		}
@@ -120,12 +111,12 @@ func (sc *StudentCreate) check() error {
 	return nil
 }
 
-func (sc *StudentCreate) sqlSave(ctx context.Context) (*Student, error) {
-	if err := sc.check(); err != nil {
+func (_c *StudentCreate) sqlSave(ctx context.Context) (*Student, error) {
+	if err := _c.check(); err != nil {
 		return nil, err
 	}
-	_node, _spec := sc.createSpec()
-	if err := sqlgraph.CreateNode(ctx, sc.driver, _spec); err != nil {
+	_node, _spec := _c.createSpec()
+	if err := sqlgraph.CreateNode(ctx, _c.driver, _spec); err != nil {
 		if sqlgraph.IsConstraintError(err) {
 			err = &ConstraintError{msg: err.Error(), wrap: err}
 		}
@@ -135,33 +126,29 @@ func (sc *StudentCreate) sqlSave(ctx context.Context) (*Student, error) {
 		id := _spec.ID.Value.(int64)
 		_node.ID = int(id)
 	}
-	sc.mutation.id = &_node.ID
-	sc.mutation.done = true
+	_c.mutation.id = &_node.ID
+	_c.mutation.done = true
 	return _node, nil
 }
 
-func (sc *StudentCreate) createSpec() (*Student, *sqlgraph.CreateSpec) {
+func (_c *StudentCreate) createSpec() (*Student, *sqlgraph.CreateSpec) {
 	var (
-		_node = &Student{config: sc.config}
+		_node = &Student{config: _c.config}
 		_spec = sqlgraph.NewCreateSpec(student.Table, sqlgraph.NewFieldSpec(student.FieldID, field.TypeInt))
 	)
-	if id, ok := sc.mutation.ID(); ok {
+	if id, ok := _c.mutation.ID(); ok {
 		_node.ID = id
 		_spec.ID.Value = id
 	}
-	if value, ok := sc.mutation.StuNo(); ok {
-		_spec.SetField(student.FieldStuNo, field.TypeString, value)
-		_node.StuNo = value
-	}
-	if value, ok := sc.mutation.Name(); ok {
+	if value, ok := _c.mutation.Name(); ok {
 		_spec.SetField(student.FieldName, field.TypeString, value)
 		_node.Name = value
 	}
-	if value, ok := sc.mutation.Age(); ok {
+	if value, ok := _c.mutation.Age(); ok {
 		_spec.SetField(student.FieldAge, field.TypeInt, value)
 		_node.Age = value
 	}
-	if value, ok := sc.mutation.Version(); ok {
+	if value, ok := _c.mutation.Version(); ok {
 		_spec.SetField(student.FieldVersion, field.TypeInt32, value)
 		_node.Version = value
 	}
@@ -176,16 +163,16 @@ type StudentCreateBulk struct {
 }
 
 // Save creates the Student entities in the database.
-func (scb *StudentCreateBulk) Save(ctx context.Context) ([]*Student, error) {
-	if scb.err != nil {
-		return nil, scb.err
+func (_c *StudentCreateBulk) Save(ctx context.Context) ([]*Student, error) {
+	if _c.err != nil {
+		return nil, _c.err
 	}
-	specs := make([]*sqlgraph.CreateSpec, len(scb.builders))
-	nodes := make([]*Student, len(scb.builders))
-	mutators := make([]Mutator, len(scb.builders))
-	for i := range scb.builders {
+	specs := make([]*sqlgraph.CreateSpec, len(_c.builders))
+	nodes := make([]*Student, len(_c.builders))
+	mutators := make([]Mutator, len(_c.builders))
+	for i := range _c.builders {
 		func(i int, root context.Context) {
-			builder := scb.builders[i]
+			builder := _c.builders[i]
 			builder.defaults()
 			var mut Mutator = MutateFunc(func(ctx context.Context, m Mutation) (Value, error) {
 				mutation, ok := m.(*StudentMutation)
@@ -199,11 +186,11 @@ func (scb *StudentCreateBulk) Save(ctx context.Context) ([]*Student, error) {
 				var err error
 				nodes[i], specs[i] = builder.createSpec()
 				if i < len(mutators)-1 {
-					_, err = mutators[i+1].Mutate(root, scb.builders[i+1].mutation)
+					_, err = mutators[i+1].Mutate(root, _c.builders[i+1].mutation)
 				} else {
 					spec := &sqlgraph.BatchCreateSpec{Nodes: specs}
 					// Invoke the actual operation on the latest mutation in the chain.
-					if err = sqlgraph.BatchCreate(ctx, scb.driver, spec); err != nil {
+					if err = sqlgraph.BatchCreate(ctx, _c.driver, spec); err != nil {
 						if sqlgraph.IsConstraintError(err) {
 							err = &ConstraintError{msg: err.Error(), wrap: err}
 						}
@@ -227,7 +214,7 @@ func (scb *StudentCreateBulk) Save(ctx context.Context) ([]*Student, error) {
 		}(i, ctx)
 	}
 	if len(mutators) > 0 {
-		if _, err := mutators[0].Mutate(ctx, scb.builders[0].mutation); err != nil {
+		if _, err := mutators[0].Mutate(ctx, _c.builders[0].mutation); err != nil {
 			return nil, err
 		}
 	}
@@ -235,8 +222,8 @@ func (scb *StudentCreateBulk) Save(ctx context.Context) ([]*Student, error) {
 }
 
 // SaveX is like Save, but panics if an error occurs.
-func (scb *StudentCreateBulk) SaveX(ctx context.Context) []*Student {
-	v, err := scb.Save(ctx)
+func (_c *StudentCreateBulk) SaveX(ctx context.Context) []*Student {
+	v, err := _c.Save(ctx)
 	if err != nil {
 		panic(err)
 	}
@@ -244,14 +231,14 @@ func (scb *StudentCreateBulk) SaveX(ctx context.Context) []*Student {
 }
 
 // Exec executes the query.
-func (scb *StudentCreateBulk) Exec(ctx context.Context) error {
-	_, err := scb.Save(ctx)
+func (_c *StudentCreateBulk) Exec(ctx context.Context) error {
+	_, err := _c.Save(ctx)
 	return err
 }
 
 // ExecX is like Exec, but panics if an error occurs.
-func (scb *StudentCreateBulk) ExecX(ctx context.Context) {
-	if err := scb.Exec(ctx); err != nil {
+func (_c *StudentCreateBulk) ExecX(ctx context.Context) {
+	if err := _c.Exec(ctx); err != nil {
 		panic(err)
 	}
 }

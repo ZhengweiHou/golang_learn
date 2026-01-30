@@ -18,7 +18,8 @@ import (
 const (
 	// brokerList = "localhost:9092" // Kafka broker 地址
 	brokerList = "localhost:9092" // Kafka broker 地址
-	topic      = "hzwkfk_topic"   // Kafka 主题名称
+	// topic      = "hzwkfk_topic"   // Kafka 主题名称
+	topic = "test" // Kafka 主题名称
 	// groupID    = "hzwkfk-group"   // 消费者组 ID
 )
 

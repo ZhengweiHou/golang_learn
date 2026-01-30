@@ -16,7 +16,7 @@ type Student struct {
 func (Student) Fields() []ent.Field {
 	return []ent.Field{
 		field.Int("id").StorageKey("ID").Positive(),
-		field.String("stuNo").StorageKey("STU_NO"),
+		// field.String("stuNo").StorageKey("STU_NO"),
 		//field.String("stuNo"), // StorageKey默认为转为蛇形命名即stu_no
 		field.String("name").StorageKey("NAME"),
 		field.Int("age").StorageKey("AGE"),

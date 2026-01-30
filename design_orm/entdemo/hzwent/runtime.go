@@ -27,7 +27,7 @@ func init() {
 	studentFields := schema.Student{}.Fields()
 	_ = studentFields
 	// studentDescVersion is the schema descriptor for version field.
-	studentDescVersion := studentFields[4].Descriptor()
+	studentDescVersion := studentFields[3].Descriptor()
 	// student.DefaultVersion holds the default value on creation for the version field.
 	student.DefaultVersion = studentDescVersion.Default.(int32)
 	// studentDescID is the schema descriptor for id field.

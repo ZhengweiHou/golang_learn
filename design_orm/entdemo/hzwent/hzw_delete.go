@@ -20,56 +20,56 @@ type HzwDelete struct {
 }
 
 // Where appends a list predicates to the HzwDelete builder.
-func (hd *HzwDelete) Where(ps ...predicate.Hzw) *HzwDelete {
-	hd.mutation.Where(ps...)
-	return hd
+func (_d *HzwDelete) Where(ps ...predicate.Hzw) *HzwDelete {
+	_d.mutation.Where(ps...)
+	return _d
 }
 
 // Exec executes the deletion query and returns how many vertices were deleted.
-func (hd *HzwDelete) Exec(ctx context.Context) (int, error) {
-	return withHooks(ctx, hd.sqlExec, hd.mutation, hd.hooks)
+func (_d *HzwDelete) Exec(ctx context.Context) (int, error) {
+	return withHooks(ctx, _d.sqlExec, _d.mutation, _d.hooks)
 }
 
 // ExecX is like Exec, but panics if an error occurs.
-func (hd *HzwDelete) ExecX(ctx context.Context) int {
-	n, err := hd.Exec(ctx)
+func (_d *HzwDelete) ExecX(ctx context.Context) int {
+	n, err := _d.Exec(ctx)
 	if err != nil {
 		panic(err)
 	}
 	return n
 }
 
-func (hd *HzwDelete) sqlExec(ctx context.Context) (int, error) {
+func (_d *HzwDelete) sqlExec(ctx context.Context) (int, error) {
 	_spec := sqlgraph.NewDeleteSpec(hzw.Table, sqlgraph.NewFieldSpec(hzw.FieldID, field.TypeUUID))
-	if ps := hd.mutation.predicates; len(ps) > 0 {
+	if ps := _d.mutation.predicates; len(ps) > 0 {
 		_spec.Predicate = func(selector *sql.Selector) {
 			for i := range ps {
 				ps[i](selector)
 			}
 		}
 	}
-	affected, err := sqlgraph.DeleteNodes(ctx, hd.driver, _spec)
+	affected, err := sqlgraph.DeleteNodes(ctx, _d.driver, _spec)
 	if err != nil && sqlgraph.IsConstraintError(err) {
 		err = &ConstraintError{msg: err.Error(), wrap: err}
 	}
-	hd.mutation.done = true
+	_d.mutation.done = true
 	return affected, err
 }
 
 // HzwDeleteOne is the builder for deleting a single Hzw entity.
 type HzwDeleteOne struct {
-	hd *HzwDelete
+	_d *HzwDelete
 }
 
 // Where appends a list predicates to the HzwDelete builder.
-func (hdo *HzwDeleteOne) Where(ps ...predicate.Hzw) *HzwDeleteOne {
-	hdo.hd.mutation.Where(ps...)
-	return hdo
+func (_d *HzwDeleteOne) Where(ps ...predicate.Hzw) *HzwDeleteOne {
+	_d._d.mutation.Where(ps...)
+	return _d
 }
 
 // Exec executes the deletion query.
-func (hdo *HzwDeleteOne) Exec(ctx context.Context) error {
-	n, err := hdo.hd.Exec(ctx)
+func (_d *HzwDeleteOne) Exec(ctx context.Context) error {
+	n, err := _d._d.Exec(ctx)
 	switch {
 	case err != nil:
 		return err
@@ -81,8 +81,8 @@ func (hdo *HzwDeleteOne) Exec(ctx context.Context) error {
 }
 
 // ExecX is like Exec, but panics if an error occurs.
-func (hdo *HzwDeleteOne) ExecX(ctx context.Context) {
-	if err := hdo.Exec(ctx); err != nil {
+func (_d *HzwDeleteOne) ExecX(ctx context.Context) {
+	if err := _d.Exec(ctx); err != nil {
 		panic(err)
 	}
 }

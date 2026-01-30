@@ -48,7 +48,7 @@ func (*Hzw) scanValues(columns []string) ([]any, error) {
 
 // assignValues assigns the values that were returned from sql.Rows (after scanning)
 // to the Hzw fields.
-func (h *Hzw) assignValues(columns []string, values []any) error {
+func (_m *Hzw) assignValues(columns []string, values []any) error {
 	if m, n := len(values), len(columns); m < n {
 		return fmt.Errorf("mismatch number of scan values: %d != %d", m, n)
 	}
@@ -58,34 +58,34 @@ func (h *Hzw) assignValues(columns []string, values []any) error {
 			if value, ok := values[i].(*uuid.UUID); !ok {
 				return fmt.Errorf("unexpected type %T for field id", values[i])
 			} else if value != nil {
-				h.ID = *value
+				_m.ID = *value
 			}
 		case hzw.FieldStuNo:
 			if value, ok := values[i].(*sql.NullString); !ok {
 				return fmt.Errorf("unexpected type %T for field stuNo", values[i])
 			} else if value.Valid {
-				h.StuNo = value.String
+				_m.StuNo = value.String
 			}
 		case hzw.FieldName:
 			if value, ok := values[i].(*sql.NullString); !ok {
 				return fmt.Errorf("unexpected type %T for field name", values[i])
 			} else if value.Valid {
-				h.Name = value.String
+				_m.Name = value.String
 			}
 		case hzw.FieldAge:
 			if value, ok := values[i].(*sql.NullInt64); !ok {
 				return fmt.Errorf("unexpected type %T for field age", values[i])
 			} else if value.Valid {
-				h.Age = int(value.Int64)
+				_m.Age = int(value.Int64)
 			}
 		case hzw.FieldVersion:
 			if value, ok := values[i].(*sql.NullInt64); !ok {
 				return fmt.Errorf("unexpected type %T for field version", values[i])
 			} else if value.Valid {
-				h.Version = int32(value.Int64)
+				_m.Version = int32(value.Int64)
 			}
 		default:
-			h.selectValues.Set(columns[i], values[i])
+			_m.selectValues.Set(columns[i], values[i])
 		}
 	}
 	return nil
@@ -93,44 +93,44 @@ func (h *Hzw) assignValues(columns []string, values []any) error {
 
 // Value returns the ent.Value that was dynamically selected and assigned to the Hzw.
 // This includes values selected through modifiers, order, etc.
-func (h *Hzw) Value(name string) (ent.Value, error) {
-	return h.selectValues.Get(name)
+func (_m *Hzw) Value(name string) (ent.Value, error) {
+	return _m.selectValues.Get(name)
 }
 
 // Update returns a builder for updating this Hzw.
 // Note that you need to call Hzw.Unwrap() before calling this method if this Hzw
 // was returned from a transaction, and the transaction was committed or rolled back.
-func (h *Hzw) Update() *HzwUpdateOne {
-	return NewHzwClient(h.config).UpdateOne(h)
+func (_m *Hzw) Update() *HzwUpdateOne {
+	return NewHzwClient(_m.config).UpdateOne(_m)
 }
 
 // Unwrap unwraps the Hzw entity that was returned from a transaction after it was closed,
 // so that all future queries will be executed through the driver which created the transaction.
-func (h *Hzw) Unwrap() *Hzw {
-	_tx, ok := h.config.driver.(*txDriver)
+func (_m *Hzw) Unwrap() *Hzw {
+	_tx, ok := _m.config.driver.(*txDriver)
 	if !ok {
 		panic("hzwent: Hzw is not a transactional entity")
 	}
-	h.config.driver = _tx.drv
-	return h
+	_m.config.driver = _tx.drv
+	return _m
 }
 
 // String implements the fmt.Stringer.
-func (h *Hzw) String() string {
+func (_m *Hzw) String() string {
 	var builder strings.Builder
 	builder.WriteString("Hzw(")
-	builder.WriteString(fmt.Sprintf("id=%v, ", h.ID))
+	builder.WriteString(fmt.Sprintf("id=%v, ", _m.ID))
 	builder.WriteString("stuNo=")
-	builder.WriteString(h.StuNo)
+	builder.WriteString(_m.StuNo)
 	builder.WriteString(", ")
 	builder.WriteString("name=")
-	builder.WriteString(h.Name)
+	builder.WriteString(_m.Name)
 	builder.WriteString(", ")
 	builder.WriteString("age=")
-	builder.WriteString(fmt.Sprintf("%v", h.Age))
+	builder.WriteString(fmt.Sprintf("%v", _m.Age))
 	builder.WriteString(", ")
 	builder.WriteString("version=")
-	builder.WriteString(fmt.Sprintf("%v", h.Version))
+	builder.WriteString(fmt.Sprintf("%v", _m.Version))
 	builder.WriteByte(')')
 	return builder.String()
 }

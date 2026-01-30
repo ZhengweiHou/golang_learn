@@ -37,11 +37,9 @@ require (
 	github.com/looplab/fsm v1.0.1
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/robfig/cron/v3 v3.0.1
-	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.10.0
 	github.com/thmeitz/ksqldb-go v0.1.0
 	github.com/viant/dsc v0.16.3
-	github.com/xdg-go/scram v1.1.2
 	golang.org/x/time v0.0.0-20191024005414-555d28b269f0
 	gorm.io/driver/ibmdb v0.0.0-00010101000000-000000000000
 	gorm.io/driver/mysql v1.6.0
@@ -84,7 +82,6 @@ require (
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-uuid v1.0.3 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
-	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761 // indirect
 	github.com/jackc/pgx/v5 v5.6.0 // indirect
@@ -125,8 +122,6 @@ require (
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.11 // indirect
 	github.com/viant/toolbox v0.0.0-00010101000000-000000000000 // indirect
-	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
-	github.com/xdg-go/stringprep v1.0.4 // indirect
 	golang.org/x/arch v0.3.0 // indirect
 	golang.org/x/crypto v0.31.0 // indirect
 	golang.org/x/exp v0.0.0-20220722155223-a9213eeb770e // indirect

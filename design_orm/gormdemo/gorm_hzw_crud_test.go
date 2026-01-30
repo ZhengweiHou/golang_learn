@@ -6,7 +6,8 @@ import (
 	"log"
 	"testing"
 
-	"gorm.io/driver/ibmdb"
+	ibmdb "github.com/ZhengweiHou/gorm_ibmdb"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -17,9 +18,10 @@ var conhzwmysql = "root:root@tcp(localhost:3306)/test?parseTime=True"
 var hzwlog = logger.New(log.New(log.Writer(), "\r\n", log.LstdFlags), logger.Config{LogLevel: logger.Info})
 
 func getHzwDb() *gorm.DB {
-	//	return getHzwMysqlDb()
-	return getHzwDB2Db()
+	return getHzwMysqlDb()
+	// return getHzwDB2Db()
 }
+
 func getHzwDB2Db() *gorm.DB {
 	dialector := ibmdb.Open(conhzwdb2)
 
@@ -76,6 +78,12 @@ func TestHzwCreate(t *testing.T) {
 		log.Fatalf("json marshal failed: %v", err)
 	}
 	fmt.Printf("Affected: %v Created hzw: %s\n", result.RowsAffected, jstr)
+
+	hzw.ID = 0
+	result = db.Table("hzw2").Create(&hzw) // 动态修改表名,操作hzw2表
+	if result.Error != nil {
+		log.Fatalf("Create failed: %v", result.Error)
+	}
 
 }
 
@@ -224,6 +232,43 @@ func TestHzwFind(t *testing.T) {
 	for _, hzw := range hzws {
 		fmt.Printf("%s\n", hzw.Name)
 	}
+}
+
+func TestHzwFindWithSession(t *testing.T) {
+	hzw := &Hzw{}
+
+	db := getHzwDb()
+
+	db.Transaction(func(tx *gorm.DB) error {
+		queryDb := tx
+		// queryDb := db.Session(&gorm.Session{}) // session模式
+
+		queryDb.Table("hzw").First(hzw, 1)
+		fmt.Printf("first by id:%v\n", hzw)
+
+		queryDb.Table("hzw2").First(hzw, 1)
+		fmt.Printf("first by id:%v\n", hzw)
+		queryDb.First(hzw, 1)
+		return nil
+	})
+
+	fmt.Println("===================")
+
+	db = getHzwDb()
+	// qdb := db.Session(&gorm.Session{})
+	qdb := db
+
+	qdb = qdb.Where("id = ?", 1)
+
+	hzw = &Hzw{}
+	qdb.Where("age > ?", 20).First(hzw)
+
+	hzw = &Hzw{}
+	qdb.Where("age > ?", 21).First(hzw)
+
+	db.Where("age > ?", 23).First(hzw)
+
+	// gorm.G[T any](db *gorm.DB, opts ...clause.Expression)
 }
 
 // 删除

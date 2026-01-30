@@ -53,11 +53,6 @@ func IDLTE(id int) predicate.Student {
 	return predicate.Student(sql.FieldLTE(FieldID, id))
 }
 
-// StuNo applies equality check predicate on the "stuNo" field. It's identical to StuNoEQ.
-func StuNo(v string) predicate.Student {
-	return predicate.Student(sql.FieldEQ(FieldStuNo, v))
-}
-
 // Name applies equality check predicate on the "name" field. It's identical to NameEQ.
 func Name(v string) predicate.Student {
 	return predicate.Student(sql.FieldEQ(FieldName, v))
@@ -71,71 +66,6 @@ func Age(v int) predicate.Student {
 // Version applies equality check predicate on the "version" field. It's identical to VersionEQ.
 func Version(v int32) predicate.Student {
 	return predicate.Student(sql.FieldEQ(FieldVersion, v))
-}
-
-// StuNoEQ applies the EQ predicate on the "stuNo" field.
-func StuNoEQ(v string) predicate.Student {
-	return predicate.Student(sql.FieldEQ(FieldStuNo, v))
-}
-
-// StuNoNEQ applies the NEQ predicate on the "stuNo" field.
-func StuNoNEQ(v string) predicate.Student {
-	return predicate.Student(sql.FieldNEQ(FieldStuNo, v))
-}
-
-// StuNoIn applies the In predicate on the "stuNo" field.
-func StuNoIn(vs ...string) predicate.Student {
-	return predicate.Student(sql.FieldIn(FieldStuNo, vs...))
-}
-
-// StuNoNotIn applies the NotIn predicate on the "stuNo" field.
-func StuNoNotIn(vs ...string) predicate.Student {
-	return predicate.Student(sql.FieldNotIn(FieldStuNo, vs...))
-}
-
-// StuNoGT applies the GT predicate on the "stuNo" field.
-func StuNoGT(v string) predicate.Student {
-	return predicate.Student(sql.FieldGT(FieldStuNo, v))
-}
-
-// StuNoGTE applies the GTE predicate on the "stuNo" field.
-func StuNoGTE(v string) predicate.Student {
-	return predicate.Student(sql.FieldGTE(FieldStuNo, v))
-}
-
-// StuNoLT applies the LT predicate on the "stuNo" field.
-func StuNoLT(v string) predicate.Student {
-	return predicate.Student(sql.FieldLT(FieldStuNo, v))
-}
-
-// StuNoLTE applies the LTE predicate on the "stuNo" field.
-func StuNoLTE(v string) predicate.Student {
-	return predicate.Student(sql.FieldLTE(FieldStuNo, v))
-}
-
-// StuNoContains applies the Contains predicate on the "stuNo" field.
-func StuNoContains(v string) predicate.Student {
-	return predicate.Student(sql.FieldContains(FieldStuNo, v))
-}
-
-// StuNoHasPrefix applies the HasPrefix predicate on the "stuNo" field.
-func StuNoHasPrefix(v string) predicate.Student {
-	return predicate.Student(sql.FieldHasPrefix(FieldStuNo, v))
-}
-
-// StuNoHasSuffix applies the HasSuffix predicate on the "stuNo" field.
-func StuNoHasSuffix(v string) predicate.Student {
-	return predicate.Student(sql.FieldHasSuffix(FieldStuNo, v))
-}
-
-// StuNoEqualFold applies the EqualFold predicate on the "stuNo" field.
-func StuNoEqualFold(v string) predicate.Student {
-	return predicate.Student(sql.FieldEqualFold(FieldStuNo, v))
-}
-
-// StuNoContainsFold applies the ContainsFold predicate on the "stuNo" field.
-func StuNoContainsFold(v string) predicate.Student {
-	return predicate.Student(sql.FieldContainsFold(FieldStuNo, v))
 }
 
 // NameEQ applies the EQ predicate on the "name" field.

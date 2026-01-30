@@ -63,7 +63,7 @@ func TestEntDb2(t *testing.T) {
 	istu, err := client.Student.
 		Create().
 		SetName("张三").
-		SetStuNo("001").
+		// SetStuNo("001").
 		SetAge(18).
 		Save(ctx)
 	if err != nil {
@@ -190,7 +190,7 @@ func BenchmarkEnt(b *testing.B) {
 	istu, err := client.Student.
 		Create().
 		SetName("张三").
-		SetStuNo("001").
+		// SetStuNo("001").
 		SetAge(18).
 		Save(ctx)
 	if err != nil {

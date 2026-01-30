@@ -22,7 +22,7 @@ func TestCreate(t *testing.T) {
 	istu, err := client.Student.
 		Create().
 		SetName("张三").
-		SetStuNo("001").
+		// SetStuNo("001").
 		SetAge(18).
 		Save(ctx) // SaveX(ctx) 会panic
 	if err != nil {
@@ -58,7 +58,9 @@ func TestUpdate(t *testing.T) {
 
 	// create one
 	// SQL: INSERT INTO student (STU_NO, NAME, AGE, VERSION) VALUES (?, ?, ?, ?)
-	stu := client.Student.Create().SetName("王二小").SetStuNo("999").SetAge(8).SaveX(ctx)
+	stu := client.Student.Create().SetName("王二小").
+		// SetStuNo("999").
+		SetAge(8).SaveX(ctx)
 	log.Printf("1: student create one: id:%v  %v ", stu.ID, stu)
 
 	// update one

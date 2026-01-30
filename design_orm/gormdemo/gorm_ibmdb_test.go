@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	_ "github.com/ibmdb/go_ibm_db"
-	"gorm.io/driver/ibmdb"
+	ibmdb "github.com/ZhengweiHou/gorm_ibmdb"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )

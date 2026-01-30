@@ -32,6 +32,7 @@ func (dao *StudentDao) UpdateByPrimaryKey(ctx *context.Context,arg *model.Studen
 
 // delete by primaryKey
 func (dao *StudentDao) DeleteByPrimaryKey(ctx *context.Context,arg *model.Student)(int64,error){
+	// TODO ???
       result:=globaldb.Delete(arg)
       return result.RowsAffected, result.Error
 }

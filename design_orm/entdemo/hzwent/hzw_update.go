@@ -22,94 +22,94 @@ type HzwUpdate struct {
 }
 
 // Where appends a list predicates to the HzwUpdate builder.
-func (hu *HzwUpdate) Where(ps ...predicate.Hzw) *HzwUpdate {
-	hu.mutation.Where(ps...)
-	return hu
+func (_u *HzwUpdate) Where(ps ...predicate.Hzw) *HzwUpdate {
+	_u.mutation.Where(ps...)
+	return _u
 }
 
 // SetStuNo sets the "stuNo" field.
-func (hu *HzwUpdate) SetStuNo(s string) *HzwUpdate {
-	hu.mutation.SetStuNo(s)
-	return hu
+func (_u *HzwUpdate) SetStuNo(v string) *HzwUpdate {
+	_u.mutation.SetStuNo(v)
+	return _u
 }
 
 // SetNillableStuNo sets the "stuNo" field if the given value is not nil.
-func (hu *HzwUpdate) SetNillableStuNo(s *string) *HzwUpdate {
-	if s != nil {
-		hu.SetStuNo(*s)
+func (_u *HzwUpdate) SetNillableStuNo(v *string) *HzwUpdate {
+	if v != nil {
+		_u.SetStuNo(*v)
 	}
-	return hu
+	return _u
 }
 
 // SetName sets the "name" field.
-func (hu *HzwUpdate) SetName(s string) *HzwUpdate {
-	hu.mutation.SetName(s)
-	return hu
+func (_u *HzwUpdate) SetName(v string) *HzwUpdate {
+	_u.mutation.SetName(v)
+	return _u
 }
 
 // SetNillableName sets the "name" field if the given value is not nil.
-func (hu *HzwUpdate) SetNillableName(s *string) *HzwUpdate {
-	if s != nil {
-		hu.SetName(*s)
+func (_u *HzwUpdate) SetNillableName(v *string) *HzwUpdate {
+	if v != nil {
+		_u.SetName(*v)
 	}
-	return hu
+	return _u
 }
 
 // SetAge sets the "age" field.
-func (hu *HzwUpdate) SetAge(i int) *HzwUpdate {
-	hu.mutation.ResetAge()
-	hu.mutation.SetAge(i)
-	return hu
+func (_u *HzwUpdate) SetAge(v int) *HzwUpdate {
+	_u.mutation.ResetAge()
+	_u.mutation.SetAge(v)
+	return _u
 }
 
 // SetNillableAge sets the "age" field if the given value is not nil.
-func (hu *HzwUpdate) SetNillableAge(i *int) *HzwUpdate {
-	if i != nil {
-		hu.SetAge(*i)
+func (_u *HzwUpdate) SetNillableAge(v *int) *HzwUpdate {
+	if v != nil {
+		_u.SetAge(*v)
 	}
-	return hu
+	return _u
 }
 
-// AddAge adds i to the "age" field.
-func (hu *HzwUpdate) AddAge(i int) *HzwUpdate {
-	hu.mutation.AddAge(i)
-	return hu
+// AddAge adds value to the "age" field.
+func (_u *HzwUpdate) AddAge(v int) *HzwUpdate {
+	_u.mutation.AddAge(v)
+	return _u
 }
 
 // SetVersion sets the "version" field.
-func (hu *HzwUpdate) SetVersion(i int32) *HzwUpdate {
-	hu.mutation.ResetVersion()
-	hu.mutation.SetVersion(i)
-	return hu
+func (_u *HzwUpdate) SetVersion(v int32) *HzwUpdate {
+	_u.mutation.ResetVersion()
+	_u.mutation.SetVersion(v)
+	return _u
 }
 
 // SetNillableVersion sets the "version" field if the given value is not nil.
-func (hu *HzwUpdate) SetNillableVersion(i *int32) *HzwUpdate {
-	if i != nil {
-		hu.SetVersion(*i)
+func (_u *HzwUpdate) SetNillableVersion(v *int32) *HzwUpdate {
+	if v != nil {
+		_u.SetVersion(*v)
 	}
-	return hu
+	return _u
 }
 
-// AddVersion adds i to the "version" field.
-func (hu *HzwUpdate) AddVersion(i int32) *HzwUpdate {
-	hu.mutation.AddVersion(i)
-	return hu
+// AddVersion adds value to the "version" field.
+func (_u *HzwUpdate) AddVersion(v int32) *HzwUpdate {
+	_u.mutation.AddVersion(v)
+	return _u
 }
 
 // Mutation returns the HzwMutation object of the builder.
-func (hu *HzwUpdate) Mutation() *HzwMutation {
-	return hu.mutation
+func (_u *HzwUpdate) Mutation() *HzwMutation {
+	return _u.mutation
 }
 
 // Save executes the query and returns the number of nodes affected by the update operation.
-func (hu *HzwUpdate) Save(ctx context.Context) (int, error) {
-	return withHooks(ctx, hu.sqlSave, hu.mutation, hu.hooks)
+func (_u *HzwUpdate) Save(ctx context.Context) (int, error) {
+	return withHooks(ctx, _u.sqlSave, _u.mutation, _u.hooks)
 }
 
 // SaveX is like Save, but panics if an error occurs.
-func (hu *HzwUpdate) SaveX(ctx context.Context) int {
-	affected, err := hu.Save(ctx)
+func (_u *HzwUpdate) SaveX(ctx context.Context) int {
+	affected, err := _u.Save(ctx)
 	if err != nil {
 		panic(err)
 	}
@@ -117,46 +117,46 @@ func (hu *HzwUpdate) SaveX(ctx context.Context) int {
 }
 
 // Exec executes the query.
-func (hu *HzwUpdate) Exec(ctx context.Context) error {
-	_, err := hu.Save(ctx)
+func (_u *HzwUpdate) Exec(ctx context.Context) error {
+	_, err := _u.Save(ctx)
 	return err
 }
 
 // ExecX is like Exec, but panics if an error occurs.
-func (hu *HzwUpdate) ExecX(ctx context.Context) {
-	if err := hu.Exec(ctx); err != nil {
+func (_u *HzwUpdate) ExecX(ctx context.Context) {
+	if err := _u.Exec(ctx); err != nil {
 		panic(err)
 	}
 }
 
-func (hu *HzwUpdate) sqlSave(ctx context.Context) (n int, err error) {
+func (_u *HzwUpdate) sqlSave(ctx context.Context) (_node int, err error) {
 	_spec := sqlgraph.NewUpdateSpec(hzw.Table, hzw.Columns, sqlgraph.NewFieldSpec(hzw.FieldID, field.TypeUUID))
-	if ps := hu.mutation.predicates; len(ps) > 0 {
+	if ps := _u.mutation.predicates; len(ps) > 0 {
 		_spec.Predicate = func(selector *sql.Selector) {
 			for i := range ps {
 				ps[i](selector)
 			}
 		}
 	}
-	if value, ok := hu.mutation.StuNo(); ok {
+	if value, ok := _u.mutation.StuNo(); ok {
 		_spec.SetField(hzw.FieldStuNo, field.TypeString, value)
 	}
-	if value, ok := hu.mutation.Name(); ok {
+	if value, ok := _u.mutation.Name(); ok {
 		_spec.SetField(hzw.FieldName, field.TypeString, value)
 	}
-	if value, ok := hu.mutation.Age(); ok {
+	if value, ok := _u.mutation.Age(); ok {
 		_spec.SetField(hzw.FieldAge, field.TypeInt, value)
 	}
-	if value, ok := hu.mutation.AddedAge(); ok {
+	if value, ok := _u.mutation.AddedAge(); ok {
 		_spec.AddField(hzw.FieldAge, field.TypeInt, value)
 	}
-	if value, ok := hu.mutation.Version(); ok {
+	if value, ok := _u.mutation.Version(); ok {
 		_spec.SetField(hzw.FieldVersion, field.TypeInt32, value)
 	}
-	if value, ok := hu.mutation.AddedVersion(); ok {
+	if value, ok := _u.mutation.AddedVersion(); ok {
 		_spec.AddField(hzw.FieldVersion, field.TypeInt32, value)
 	}
-	if n, err = sqlgraph.UpdateNodes(ctx, hu.driver, _spec); err != nil {
+	if _node, err = sqlgraph.UpdateNodes(ctx, _u.driver, _spec); err != nil {
 		if _, ok := err.(*sqlgraph.NotFoundError); ok {
 			err = &NotFoundError{hzw.Label}
 		} else if sqlgraph.IsConstraintError(err) {
@@ -164,8 +164,8 @@ func (hu *HzwUpdate) sqlSave(ctx context.Context) (n int, err error) {
 		}
 		return 0, err
 	}
-	hu.mutation.done = true
-	return n, nil
+	_u.mutation.done = true
+	return _node, nil
 }
 
 // HzwUpdateOne is the builder for updating a single Hzw entity.
@@ -177,101 +177,101 @@ type HzwUpdateOne struct {
 }
 
 // SetStuNo sets the "stuNo" field.
-func (huo *HzwUpdateOne) SetStuNo(s string) *HzwUpdateOne {
-	huo.mutation.SetStuNo(s)
-	return huo
+func (_u *HzwUpdateOne) SetStuNo(v string) *HzwUpdateOne {
+	_u.mutation.SetStuNo(v)
+	return _u
 }
 
 // SetNillableStuNo sets the "stuNo" field if the given value is not nil.
-func (huo *HzwUpdateOne) SetNillableStuNo(s *string) *HzwUpdateOne {
-	if s != nil {
-		huo.SetStuNo(*s)
+func (_u *HzwUpdateOne) SetNillableStuNo(v *string) *HzwUpdateOne {
+	if v != nil {
+		_u.SetStuNo(*v)
 	}
-	return huo
+	return _u
 }
 
 // SetName sets the "name" field.
-func (huo *HzwUpdateOne) SetName(s string) *HzwUpdateOne {
-	huo.mutation.SetName(s)
-	return huo
+func (_u *HzwUpdateOne) SetName(v string) *HzwUpdateOne {
+	_u.mutation.SetName(v)
+	return _u
 }
 
 // SetNillableName sets the "name" field if the given value is not nil.
-func (huo *HzwUpdateOne) SetNillableName(s *string) *HzwUpdateOne {
-	if s != nil {
-		huo.SetName(*s)
+func (_u *HzwUpdateOne) SetNillableName(v *string) *HzwUpdateOne {
+	if v != nil {
+		_u.SetName(*v)
 	}
-	return huo
+	return _u
 }
 
 // SetAge sets the "age" field.
-func (huo *HzwUpdateOne) SetAge(i int) *HzwUpdateOne {
-	huo.mutation.ResetAge()
-	huo.mutation.SetAge(i)
-	return huo
+func (_u *HzwUpdateOne) SetAge(v int) *HzwUpdateOne {
+	_u.mutation.ResetAge()
+	_u.mutation.SetAge(v)
+	return _u
 }
 
 // SetNillableAge sets the "age" field if the given value is not nil.
-func (huo *HzwUpdateOne) SetNillableAge(i *int) *HzwUpdateOne {
-	if i != nil {
-		huo.SetAge(*i)
+func (_u *HzwUpdateOne) SetNillableAge(v *int) *HzwUpdateOne {
+	if v != nil {
+		_u.SetAge(*v)
 	}
-	return huo
+	return _u
 }
 
-// AddAge adds i to the "age" field.
-func (huo *HzwUpdateOne) AddAge(i int) *HzwUpdateOne {
-	huo.mutation.AddAge(i)
-	return huo
+// AddAge adds value to the "age" field.
+func (_u *HzwUpdateOne) AddAge(v int) *HzwUpdateOne {
+	_u.mutation.AddAge(v)
+	return _u
 }
 
 // SetVersion sets the "version" field.
-func (huo *HzwUpdateOne) SetVersion(i int32) *HzwUpdateOne {
-	huo.mutation.ResetVersion()
-	huo.mutation.SetVersion(i)
-	return huo
+func (_u *HzwUpdateOne) SetVersion(v int32) *HzwUpdateOne {
+	_u.mutation.ResetVersion()
+	_u.mutation.SetVersion(v)
+	return _u
 }
 
 // SetNillableVersion sets the "version" field if the given value is not nil.
-func (huo *HzwUpdateOne) SetNillableVersion(i *int32) *HzwUpdateOne {
-	if i != nil {
-		huo.SetVersion(*i)
+func (_u *HzwUpdateOne) SetNillableVersion(v *int32) *HzwUpdateOne {
+	if v != nil {
+		_u.SetVersion(*v)
 	}
-	return huo
+	return _u
 }
 
-// AddVersion adds i to the "version" field.
-func (huo *HzwUpdateOne) AddVersion(i int32) *HzwUpdateOne {
-	huo.mutation.AddVersion(i)
-	return huo
+// AddVersion adds value to the "version" field.
+func (_u *HzwUpdateOne) AddVersion(v int32) *HzwUpdateOne {
+	_u.mutation.AddVersion(v)
+	return _u
 }
 
 // Mutation returns the HzwMutation object of the builder.
-func (huo *HzwUpdateOne) Mutation() *HzwMutation {
-	return huo.mutation
+func (_u *HzwUpdateOne) Mutation() *HzwMutation {
+	return _u.mutation
 }
 
 // Where appends a list predicates to the HzwUpdate builder.
-func (huo *HzwUpdateOne) Where(ps ...predicate.Hzw) *HzwUpdateOne {
-	huo.mutation.Where(ps...)
-	return huo
+func (_u *HzwUpdateOne) Where(ps ...predicate.Hzw) *HzwUpdateOne {
+	_u.mutation.Where(ps...)
+	return _u
 }
 
 // Select allows selecting one or more fields (columns) of the returned entity.
 // The default is selecting all fields defined in the entity schema.
-func (huo *HzwUpdateOne) Select(field string, fields ...string) *HzwUpdateOne {
-	huo.fields = append([]string{field}, fields...)
-	return huo
+func (_u *HzwUpdateOne) Select(field string, fields ...string) *HzwUpdateOne {
+	_u.fields = append([]string{field}, fields...)
+	return _u
 }
 
 // Save executes the query and returns the updated Hzw entity.
-func (huo *HzwUpdateOne) Save(ctx context.Context) (*Hzw, error) {
-	return withHooks(ctx, huo.sqlSave, huo.mutation, huo.hooks)
+func (_u *HzwUpdateOne) Save(ctx context.Context) (*Hzw, error) {
+	return withHooks(ctx, _u.sqlSave, _u.mutation, _u.hooks)
 }
 
 // SaveX is like Save, but panics if an error occurs.
-func (huo *HzwUpdateOne) SaveX(ctx context.Context) *Hzw {
-	node, err := huo.Save(ctx)
+func (_u *HzwUpdateOne) SaveX(ctx context.Context) *Hzw {
+	node, err := _u.Save(ctx)
 	if err != nil {
 		panic(err)
 	}
@@ -279,26 +279,26 @@ func (huo *HzwUpdateOne) SaveX(ctx context.Context) *Hzw {
 }
 
 // Exec executes the query on the entity.
-func (huo *HzwUpdateOne) Exec(ctx context.Context) error {
-	_, err := huo.Save(ctx)
+func (_u *HzwUpdateOne) Exec(ctx context.Context) error {
+	_, err := _u.Save(ctx)
 	return err
 }
 
 // ExecX is like Exec, but panics if an error occurs.
-func (huo *HzwUpdateOne) ExecX(ctx context.Context) {
-	if err := huo.Exec(ctx); err != nil {
+func (_u *HzwUpdateOne) ExecX(ctx context.Context) {
+	if err := _u.Exec(ctx); err != nil {
 		panic(err)
 	}
 }
 
-func (huo *HzwUpdateOne) sqlSave(ctx context.Context) (_node *Hzw, err error) {
+func (_u *HzwUpdateOne) sqlSave(ctx context.Context) (_node *Hzw, err error) {
 	_spec := sqlgraph.NewUpdateSpec(hzw.Table, hzw.Columns, sqlgraph.NewFieldSpec(hzw.FieldID, field.TypeUUID))
-	id, ok := huo.mutation.ID()
+	id, ok := _u.mutation.ID()
 	if !ok {
 		return nil, &ValidationError{Name: "id", err: errors.New(`hzwent: missing "Hzw.id" for update`)}
 	}
 	_spec.Node.ID.Value = id
-	if fields := huo.fields; len(fields) > 0 {
+	if fields := _u.fields; len(fields) > 0 {
 		_spec.Node.Columns = make([]string, 0, len(fields))
 		_spec.Node.Columns = append(_spec.Node.Columns, hzw.FieldID)
 		for _, f := range fields {
@@ -310,35 +310,35 @@ func (huo *HzwUpdateOne) sqlSave(ctx context.Context) (_node *Hzw, err error) {
 			}
 		}
 	}
-	if ps := huo.mutation.predicates; len(ps) > 0 {
+	if ps := _u.mutation.predicates; len(ps) > 0 {
 		_spec.Predicate = func(selector *sql.Selector) {
 			for i := range ps {
 				ps[i](selector)
 			}
 		}
 	}
-	if value, ok := huo.mutation.StuNo(); ok {
+	if value, ok := _u.mutation.StuNo(); ok {
 		_spec.SetField(hzw.FieldStuNo, field.TypeString, value)
 	}
-	if value, ok := huo.mutation.Name(); ok {
+	if value, ok := _u.mutation.Name(); ok {
 		_spec.SetField(hzw.FieldName, field.TypeString, value)
 	}
-	if value, ok := huo.mutation.Age(); ok {
+	if value, ok := _u.mutation.Age(); ok {
 		_spec.SetField(hzw.FieldAge, field.TypeInt, value)
 	}
-	if value, ok := huo.mutation.AddedAge(); ok {
+	if value, ok := _u.mutation.AddedAge(); ok {
 		_spec.AddField(hzw.FieldAge, field.TypeInt, value)
 	}
-	if value, ok := huo.mutation.Version(); ok {
+	if value, ok := _u.mutation.Version(); ok {
 		_spec.SetField(hzw.FieldVersion, field.TypeInt32, value)
 	}
-	if value, ok := huo.mutation.AddedVersion(); ok {
+	if value, ok := _u.mutation.AddedVersion(); ok {
 		_spec.AddField(hzw.FieldVersion, field.TypeInt32, value)
 	}
-	_node = &Hzw{config: huo.config}
+	_node = &Hzw{config: _u.config}
 	_spec.Assign = _node.assignValues
 	_spec.ScanValues = _node.scanValues
-	if err = sqlgraph.UpdateNode(ctx, huo.driver, _spec); err != nil {
+	if err = sqlgraph.UpdateNode(ctx, _u.driver, _spec); err != nil {
 		if _, ok := err.(*sqlgraph.NotFoundError); ok {
 			err = &NotFoundError{hzw.Label}
 		} else if sqlgraph.IsConstraintError(err) {
@@ -346,6 +346,6 @@ func (huo *HzwUpdateOne) sqlSave(ctx context.Context) (_node *Hzw, err error) {
 		}
 		return nil, err
 	}
-	huo.mutation.done = true
+	_u.mutation.done = true
 	return _node, nil
 }

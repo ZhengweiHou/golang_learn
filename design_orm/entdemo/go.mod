@@ -1,13 +1,14 @@
 module entdemo
 
-go 1.24.0
+go 1.23.6
 
 // https://github.com/ZhengweiHou/ent/tree/v0.14.2_hzw
-//replace entgo.io/ent v0.14.2 => github.com/ZhengweiHou/ent v0.0.0-20250310071907-97a9c8083ad8
-replace entgo.io/ent v0.14.2 => /home/houzw/document/git-rep/golang/ent
+replace entgo.io/ent v0.14.2 => github.com/ZhengweiHou/ent v0.0.0-20250310071907-97a9c8083ad8
+
+// replace entgo.io/ent v0.14.2 => /home/houzw/document/git-rep/golang/ent
 
 // https://github.com/ZhengweiHou/atlas/tree/v0.31.0_hzw
-replace ariga.io/atlas v0.31.0 => /home/houzw/document/git-rep/golang/atlas
+// replace ariga.io/atlas v0.31.0 => /home/houzw/document/git-rep/golang/atlas
 
 require (
 	//	entgo.io/ent v0.14.2
@@ -21,7 +22,7 @@ require (
 )
 
 require (
-	ariga.io/atlas v0.31.0 // indirect
+	ariga.io/atlas v0.31.1-0.20250212144724-069be8033e83 // indirect
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/agext/levenshtein v1.2.1 // indirect
 	github.com/apparentlymart/go-textseg/v13 v13.0.0 // indirect

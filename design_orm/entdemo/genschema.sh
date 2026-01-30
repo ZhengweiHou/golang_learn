@@ -14,3 +14,12 @@ mkdir ${targetdir}
 echo "package ${targetdir}" > ${targetdir}/dir.go
 
 
+
+
+
+
+
+# go install entgo.io/ent/cmd/ent@latest
+
+# ent generate --target ./hzwent ./schema
+

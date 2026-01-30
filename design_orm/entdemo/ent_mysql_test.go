@@ -33,7 +33,7 @@ func TestEntMysql(t *testing.T) {
 	u, err := tx.Student.
 		Create().
 		SetName("张三").
-		SetStuNo("001").
+		// SetStuNo("001").
 		//		SetStuno("001").
 		SetAge(18).
 		Save(ctx)

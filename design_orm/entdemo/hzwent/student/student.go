@@ -11,8 +11,6 @@ const (
 	Label = "student"
 	// FieldID holds the string denoting the id field in the database.
 	FieldID = "ID"
-	// FieldStuNo holds the string denoting the stuno field in the database.
-	FieldStuNo = "STU_NO"
 	// FieldName holds the string denoting the name field in the database.
 	FieldName = "NAME"
 	// FieldAge holds the string denoting the age field in the database.
@@ -26,7 +24,6 @@ const (
 // Columns holds all SQL columns for student fields.
 var Columns = []string{
 	FieldID,
-	FieldStuNo,
 	FieldName,
 	FieldAge,
 	FieldVersion,
@@ -55,11 +52,6 @@ type OrderOption func(*sql.Selector)
 // ByID orders the results by the id field.
 func ByID(opts ...sql.OrderTermOption) OrderOption {
 	return sql.OrderByField(FieldID, opts...).ToFunc()
-}
-
-// ByStuNo orders the results by the stuNo field.
-func ByStuNo(opts ...sql.OrderTermOption) OrderOption {
-	return sql.OrderByField(FieldStuNo, opts...).ToFunc()
 }
 
 // ByName orders the results by the name field.
